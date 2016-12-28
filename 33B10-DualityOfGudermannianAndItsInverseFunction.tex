@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DualityOfGudermannianAndItsInverseFunction}
+\pmcreated{2013-03-22 19:06:41}
+\pmmodified{2013-03-22 19:06:41}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{duality of Gudermannian and its inverse function}
+\pmrecord{7}{42004}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33B10}
+\pmclassification{msc}{26E05}
+\pmclassification{msc}{26A09}
+\pmclassification{msc}{26A48}
+\pmrelated{InverseGudermannianFunction}
+\pmrelated{IdealInvertingInPruferRing}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{formula}
+
+There are a lot of formulae concerning the Gudermannian function and its inverse function containing a hyperbolic function or a trigonometric function or both, such that if we change functions of one kind to the corresponding functions of the other kind, then the new formula also is true.
+
+Some exemples:
+
+\begin{align}
+\mbox{gd}\,x \;=\; \int_0^x\!\frac{dt}{\cosh{t}}, \qquad \mbox{gd}^{-1}x \;=\; \int_0^x\!\frac{dt}{\cos{t}}
+\end{align}
+
+\begin{align}
+\frac{d}{dx}\mbox{gd}\,x \;=\; \frac{1}{\cosh{x}}, \qquad \frac{d}{dx}\mbox{gd}^{-1}\,x \;=\; \frac{1}{\cos{x}}
+\end{align}
+
+\begin{align}
+\tan(\mbox{gd}\,x) \;=\; \sinh{x}, \qquad \tanh(\mbox{gd}^{-1}x) \;=\; \sin{x}
+\end{align}
+
+\begin{align}
+\sin(\mbox{gd}\,x) \;=\; \tanh{x}, \qquad \sinh(\mbox{gd}^{-1}x) \;=\; \tan{x}
+\end{align}
+
+\begin{align}
+\tan\frac{\mbox{gd}\,x}{2} \;=\; \tanh\frac{x}{2}, \qquad \tanh\frac{\mbox{gd}^{-1}x}{2} \;=\; \tan\frac{x}{2}
+\end{align}
+
+
+
+For proving (5) we can check that
+$$\frac{d}{dx}[2\arctan(\tanh\frac{x}{2})] \;=\; \frac{1}{\cosh{x}},$$
+and since both the expression in the brackets and the \PMlinkid{Gudermannian}{11997} vanish in the origin, we have
+$$\mbox{gd}\,x \;\equiv\; 2\arctan(\tanh\frac{x}{2}).$$
+This equation implies (5).\\
+
+
+The \PMlinkname{duality}{DualityInMathematics} of the formula pairs may be explained by the equality
+\begin{align}
+\mbox{gd}\,ix \;=\; i\,\mbox{gd}^{-1}x.
+\end{align}
+%%%%%
+%%%%%
+\end{document}

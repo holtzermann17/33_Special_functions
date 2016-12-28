@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LambertWFunction}
+\pmcreated{2013-03-22 12:40:48}
+\pmmodified{2013-03-22 12:40:48}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{Lambert W function}
+\pmrecord{8}{32957}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33B30}
+\pmsynonym{product log}{LambertWFunction}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\begin{document}
+Lambert's $W$ function is the inverse of the function $f: \C \to \C$ given by $f(x) := x e^x$. That is, $W(x)$ is the complex valued function that satisfies
+\begin{displaymath}W(x) e^{W(x)} = x,\end{displaymath} 
+for all $x \in \mathbb{C}$. In practice the definition of $W(x)$ requires a branch cut, which is usually taken along the negative real axis. Lambert's W function is sometimes also called product log function.
+
+This function allow us to solve the functional equation $$g(x)^{g(x)}=x$$
+since $$g(x)=e^{W(\ln(x))}.$$
+
+\section{References}
+A site with good information on Lambert's W function is Corless' page 
+\PMlinkexternal{``On the Lambert W Function''}{http://kong.apmaths.uwo.ca/~rcorless/frames/PAPERS/LambertW/}
+%%%%%
+%%%%%
+\end{document}

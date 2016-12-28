@@ -1,0 +1,44 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlternateIntegralRepresentationOfBetaFunction2}
+\pmcreated{2013-03-22 18:34:31}
+\pmmodified{2013-03-22 18:34:31}
+\pmowner{karstenb}{16623}
+\pmmodifier{karstenb}{16623}
+\pmtitle{alternate integral representation of beta function (2)}
+\pmrecord{8}{41299}
+\pmprivacy{1}
+\pmauthor{karstenb}{16623}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33B15}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage[sort&compress]{natbib}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%%\usepackage{xypic}
+
+
+% commands
+\newcommand{\comment}[1]{\small{(\,\textit{#1}\;)}}
+
+
+\begin{document}
+Substitute $x := \frac{1}{1+s}$, $dx = \frac{-1}{(1 + s)^2}\,ds$:
+\begin{align*}
+\int_{0}^{1} x^{p-1} (1 - x)^{q-1} \,dx &= \int_{0}^{\infty} \frac{1}{(1+s)^{p+1}} \left(\frac{s}{1+s}\right)^{q-1}\,ds \\
+&= \int_{0}^{\infty} \frac{s^{q-1}}{(1 + s)^{p+q}} \,ds
+\end{align*}
+
+Since $B(p,q) = B(q,p)$ this gives:
+\begin{align*}
+\int_{0}^{\infty} \frac{s^{p-1}}{(1 + s)^{p+q}} \,ds &= \frac{\Gamma(p) \Gamma(q)}{\Gamma(p+q)}
+\end{align*}
+%%%%%
+%%%%%
+\end{document}

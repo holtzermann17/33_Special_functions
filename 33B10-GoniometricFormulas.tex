@@ -1,0 +1,280 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GoniometricFormulas}
+\pmcreated{2013-03-22 17:00:40}
+\pmmodified{2013-03-22 17:00:40}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{goniometric formulas}
+\pmrecord{39}{39293}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33B10}
+\pmclassification{msc}{26A09}
+\pmsynonym{trigonometric identities}{GoniometricFormulas}
+\pmsynonym{goniometric formulae}{GoniometricFormulas}
+\pmrelated{Trigonometry}
+\pmrelated{DefinitionsInTrigonometry}
+\pmrelated{ExampleOnSolvingAFunctionalEquation}
+\pmrelated{IntegrationOfRationalFunctionOfSineAndCosine}
+\pmrelated{WeierstrassSubstitutionFormulas}
+\pmrelated{TangentOfHalvedAngle}
+\pmrelated{ExampleOfTelescopingSum}
+\pmrelated{DerivativeForParametricForm}
+\pmrelated{ComplementaryAngles}
+\pmrelated{S}
+\pmdefines{supplement formula}
+\pmdefines{complement formula}
+\pmdefines{half angle formula}
+\pmdefines{product formula}
+\pmdefines{Pythagorean identities}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{connections}
+\PMlinkescapeword{formula}
+\PMlinkescapeword{formulas}
+
+The \PMlinkescapetext{word} {\em goniometric} (from Greek $\gamma\omega\nu${\em\'{i}}$\alpha$ ``angle'' and $\mu\varepsilon\tau\varrho\iota\kappa${\em\'{o}}$\varsigma$ ``measuring'') concerns the trigonometric functions and their mutual connections. There are a great amount of formulas involving these functions (usually for real arguments).
+
+\begin{enumerate}
+\item Pythagorean identities
+
+\begin{itemize}
+\item $\sin^2{x}+\cos^2{x} = 1$
+\item $\tan^2{x}+1 = \sec^2{x}$
+\item $1+\cot^2{x} = \csc^2{x}$
+\end{itemize}
+
+\item Fractional identities
+
+\begin{itemize}
+\item $\displaystyle \tan{x} = \frac{\sin{x}}{\cos{x}}$
+\item $\displaystyle \cot{x} = \frac{\cos{x}}{\sin{x}}$
+\item $\displaystyle \cot{x} = \frac{1}{\tan{x}}$
+\item $\displaystyle \tan{x} = \frac{1}{\cot{x}}$
+\item $\displaystyle \csc{x} = \frac{1}{\sin{x}}$
+\item $\displaystyle \sec{x} = \frac{1}{\cos{x}}$
+\end{itemize}
+
+\item Formulas involving \PMlinkname{radicals}{Radical6}
+
+\begin{itemize}
+\item $\displaystyle \sin{x} = \pm\frac{\tan{x}}{\sqrt{1+\tan^2{x}}}$
+\item $\displaystyle \cos{x} = \pm\frac{1}{\sqrt{1+\tan^2{x}}}$
+\end{itemize}
+
+\item Weierstrass substitution formulas and related formula for $\tan x$
+
+\begin{itemize}
+\item $\displaystyle \sin{x} = \frac{\displaystyle 2\tan\left( \frac{x}{2} \right)}{\displaystyle 1+\tan^2\left( \frac{x}{2} \right)}$
+\item $\displaystyle \cos{x} = \frac{\displaystyle 1-\tan^2\left( \frac{x}{2} \right)}{\displaystyle 1+\tan^2\left( \frac{x}{2} \right)}$
+\item $\displaystyle \tan{x} = \frac{\displaystyle 2\tan\left( \frac{x}{2} \right)}{\displaystyle 1-\tan^2\left( \frac{x}{2} \right)}$
+\end{itemize}
+
+\item Trigonometric functions of a purely imaginary number
+
+\begin{itemize}
+\item $\sin(ix)=i\sinh x$
+\item $\cos(ix)=\cosh x$
+\item $\tan(ix)=i\tanh x$
+\item $\cot(ix)=i\coth x$
+\item $\csc(ix)=i\operatorname{csch}x$
+\item $\sec(ix)=\operatorname{sech}x$
+\end{itemize}
+
+\item \PMlinkname{Addition formulas and subtraction formulas}{AdditionFormulasForSineAndCosine}
+
+\begin{itemize}
+\item $\sin(x \pm y) = \sin{x}\cos{y}\pm\cos{x}\sin{y}$
+\item $\cos(x \pm y) = \cos{x}\cos{y}\mp\sin{x}\sin{y}$
+\item $\displaystyle \tan(x \pm y) = \frac{\tan{x}\pm\tan{y}}{1\mp\tan{x}\tan{y}}$
+\end{itemize}
+
+\item Formulas for trigonometric functions of a complex number
+
+\begin{itemize}
+\item $\sin(x+iy) = \sin x\cosh y+i\cos x\sinh y$
+\item $\cos(x+iy) = \cos x\cosh y-i\sin x\sinh y$
+\item $\displaystyle \tan(x+iy) = \frac{\tan x+i\tanh y}{1-i\tan x\tanh y}$
+\end{itemize}
+
+\item Complement formulas
+
+\begin{itemize}
+\item $\displaystyle \sin\left(\frac{\pi}{2}-x\right) = \cos{x}$
+\item $\displaystyle \cos\left(\frac{\pi}{2}-x\right) = \sin{x}$
+\item $\displaystyle \tan\left(\frac{\pi}{2}-x\right) = \cot{x}$
+\end{itemize}
+
+\item Supplement formulas
+
+\begin{itemize}
+\item $\sin(\pi-x) = \sin{x}$
+\item $\cos(\pi-x) = -\cos{x}$
+\item $\tan(\pi-x) = -\tan{x}$
+\end{itemize}
+
+\item Explement formulas
+
+\begin{itemize}
+\item $\sin(2\pi-x) = -\sin{x}$
+\item $\cos(2\pi-x) = \cos{x}$
+\item $\tan(2\pi-x) = -\tan{x}$
+\end{itemize}
+
+\item \PMlinkescapetext{Opposite} angle formulas
+
+\begin{itemize}
+\item $\sin(-x) = -\sin{x}$
+\item $\cos(-x) = \cos{x}$
+\item $\tan(-x) = -\tan{x}$
+\end{itemize}
+
+\item \PMlinkname{Periodicity}{Periodic} formulas
+
+\begin{itemize}
+\item $\sin(x+2\pi) = \sin{x}$
+\item $\cos(x+2\pi) = \cos{x}$
+\item $\tan(x+\pi) = \tan{x}$
+\end{itemize}
+
+\item Double angle formulas
+
+\begin{itemize}
+\item $\sin(2x) = 2\sin{x}\cos{x}$
+\item $\cos(2x) = \cos^2{x}-\sin^2{x} = 2\cos^2{x}-1 = 1-2\sin^2{x}$
+\item $\displaystyle \tan(2x) = \frac{2\tan{x}}{1-\tan^2{x}}$
+\end{itemize}
+
+\item Triple angle formulas
+
+\begin{itemize}
+\item $\sin(3x) = 3\sin{x}-4\sin^3{x} = (4\cos^2{x}-1)\sin{x}$
+\item $\cos(3x) = 4\cos^3{x}-3\cos{x} = (1-4\sin^2{x})\cos{x}$
+\item $\displaystyle \tan(3x) = \frac{3\tan{x}-\tan^3{x}}{1-3\tan^2{x}}$
+\end{itemize}
+
+\item Half angle formulas
+
+\begin{itemize}
+\item $\displaystyle \sin\left(\frac{x}{2}\right) = \pm\sqrt{\frac{1-\cos{x}}{2}}$
+\item $\displaystyle \cos\left(\frac{x}{2}\right) = \pm\sqrt{\frac{1+\cos{x}}{2}}$
+\item $\displaystyle \tan\left(\frac{x}{2}\right) = \frac{\sin{x}}{1+\cos{x}} = \frac{1-\cos{x}}{\sin{x}} = \pm\sqrt{\frac{1-\cos{x}}{1+\cos{x}}}$
+\end{itemize}
+
+\item Prosthaphaeresis formulas
+
+\begin{itemize}
+\item $\displaystyle \sin{x}+\sin{y} = 2\sin\left(\frac{x+y}{2}\right)\cos\left(\frac{x-y}{2}\right)$
+\item $\displaystyle \sin{x}-\sin{y} = 2\sin\left(\frac{x-y}{2}\right)\cos\left(\frac{x+y}{2}\right)$
+\item $\displaystyle \cos{x}+\cos{y} = 2\cos\left(\frac{x+y}{2}\right)\cos\left(\frac{x-y}{2}\right)$
+\item $\displaystyle \cos{x}-\cos{y} = -2\sin\left(\frac{x+y}{2}\right)\sin\left(\frac{x-y}{2}\right)$
+\end{itemize}
+
+\item \PMlinkescapetext{Product} formulas
+
+\begin{itemize}
+\item $\displaystyle \sin{x}\,\sin{y} = \frac{\cos(x-y)-\cos(x+y)}{2}$
+\item $\displaystyle \cos{x}\,\sin{y} = \frac{\sin(x+y)-\sin(x-y)}{2}$
+\item $\displaystyle \cos{x}\,\cos{y} = \frac{\cos(x-y)+\cos(x+y)}{2}$
+\end{itemize}
+
+\item Other sums and differences
+
+\begin{itemize}
+\item $\displaystyle \tan{x}\pm\tan{y} = \frac{\sin(x \pm y)}{\cos{x}\,\cos{y}}$
+\item $\displaystyle \cot{x}\pm\cot{y} = \frac{\sin(y \pm x)}{\sin{x}\,\sin{y}}$
+\item $\displaystyle \cos{x}\pm\sin{x} = \sqrt{2}\sin\!\left(\frac{\pi}{4}\pm x\right) =   \sqrt{2}\cos\!\left(\frac{\pi}{4}\mp x\right)$
+\end{itemize}
+
+\item \PMlinkescapetext{Linearization} formulas
+
+\begin{itemize}
+
+\item Second power
+
+\begin{itemize}
+\item $\displaystyle \sin^2{x} = \frac{1-\cos(2x)}{2}$ 
+\item $\displaystyle \cos^2{x} = \frac{1+\cos(2x)}{2}$
+\item $\displaystyle \tan^2{x} = \frac{1-\cos(2x)}{1+\cos(2x)}$
+\end{itemize}
+
+\item Third power
+
+\begin{itemize}
+\item $\displaystyle \sin^3{x} = \frac{3\sin{x}-\sin(3x)}{4}$
+\item $\displaystyle \cos^3{x} = \frac{3\cos{x}+\cos(3x)}{4}$
+\item $\displaystyle \tan^3{x} = \frac{3\sin{x}-\sin(3x)}{3\cos{x}+\cos(3x)}$
+\end{itemize}
+
+\item Fourth power
+
+\begin{itemize}
+\item $\displaystyle \sin^4{x} = \frac{\cos(4x)-4\cos(2x)+3}{8}$
+\item $\displaystyle \cos^4{x} = \frac{\cos(4x)+4\cos(2x)+3}{8}$
+\item $\displaystyle \tan^4{x} = \frac{\cos(4x)-4\cos(2x)+3}{\cos(4x)+4\cos(2x)+3}$
+\end{itemize}
+
+\end{itemize}
+
+\item Recursion formulas
+
+\begin{itemize}
+\item $\displaystyle\sin[(n\!+\!1)x] = 2\cos{x}\,\sin(nx)-\sin[(n\!-\!1)x]$ 
+\item $\displaystyle\cos[(n\!+\!1)x] = 2\cos{x}\,\cos(nx)-\cos[(n\!-\!1)x]$
+\end{itemize}
+
+\item \PMlinkname{Exponential formulas}{ExponentialFunction}
+
+\begin{itemize}
+\item $e^{ix}=\cos x+i\sin x$
+\item $e^{-ix}=\cos x-i\sin x$
+\item $\displaystyle \cos x=\frac{e^{ix}+e^{-ix}}{2}$
+\item $\displaystyle \sin x=\frac{e^{ix}-e^{-ix}}{2i}$
+\item $\displaystyle \tan x=\frac{e^{ix}-e^{-ix}}{i(e^{ix}+e^{-ix})}$
+\end{itemize}
+
+\item Some special formulas
+
+\begin{itemize}
+\item $\displaystyle\tan{\left(x\!+\!\frac{\pi}{4}\right)} = 
+\frac{\cos{x}+\sin{x}}{\cos{x}-\sin{x}} = \pm\sqrt{\frac{1+\sin{2x}}{1-\sin{2x}}}$
+\item $\displaystyle\tan x+\sec x = \tan\left(\frac{x}{2}+\frac{\pi}{4}\right)$
+\item $\displaystyle\tan\left(\frac{x\pm y}{2}\right) = 
+ \frac{\sin{x}\pm\sin{y}}{\cos{x}+\cos{y}} = \frac{\cos{y}-\cos{x}}{\sin{x}\mp\sin{y}}$
+\item $\displaystyle\tan\left(\frac{x+y}{2}\right)\,\tan\left(\frac{x-y}{2}\right) =  
+ \frac{\cos{y}-\cos{x}}{\cos{y}+\cos{x}}$
+\item $\displaystyle\sin(x+y)\,\sin(x-y) = \sin^2x-\sin^2y$
+\end{itemize}
+
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

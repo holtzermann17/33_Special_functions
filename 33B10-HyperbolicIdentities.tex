@@ -1,0 +1,129 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HyperbolicIdentities}
+\pmcreated{2013-03-22 17:50:42}
+\pmmodified{2013-03-22 17:50:42}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{hyperbolic identities}
+\pmrecord{11}{40316}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33B10}
+\pmclassification{msc}{26A09}
+\pmsynonym{hyperbolic formulas}{HyperbolicIdentities}
+\pmsynonym{hyperbolic formulae}{HyperbolicIdentities}
+\pmrelated{GoniometricFormulae}
+\pmrelated{AdditionAndSubtractionFormulasForHyperbolicFunctions}
+\pmrelated{ExamplesOfPeriodicFunctions}
+\pmrelated{TaylorSeriesOfHyperbolicFunctions}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\csch}{\operatorname{csch}}
+
+\newcommand{\ds}{\displaystyle}
+\begin{document}
+\PMlinkescapeword{formulas}
+
+There are many formulas involving hyperbolic functions, many of which are \PMlinkescapetext{similar} to formulas for trigonometric functions.  Below is a list of some of these formulas (usually for real arguments).
+
+\begin{enumerate}
+\item Hyperbolic version of Pythagorean identities
+
+\begin{itemize}
+\item $\cosh^2 x-\sinh^2 x=1$
+\item $1-\tanh^2 x=\sech^2 x$
+\item $\coth^2 x-1=\csch^2 x$
+\end{itemize}
+
+\item Fractional identities
+
+\begin{itemize}
+\item $\ds \tanh x=\frac{\sinh x}{\cosh x}$
+\item $\ds \coth x=\frac{\cosh x}{\sinh x}$
+\item $\ds \coth x=\frac{1}{\tanh x}$
+\item $\ds \tanh x=\frac{1}{\coth x}$
+\item $\ds \csch x=\frac{1}{\sinh x}$
+\item $\ds \sech x=\frac{1}{\cosh x}$
+\end{itemize}
+
+\item Hyperbolic functions of a purely imaginary number
+
+\begin{itemize}
+\item $\sinh(ix)=i\sin x$
+\item $\cosh(ix)=\cos x$
+\item $\tanh(ix)=i\tan x$
+\item $\cosh(ix)=i\cot x$
+\item $\csch(ix)=i\csc x$
+\item $\sech(ix)=\sec x$
+\end{itemize}
+
+\item \PMlinkname{Addition formulas and subtraction formulas}{AdditionAndSubtractionFormulasForHyperbolicFunctions}
+
+\begin{itemize}
+\item $\sinh(x\pm y)=\sinh x\cosh y\pm\cosh x\sinh y$
+\item $\cosh(x\pm y)=\cosh x\cosh y\pm\sinh x\sinh y$
+\item $\ds \tanh(x\pm y)=\frac{\tanh x\pm\tanh y}{1\pm\tanh x\tanh y}$
+\end{itemize}
+
+\item Formulas for hyperbolic functions of a complex number
+
+\begin{itemize}
+\item $\sinh(x+iy)=\sinh x\cos y+i\cosh x\sin y$
+\item $\cosh(x+iy)=\cosh x\cos y+i\sinh x\sin y$
+\item $\ds \tanh(x+iy)=\frac{\tanh x+i\tan y}{1+i\tanh x\tan y}$
+\end{itemize}
+
+\item Opposite formulas
+
+\begin{itemize}
+\item $\sinh(-x)=-\sinh x$
+\item $\cosh(-x)=\cosh x$
+\item $\tanh(-x)=-\tanh x$
+\end{itemize}
+
+\item Double argument formulas
+
+\begin{itemize}
+\item $\sinh(2x)=2\sinh x\cosh x$
+\item $\cosh(2x)=\cosh^2 x+\sinh^2 x=2\cosh^2 x-1=1+2\sinh^2 x$
+\item $\ds \tanh(2x)=\frac{2\tanh x}{1+\tanh^2 x}$
+\end{itemize}
+
+\item \PMlinkname{Periodicity}{Periodic} formulas
+
+\begin{itemize}
+\item $\sinh(z+2\pi i) = \sinh{z}$
+\item $\cosh(z+2\pi i) = \cosh{z}$
+\item $\tanh(z+\pi i) = \tanh{z}$
+\end{itemize}
+
+\PMlinkname{Cf}{Cf}. the periodicity of exponential function.
+
+\item \PMlinkname{Exponential formulas}{ExponentialFunction}
+
+\begin{itemize}
+\item $\ds \cosh x=\frac{e^x+e^{-x}}{2}$
+\item $\ds \sinh x=\frac{e^x-e^{-x}}{2}$
+\item $\ds \tanh x=\frac{e^x-e^{-x}}{e^x+e^{-x}}$
+\item $e^x=\cosh x+\sinh x$
+\item $e^{-x}=\cosh x-\sinh x$
+\end{itemize}
+
+Note that the first three formulas given in this \PMlinkescapetext{section} are definitions.
+
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

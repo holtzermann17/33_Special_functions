@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AdditionAndSubtractionFormulasForTangent}
+\pmcreated{2013-03-22 16:59:04}
+\pmmodified{2013-03-22 16:59:04}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{addition and subtraction formulas for tangent}
+\pmrecord{8}{39261}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33B10}
+\pmclassification{msc}{26A09}
+\pmsynonym{addition and subtraction formulae for tangent}{AdditionAndSubtractionFormulasForTangent}
+\pmsynonym{addition formula for tangent}{AdditionAndSubtractionFormulasForTangent}
+\pmsynonym{subtraction formula for tangent}{AdditionAndSubtractionFormulasForTangent}
+\pmrelated{AdditionFormula}
+\pmrelated{DefinitionsInTrigonometry}
+\pmrelated{AngleBetweenTwoLines}
+\pmrelated{AdditionFormulas}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+The addition formula for tangent will be achieved via brute \PMlinkescapetext{force} from the addition formulas for sine and cosine.
+
+\begin{center}
+$\begin{array}{rl}
+\tan(\alpha+\beta) & =\displaystyle \frac{\sin(\alpha+\beta)}{\cos(\alpha+\beta)} \\
+& \\
+& =\displaystyle \frac{\sin \alpha \cos \beta +\cos \alpha \sin \beta}{\cos \alpha \cos \beta -\sin \alpha \sin \beta} \\
+& \\
+& =\displaystyle \frac{ \displaystyle \frac{\sin \alpha}{\cos \alpha} \cdot \frac{\cos \beta}{\cos \beta}+\displaystyle \frac{\cos \alpha}{\cos \alpha} \cdot \frac{\sin \beta}{\cos \beta}}{ \displaystyle \frac{\cos \alpha}{\cos \alpha} \cdot \frac{\cos \beta}{\cos \beta}-\frac{\sin \alpha}{\cos \alpha} \cdot \frac{\sin \beta}{\cos \beta}} \\
+& \\
+& =\displaystyle \frac{ \tan \alpha \cdot 1+1 \cdot \tan \beta}{1 \cdot 1-\tan \alpha \tan \beta} \\
+& \\
+& =\displaystyle \frac{ \tan \alpha+\tan \beta}{1-\tan \alpha \tan \beta} \end{array}$
+\end{center}
+
+Note that $\tan$ is an odd function, \PMlinkname{i.e.}{Ie} $\tan(-x)=-\tan x$.  This fact enables us to obtain the subtraction formula for tangent.
+
+$$\tan(\alpha-\beta)=\tan(\alpha+(-\beta))=\frac{ \tan \alpha+\tan(-\beta)}{1-\tan \alpha \tan(-\beta)}=\frac{ \tan \alpha-\tan \beta}{1+\tan \alpha \tan \beta}$$
+%%%%%
+%%%%%
+\end{document}

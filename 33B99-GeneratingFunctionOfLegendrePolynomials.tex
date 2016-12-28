@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneratingFunctionOfLegendrePolynomials}
+\pmcreated{2015-03-08 20:29:06}
+\pmmodified{2015-03-08 20:29:06}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{generating function of Legendre polynomials}
+\pmrecord{17}{41793}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33B99}
+\pmclassification{msc}{30D10}
+\pmclassification{msc}{30B10}
+%\pmkeywords{generating function}
+%\pmkeywords{power series}
+\pmrelated{GeneratingFunctionOfHermitePolynomials}
+\pmrelated{GeneratingFunctionOfLaguerrePolynomials}
+\pmrelated{VariantOfCauchyIntegralFormula}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+For finding the generating function 
+$$F(t) \;=\; \sum_{n=0}^\infty P_n(z)t^n$$
+of the sequence of the Legendre polynomials\\
+$P_0(z) \;=\; 1$ \\
+$P_1(z) \;=\; z$ \\
+$P_2(z) \;=\; \frac{1}{2}(3z^2\!-\!1)$ \\
+$P_3(x) \;=\; \frac{1}{2}(5z^3\!-\!3z)$ \\
+$P_4(z) \;=\; \frac{1}{8}(35z^4\!-\!30z^2\!+\!3)$ \\
+$P_5(z) \;=\; \frac{1}{8}(63z^5\!-\!70z^3\!+\!15z)$\\
+$\cdots \qquad\;\; \cdots$\\
+we have to present $P_n(z)$ as the general coefficient of Taylor series in $t$, 
+i.e. as the $n$th derivative of some $F(t)$ in the origin, divided by the factorial $n!$.\, The Cauchy integral formula offers the chance to implement that.
+
+Starting from the \PMlinkid{Rodrigues formula}{11983} of Legendre polynomials, we may write
+$$P_n(z) \;=\; \frac{1}{2^nn!}\frac{d^n}{dz^n}(z^2\!-\!1)^n \;=\; 
+\frac{1}{2^nn!}\frac{n!}{2i\pi}\oint_c\frac{(\zeta^2\!-\!1)^n}{(\zeta\!-\!z)^{n+1}}d\zeta\;=\; 
+\frac{1}{2i\pi}\oint_c\left(\frac{1}{2}\frac{\zeta^2\!-\!1}{\zeta\!-\!z}\right)^n\!\frac{d\zeta}{\zeta\!-\!z},$$
+where the contour $c$ runs anticlockwise once around the point $z$.\, The change of variable
+$$\frac{\zeta^2\!-\!1}{2(\zeta\!-\!z)} \;=\; \frac{1}{t}, 
+\qquad d\zeta \;=\; \frac{zt\!-\!1\!-\!\sqrt{1\!-\!zt\!+\!t^2}}{t^2\sqrt{1\!-\!zt\!+\!t^2}}dt$$
+gives
+$$P_n(z) \;=\; -\frac{1}{2i\pi}\oint_{c'}\frac{dt}{t^nt\sqrt{1\!-\!zt\!+\!t^2}}$$
+where $t$ must go round the origin clockwise, but in
+$$P_n(z) \;=\; \frac{1}{n!}\cdot\frac{n!}{2i\pi}\oint_{c'}\frac{dt}{\sqrt{1\!-\!zt\!+\!t^2}\cdot(t\!-\!0)^{n+1}}$$
+anticlockwise.\, This is, by Cauchy integral formula again, 
+$$P_n(z) \;=\; \frac{1}{n!}\left[\frac{d^n}{dt^n}\frac{1}{\sqrt{1\!-\!zt\!+\!t^2}}\right]_{t=0}.$$
+This means that
+$$F(t) \;:=\; \frac{1}{\sqrt{1\!-\!zt\!+\!t^2}}$$
+is the searched generating function of the Legendre polynomials:
+$$\frac{1}{\sqrt{1\!-\!zt\!+\!t^2}} \;=\; P_0(z)+P_1(z)t+P_2(z)t^2+P_3(z)t^3+\ldots$$\\
+
+
+Cf. the generating function of the Bessel functions.
+
+
+%%%%%
+%%%%%
+\end{document}

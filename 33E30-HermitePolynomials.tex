@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HermitePolynomials}
+\pmcreated{2013-03-22 15:16:25}
+\pmmodified{2013-03-22 15:16:25}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Hermite polynomials}
+\pmrecord{28}{37061}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33E30}
+\pmclassification{msc}{33B99}
+\pmclassification{msc}{26C05}
+\pmclassification{msc}{26A09}
+\pmclassification{msc}{12D99}
+\pmrelated{SubstitutionNotation}
+\pmrelated{AppellSequence}
+\pmrelated{LaguerrePolynomial}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+The polynomial solutions of the Hermite differential equation, with $n$ a non-negative integer, are usually normed so that the highest \PMlinkname{degree}{PolynomialRing} \PMlinkescapetext{term} is $(2z)^n$ and called the {\em Hermite polynomials} $H_n(z)$.\, The Hermite polynomials may be defined explicitly by
+\begin{align}
+H_n(z) \;:=\; (-1)^ne^{z^2}\frac{d^n}{dz^n}e^{-z^2},
+\end{align}
+since this is a polynomial having the highest \PMlinkescapetext{degree term} $(2z)^n$ and satisfying the Hermite equation.\, The equation (1) is the Rodrigues's formula for Hermite polynomials.\, Using the Fa\`a di Bruno's formula, one gets from (1) also
+$$H_n(x) \;=\; (-1)^n\!\sum_{m_1+2m_2=n}\frac{n!}{m_1!m_2!}(-1)^{m_1+m_2}(2x)^{m_1}.$$ 
+
+The first six Hermite polynomials are
+
+$H_0(z) \;\equiv\; 1,$\\
+$H_1(z) \;\equiv\; 2z,$\\
+$H_2(z) \;\equiv\; 4z^2\!-\!2,$\\
+$H_3(z) \;\equiv\; 8z^3\!-\!12z,$\\
+$H_4(z) \;\equiv\; 16z^4\!-\!48z^2\!+\!12,$\\
+$H_5(z) \;\equiv\; 32z^5\!-\!160z^3\!+\!120z,$
+
+and the general \PMlinkescapetext{polynomial form} is
+$$H_n(z) \;\equiv\; (2z)^n-\frac{n(n\!-\!1)}{1!}(2z)^{n-2}
++\frac{n(n\!-\!1)(n\!-\!2)(n\!-\!3)}{2!}(2z)^{n-4}-+\ldots$$\\
+
+Differentiating this termwise gives
+$$H'_n(z) \;=\; 2n\!\left[(2z)^{n-1}-\frac{(n\!-\!1)(n\!-\!2)}{1!}(2z)^{n-3}+
+\frac{(n\!-\!1)(n\!-\!2)(n\!-\!3)(n\!-\!4)}{2!}(2z)^{n-5}-+\ldots\right]\!,$$
+i.e.
+\begin{align}
+H'_n(z) \;=\; 2nH_{n-1}(z).
+\end{align}
+The Hermite polynomials are sometimes scaled to such ones $\mathrm{He_n}$ which obey the differentiation rule
+\begin{align}
+\mathrm{He}'_n(z) \;=\; n\mathrm{He}_{n-1}(z).
+\end{align}
+Such Hermite polynomials form an Appell sequence.
+
+
+We shall now show that the Hermite polynomials form an \PMlinkname{orthogonal set}{OrthogonalPolynomials} on the interval \,$(-\infty,\,\infty)$\, with the \PMlinkname{weight factor}{OrthogonalPolynomials} $e^{-x^2}$.\, Let\, 
+$m < n$;\, using (1) and \PMlinkname{integrating by parts}{IntegrationByParts} we get
+\begin{align*}   
+(-1)^n\!\int_{-\infty}^\infty H_m(x)H_n(x)e^{-x^2}\,dx &\;=\; 
+\int_{-\infty}^\infty H_m(x)\frac{d^ne^{-x^2}}{dx^n}\,dx\\ &\;=\;
+ \sijoitus{-\infty}{\quad\infty}\!H_m(x)\frac{d^{n-1}e^{-x^2}}{dx^{n-1}}
+-\int_{-\infty}^\infty H'_m(x)\frac{d^{n-1}e^{-x^2}}{dx^{n-1}}\,
+dx.
+\end{align*}
+The substitution portion here equals to zero because $e^{-x^2}$ and its derivatives vanish at $\pm\infty$.\, Using then (2) we obtain
+  $$\int_{-\infty}^\infty H_m(x)H_n(x)e^{-x^2}\,dx \;=\; 
+2(-1)^{1+n}m\int_{-\infty}^\infty H_{m-1}(x)\frac{d^{n-1}e^{-x^2}}{dx^{n-1}}\,dx.$$
+Repeating the integration by parts gives the result
+\begin{align*}
+\int_{-\infty}^\infty H_m(x)H_n(x)e^{-x^2}\,dx &\;=\; 
+2^m(-1)^{m+n}m!\int_{-\infty}^\infty H_0(x)\frac{d^{n-m}e^{-x^2}}{dx^{n-m}}\,dx\\ &\;=\;
+ 2^m(-1)^{m+n}m!\!\sijoitus{-\infty}{\quad\infty}\frac{d^{n-m-1}e^{-x^2}}{dx^{n-m-1}} \;=\; 0,
+\end{align*}
+whereas in the case\, $m = n$\, the result
+$$\int_{-\infty}^\infty (H_n(x))^2e^{-x^2}\,dx \;=\;
+ 2^n(-1)^{2n}n!\int_{-\infty}^\infty e^{-x^2}\,dx \;=\; 2^nn!\sqrt{\pi}$$
+(see area under Gaussian curve).
+The results \PMlinkescapetext{mean} that the functions \,$x \mapsto\frac{H_n(x)}{\sqrt{2^nn!\sqrt{\pi}}}e^{-\frac{x^2}{2}}$\, form an orthonormal set on\, $(-\infty,\,\infty)$.\\
+
+The Hermite polynomials are used in the quantum mechanical treatment of a harmonic oscillator, the wave functions of which have the form
+    $$\xi \;\,\mapsto\,\; \Psi_n(\xi) \;=\; C_nH_n(\xi)e^{-\frac{\xi^2}{2}}.$$
+%%%%%
+%%%%%
+\end{document}

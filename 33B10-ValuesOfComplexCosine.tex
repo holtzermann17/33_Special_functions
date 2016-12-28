@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ValuesOfComplexCosine}
+\pmcreated{2013-03-22 17:36:29}
+\pmmodified{2013-03-22 17:36:29}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{values of complex cosine}
+\pmrecord{16}{40024}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33B10}
+\pmclassification{msc}{30A99}
+%\pmkeywords{cosine function}
+%\pmkeywords{zeros of cosine}
+\pmrelated{RealPart}
+\pmrelated{PropertiesOfQuadraticEquation}
+\pmrelated{TakingSquareRootAlgebraically}
+\pmrelated{ComplexLogarithm}
+\pmdefines{period strip}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{root} \PMlinkescapeword{roots}
+
+Since the complex cosine function \,$z \mapsto \cos{z}$\, has the prime period $2\pi$, the cosine attains all of its possible values in one of its {\em period strips}, for example in the period strip
+\begin{align}
+   \{z \in \mathbb{C}\,\vdots\;\, -\pi \;\leqq\; \mbox{Re}(z) \;<\; \pi\}.
+\end{align}
+For finding out which values the cosine function can attain in a period strip, we solve the equation \,$\cos{z} = w$,\, where $w$ is any complex number.  Using \PMlinkname{Euler's formula}{ComplexSineAndCosine}
+     $$\cos{z} \;=\; \frac{e^{iz}+e^{-iz}}{2},$$
+the equation may be written as
+\begin{align}
+(e^{iz})^2-2we^{iz}+1 \;=\; 0.
+\end{align}
+This is a quadratic equation in $e^{iz}$, whence we obtain the two \PMlinkname{roots}{Equation}
+       $$e^{iz} \;=\; w\pm\sqrt{w^2-1}.$$
+The product of the roots is 1, and therefore the roots are distinct from zero for all values of $w$.  If we set
+    $$w+\sqrt{w^2-1} \;=\; re^{i\varphi} \quad (-\pi \;\leqq\; \varphi \;<\; \pi),$$
+the other root is the inverse number
+     $$w-\sqrt{w^2-1} \;=\; \frac{1}{r}e^{-i\varphi}.$$
+The solution of the equation
+       $$e^{iz} \;=\; re^{i\varphi}$$
+is then obtained by taking the complex logarithm
+    $$z \;=\; z_1 \;=\; \frac{1}{i}\log(re^{i\varphi}) \;=\; \varphi-i\ln{r}+n\cdot2\pi \quad (n\;\in\;\mathbb{Z}),$$
+and the other solution of (2) is
+     $$z \;=\; z_2 \;=\; -\varphi+i\ln{r}+n\cdot2\pi \quad (n\;\in\;\mathbb{Z}).$$
+In the period strip (1), we have one solution $z_1$ and one solution $z_2$, both obtained with the value\, $n = 0$\, (except $z_2$ in the case\, $\varphi = -\pi$\, with\, $n = -1$).\, In (1), the points $z_1$ and $z_2$ are situated symmetrically with respect the origin.\, In the cases\, $w = 1$\, and\, $w = -1$,\, the equation (2) has double roots\, $z = 0$\, and\, $z = -\pi$,\, respectively; then we may say that $z_1$ and $z_2$ coincide.  Anyhow, we have the
+
+\textbf{Theorem.}  In every period strip, cosine attains any complex value at two points.\\
+
+\textbf{Example.}  The solution of the equation\, $\cos{z} = 2$\, is obtained from\, $e^{iz} = 2\!\pm\!\sqrt{3}$.  In the period strip (1) we get
+ $$z \;=\; \frac{1}{i}\log(2\!\pm\!\sqrt{3}) \;=\; -i\ln(2\!\pm\!\sqrt{3})+0\cdot2\pi.$$
+Since\, $2\!\pm\!\sqrt{3}$\, are inverse numbers of each other, we have as result the purely imaginary numbers 
+\,$z = \pm{i}\ln(2\!+\!\sqrt{3})$.\\
+
+From trigonometry, we know that the real zeros of cosine are the odd multiples of $\displaystyle\frac{\pi}{2}$; from these points, $\displaystyle\pm\frac{\pi}{2}$ belong to the period strip (1).  Thus $\displaystyle\pm\frac{\pi}{2}$ are the only points of (1) where the cosine vanishes.  Therefore, according to the preceding theorem, the well-known points
+$$(2n\!+\!1)\frac{\pi}{2} \quad (n \;=\; 0,\,\pm1,\,\pm2,\,\ldots)$$
+are the only zeros of the cosine function on the whole complex plane.\\
+
+The values of complex cosine function may be transferred to the complex sine function by means of the complement formula 
+$$\sin{z} \;=\; \cos(\frac{\pi}{2}-z).$$
+One can think all points of the $z$-plane to bear the corresponding value of cosine, and then one can translate the plane in the direction of the real axis the distance $\displaystyle\frac{\pi}{2}$; then the values of the sine have been placed to their correct \PMlinkescapetext{places}.  So one has transferred also the above properties of cosine to sine.
+
+
+\begin{thebibliography}{8}
+\bibitem{L}{\sc Ernst Lindel\"of}: {\em Johdatus funktioteoriaan}.  Second edition. Mercatorin Kirjapaino Osakeyhti\"o, Helsinki (1936).
+\bibitem{NP}{\sc R. Nevanlinna \& V. Paatero}: {\em Funktioteoria}.  Kustannusosakeyhti\"o Otava, Helsinki (1963).
+\end{thebibliography} 
+
+
+
+ 
+
+
+
+%%%%%
+%%%%%
+\end{document}

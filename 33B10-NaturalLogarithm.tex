@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NaturalLogarithm}
+\pmcreated{2013-03-22 12:28:28}
+\pmmodified{2013-03-22 12:28:28}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{natural logarithm}
+\pmrecord{13}{32666}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33B10}
+\pmrelated{MatrixLogarithm}
+\pmrelated{ComplexLogarithm}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The natural logarithm of a number is the logarithm in base of Euler's number $e$. It can be defined as the map $\ln\colon\mathbb{R}_+\to\mathbb{R}$ satisfying
+\begin{equation}\label{eq:definition}
+\ln(x)\colon =\int_1^x\frac{1}{t}dt.
+\end{equation}
+Figure \ref{fig:graph} shows the graph of $\ln$.
+\begin{figure}[htbp]
+\begin{centering}
+\includegraphics[angle=270,scale=0.5]{logarithm.ps}
+\caption{The graph of $\ln(x)$.}\label{fig:graph}
+\end{centering}
+\end{figure}
+Instead of $\ln$ many mathematicians write $\log$, physicists (and calculators) however consider $\log$ as the symbol for the logarithm in base 10.
+One can show that the function defined in this way is the inverse of the exponential function. Indeed with equation (\ref{eq:definition}) we have
+$$\frac{d}{dx}\ln(e^x)=e^x\cdot\frac{1}{e^x}=1,$$
+so there exists $C\in\mathbb{R}$ such that
+$$\ln(e^x)=x+C.$$
+Since $\ln(e^0)=0$ we have $C=0$.
+One can also prove that the above integral has the defining properties of a logarithm. For example if $x,y\in\mathbb{R}_+$ we have
+\begin{eqnarray*}
+\ln(xy)&=&\int_1^x\frac{1}{t}\mathit{dt}+\int_x^{xy}\frac{1}{t}\mathit{dt}\\
+&=&\ln(x)+\int_x^{xy}\frac{1}{t}dt.
+\end{eqnarray*}
+Now applying the substitution law with $u\colon =\frac{t}{x}$ we have
+$$\int_x^{xy}\frac{1}{t}\mathit{dt}=\int_1^y\frac{1}{u}\mathit{du}=\ln(y),$$
+so we have
+$$\ln(xy)=\ln(x)+\ln(y).$$
+The natural logarithm can also be represented as a power series around $1$. For $-1<x\le 1$ we have
+\begin{equation}\label{eq:power}
+\ln(1+x)=\sum_{k=1}^\infty \frac{(-1)^{k+1}}{k}x^k.
+\end{equation}
+This series is divergent at $x=-1$ but for $x=1$ we have convergence due to Leibniz's theorem and obtain
+$$\ln(2)=\sum_{k=1}^\infty \frac{(-1)^{k+1}}{k}.$$
+In real analysis there is no reasonable way to extend the logarithm to negative numbers. In complex analysis the situation is a bit more complicated. Basically one can use the Euler relation to write a non-zero complex number $z$ in the form $z=Re^{i\varphi}$ with $R,\varphi\in\mathbb{R}$. 
+We could try to define the complex logarithm $\ln(z)$ to be $\ln(R)+i\varphi$. However $\varphi$ is unique only up to addition of a multiple of $2\pi$.
+While at first glance this does not appear to be very problematic, it actually prevents one from setting up a continuous logarithm on the complex plane (without 0, where the logarithm should be infinite). Say for example that we let the imaginary part of our logarithm take values from $-\pi$ to $\pi$. Then
+$$\lim_{\varphi\searrow-\pi}\ln e^{i\varphi}=-i\pi$$
+and
+$$\lim_{\varphi\nearrow\pi}\ln e^{i\varphi}=i\pi$$
+while $e^{i\varphi}\to-1$ for both limits. Therefore the logarithm we defined is not continuous at -1. The same argument allows one to show that it is not continuous on the negative real numbers. In fact you can only define a continuous complex logarithm on a sliced plane, i.e. the complex plane with a half-line starting at 0 removed. 
+%%%%%
+%%%%%
+\end{document}

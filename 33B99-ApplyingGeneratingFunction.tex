@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ApplyingGeneratingFunction}
+\pmcreated{2013-03-22 19:06:58}
+\pmmodified{2013-03-22 19:06:58}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{applying generating function}
+\pmrecord{11}{42010}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33B99}
+\pmclassification{msc}{33C45}
+\pmclassification{msc}{26C05}
+\pmclassification{msc}{26A42}
+\pmrelated{AreaUnderGaussianCurve}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{formula}
+The generating function of a function sequence carries information common to the members of the sequence.\, It may be utilised for deriving various properties, such as recurrence relations, orthogonality properties etc.\, We take as example
+\begin{align}
+e^{2zt-t^2} \;=\; \sum_{n=0}^\infty\frac{H_n(z)}{n!}t^n,
+\end{align}
+the \PMlinkid{generating function of the of Hermite polynomials}{11980}, and derive from it a recurrence relation and the \PMlinkname{orthonormality}{Orthonormal} formula.\\
+
+1.\, First we form the partial derivative with respect to $t$ of both \PMlinkescapetext{sides} of (1):
+$$(2z\!-\!2t)e^{2zt-t^2} \;=\; \sum_{m=1}^\infty\frac{H_m(z)}{(m\!-\!1)!}t^{m-1}$$
+Here we substitute (1) to the left hand side and rewrite the right hand side, getting
+$$\sum_{n=0}^\infty\frac{2zH_n(z)}{n!}t^n 
+-\sum_{n=1}^\infty\frac{2H_{n-1}(z)}{(n\!-\!1)!}t^n
+ \;=\; \sum_{n=0}^\infty\frac{H_{n+1}(z)}{n!}t^n,$$
+where we can compare the coefficients of $t^n$:
+$$\frac{2zH_n}{n!}-\frac{2H_{n-1}}{(n\!-\!1)!} \;=\; \frac{H_{n+1}}{n!} \qquad (n = 1,\,2,\,\ldots)$$
+Thus we have gotten the recurrence relation
+\begin{align}
+H_{n+1}(z) \;=\; 2zH_n(z)-2nH_{n-1}(z) \qquad (n = 1,\,2,\,\ldots).
+\end{align}
+Differentiating (1) partially with respect to $z$ enables respectively to find a formula expressing the derivative 
+$H_n'(z)$ via the \PMlinkescapetext{polynomials} themselves.\\
+
+2.\, We copy the equation (1) twice in the forms
+$$\sum_{n=0}^\infty\frac{H_n(x)}{n!}t^n \;=\; e^{2xt-t^2}, \quad 
+  \sum_{n=0}^\infty\frac{H_n(x)}{n!}u^n \;=\; e^{2xu-u^2},$$
+multiply these with each other and by $e^{-x^2}$ and then integrate the obtained equation termwise over 
+$\mathbb{R}$:
+\begin{align*}
+\sum_{m=0}^\infty\sum_{n=0}^\infty\left(\int_{-\infty}^\infty\!e^{-x^2}H_m(x)H_n(x)\,dx\right)\frac{t^mu^n}{m!n!} 
+\;=\; & \int_{-\infty}^\infty\!e^{-x^2}e^{2xt-t^2}e^{2xu-u^2}\,dx \\
+\;=\; & \int_{-\infty}^\infty\!e^{2x(t+u)-t^2-u^2-x^2}\,dx \\
+\;=\; & \int_{-\infty}^\infty\!e^{-[(t+u)^2-2(t+u)x+x^2]+2tu}\,dx \\
+\;=\; & e^{2tu}\!\int_{-\infty}^\infty\!e^{-[x-(t+u)]^2}\,dx \\
+\;=\; & e^{2tu}\!\int_{-\infty}^\infty\!e^{-y^2}\,dy \\
+\;=\; & e^{2tu}\sqrt{\pi} \\
+\;=\; & \sum_{\j=0}^\infty\sqrt{\pi}\frac{2^jt^ju^j}{j!} \\
+\;=\; & \sum_{m=0}^\infty\sum_{n=0}^\infty\left(\frac{\sqrt{\pi}}{n!}\cdot2^n\delta_{mn}\right)t^mu^n
+\end{align*}
+Thus we can infer that
+$$\frac{\int_{-\infty}^\infty\!e^{-x^2}H_m(x)H_n(x)\,dx}{m!n!} \;=\; \frac{\sqrt{\pi}}{n!}\cdot2^n\delta_{mn},$$
+which implies the orthonormality relation
+\begin{align}
+\int_{-\infty}^\infty\!e^{-x^2}H_m(x)H_n(x)\,dx \;=\; 2^mm!\,\delta_{mn}\sqrt{\pi}.
+\end{align}
+Cf. Hermite polynomials.
+
+%%%%%
+%%%%%
+\end{document}

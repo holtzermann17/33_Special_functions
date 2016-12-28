@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrthogonalityOfChebyshevPolynomialsFromRecursion}
+\pmcreated{2013-03-22 18:54:46}
+\pmmodified{2013-03-22 18:54:46}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{orthogonality of Chebyshev polynomials from recursion}
+\pmrecord{6}{41762}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33C45}
+\pmclassification{msc}{33D45}
+\pmclassification{msc}{42C05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+In this entry, we shall demonstrate the orthogonality
+relation of the Chebyshev polynomials from their
+recursion relation.  Recall that this relation reads as
+\[
+ T_{n+1} (x) - 2 x T_n (x) + T_{n-1} = 0
+\]
+with initial conditions $T_0 (x) = 1$ and $T_1 (x) = x$.
+The relation we seek to demonstrate is
+\[
+ \int_{-1}^{+1} dx \, 
+   {T_m (x) T_n (x) \over \sqrt {1 - x^2}} = 0
+\]
+when $m \neq n$.
+
+We start with the observation that $T_n$ is an even function
+when $n$ is even and an odd function when $n$ is odd.  That
+this is true for $T_0$ and $T_1$ follows immediately from their
+definitions.  When $n > 1$, we may induce this from the 
+recursion.  Suppose that $T_m (-x) = (-1)^m T_m (x)$ when 
+$m < n$. Then we have
+\begin{align*}
+ T_{n+1} (-x) &=
+  2 (-x) T_n (-x) - T_{n-1} (-x) \\ &=
+  - (-1)^{n} 2 x T_n (x) - (-1)^{n-1} T_{n-1} (x) \\ &=
+  (-1)^{n+1} (2 x T_n (x) - T_{n-1} (x)) \\ &=
+  (-1)^{n+1} T_{n+1} (x) .
+\end{align*}
+
+From this observation, we may immediately conclude half
+of orthogonality.  Suppose that $m$ and $n$ are nonnegative
+integers whose difference is odd.  Then $T_m (-x) T_n (-x) 
+= - T_m (x) T_n (x)$, so we have
+\[
+ \int_{-1}^{+1} dx \, 
+   {T_m (x) T_n (x) \over \sqrt {1 - x^2}} = 0
+\]
+because the integrand is an odd function of $x$.
+
+To cover the remaining cases, we shall proceed by induction.
+Assume that $T_k$ is orthogonal to $T_m$ whenever $m \le n$
+and $k \le n$ and $m \neq k$.  By the conclusions of last 
+paragraph, we know that $T_{n+1}$ is orthogonal to $T_n$.  
+Assume then that $m \le n-1$.  Using the recursion, we have
+\begin{align*}
+ \int_{-1}^{+1} dx \, 
+  {T_m (x) T_{n+1} (x) \over \sqrt {1 - x^2}} &=
+ 2 \int_{-1}^{+1} dx \, 
+  {x T_m (x) T_{n} (x) \over \sqrt {1 - x^2}} -
+ \int_{-1}^{+1} dx \, 
+  {T_m (x) T_{n-1} (x) \over \sqrt {1 - x^2}} \\ &=
+ \int_{-1}^{+1} dx \, 
+  {T_{m+1} (x) T_{n} (x) \over \sqrt {1 - x^2}} +
+ \int_{-1}^{+1} dx \, 
+  {T_{m-1} (x) T_{n} (x) \over \sqrt {1 - x^2}} -
+ \int_{-1}^{+1} dx \, 
+  {T_m (x) T_{n-1} (x) \over \sqrt {1 - x^2}}
+\end{align*}
+By our assumption, each of the three integrals is zero,
+hence $T_{n+1}$ is orthogonal to $T_m$, so we conclude
+that $T_k$ is orthogonal to $T_m$ when $m \le n+1$ and
+$k \le n+1$ and $m \neq k$.
+%%%%%
+%%%%%
+\end{document}

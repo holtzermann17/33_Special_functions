@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBohrMollerupTheorem}
+\pmcreated{2013-03-22 14:53:39}
+\pmmodified{2013-03-22 14:53:39}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{proof of Bohr-Mollerup theorem}
+\pmrecord{18}{36576}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33B15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+To show that the gamma function is logarithmically convex, we can examine the product representation:
+ $$\Gamma (x) = {1 \over x} e^{- \gamma x} \prod_{n = 1}^\infty {n \over x + n} e^{-x/n}$$
+Since this product converges absolutely for $x > 0$, we can take the logarithm term-by-term to obtain
+ $$\log \Gamma (x) = - \log x - \gamma x - \sum_{n = 1}^\infty \log \left( {n \over x + n} \right) - {x \over n}$$
+It is justified to differentiate this series twice because the series of derivatives is absolutely and uniformly convergent.
+ $${d^2 \over dx^2} \log \Gamma (x) = {1 \over x^2} + \sum_{n = 1}^\infty {1 \over (x + n)^2} = \sum_{n = 0}^\infty {1 \over (x + n)^2}$$
+Since every term in this series is positive, $\Gamma$ is logarithmically convex.  Furthermore, note that since each term is monotonically decreasing, $\log \Gamma$ is a decreasing function of $x$.  If $x > m$ for some integer $m$, then we can bound the series term-by-term to obtain
+ $${d^2 \over dx^2} \log \Gamma (x) < \sum_{n = 0}^\infty {1 \over (m + n)^2} = \sum_{n = m}^\infty {1 \over n^2}$$
+Therefore, as $x \to \infty$, $d^2 \Gamma / dx^2 \to 0$.
+
+Next, let $f$ satisfy the hypotheses of the Bohr-Mollerup theorem.  Consider the function $g$ defined as $e^{g(x)} = f(x) / \Gamma (x)$.  By hypothesis 3, $g(1) = 0$.  By hypothesis 2, $e^{g(x + 1)} = e^{g(x)}$, so $g(x+1) = g(x)$.  In other \PMlinkescapetext{words}, $g$ is periodic.
+
+Suppose that $g$ is not constant.  Then there must exist points $x_0$ and $x_1$ on the real axis such that $g(x_0) \neq g(x_1)$.  Suppose that $g(x_1) > g(x_0)$ for definiteness.  Since $g$ is periodic with period 1, we may assume without loss of generality that $x_0 < x_1 < x_0 + 1$.  Let $D_2$ denote the second divided difference of $g$:
+ $$D_2 = \Delta_2 (g; x_0, x_1, x_0 + 1) = - {g(x_0) \over x_0 - x_1} + {g(x_1) \over (x_1 - x_0)(x_1 - x_0 - 1)} - {g(x_0 + 1) \over x_0 - x_1 + 1}$$
+By our assumptions, $D_2 < 0$.  By linearity,
+ $$D_2 = \Delta_2 (\log f; x_0, x_1, x_0 + 1) - \Delta_2 (\log \Gamma; x_0, x_1, x_0 + 1)$$
+By periodicity, we have
+ $$D_2 = \Delta_2 (\log f; x_0 + n, x_1 + n, x_0 + n + 1) - \Delta_2 (\log \Gamma; x_0 + n, x_1 + n, x_0 + n + 1)$$
+for every integer $n > 0$.  However,
+ $$|\Delta_2 (\log \Gamma; x_0 + n, x_1 + n, x_0 + n + 1)| < \max_{x_0 + n \le x \le x_0 + 1} {d^2 \over dx^2} \log \Gamma (x)$$
+As $n \to \infty$, the right hand side approaches zero.  Hence, by choosing $n$ sufficiently large, we can make the left-hand side smaller than $|D_2|/2$.  For such an $n$,
+ $$\Delta_2 (\log f; x_0 + n, x_1 + n, x_0 + n + 1) < 0$$
+However, this contradicts hypothesis 1.  Therefore, $g$ must be constant.  Since $g(0) = 0$, $g(x) = 0$ for all $x$, which implies that $e^0 = f(x) / \Gamma(x)$.  In other words, $f(x) = \Gamma(x)$ as desired.
+%%%%%
+%%%%%
+\end{document}

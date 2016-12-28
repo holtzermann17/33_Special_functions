@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConvergenceOfTheSequence11nn}
+\pmcreated{2013-03-22 17:43:26}
+\pmmodified{2013-03-22 17:43:26}
+\pmowner{kfgauss70}{18761}
+\pmmodifier{kfgauss70}{18761}
+\pmtitle{convergence of the sequence (1+1/n)^n}
+\pmrecord{7}{40170}
+\pmprivacy{1}
+\pmauthor{kfgauss70}{18761}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33B99}
+\pmrelated{NondecreasingSequenceWithUpperBound}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\begin{theorem}
+The following sequence:
+\begin{equation}
+a_n=\left(1+\frac{1}{n}\right)^n
+\label{eqn001}
+\end{equation}
+is convergent.
+\end{theorem}
+\begin{proof}
+The proof will be given by demonstrating that the sequence (\ref{eqn001}) is:
+\begin{enumerate}
+\item monotonic (increasing), that is $a_{n}<a_{n+1}$
+\item bounded above, that is $\forall n\in\mathbb{N}, a_n<M$ for some $M>0$
+\end{enumerate}
+In order to prove part 1, consider the binomial expansion for $a_n$:
+$$
+a_n=\sum_{k=0}^{n}\binom{n}{k}\frac{1}{n^k}=\sum_{k=0}^{n}\frac{1}{k!}\frac{n}{n}\frac{n-1}{n}\ldots\frac{n-(k-1)}{n}=\sum_{k=0}^{n}\frac{1}{k!}\left(1-\frac{1}{n}\right)\ldots\left(1-\frac{k-1}{n}\right).
+$$
+Since $\forall i\in\{1,2\ldots (k-1)\}:(1-\frac{i}{n})<(1-\frac{i}{n+1})$, and since the sum $a_{n+1}$ has one term more than $a_n$, it is demonstrated that the sequence (\ref{eqn001}) is monotonic.\\
+In order to prove part 2, consider again the binomial expansion:
+$$
+a_n=1+\frac{n}{n}+\frac{1}{2!}\frac{n(n-1)}{n^2}+\frac{1}{3!}\frac{n(n-1)(n-2)}{n^3}+\ldots+\frac{1}{n!}\frac{n(n-1)\ldots(n-n+1)}{n^n}.
+$$
+Since $\forall k\in\{2,3\ldots n\}:\frac{1}{k!}<\frac{1}{2^{k-1}}$ and $\frac{n(n-1)\ldots(n-(k-1))}{n^k}<1$: 
+$$
+a_n<1+\left(1+\frac{1}{2}+\frac{1}{2\times2}+\ldots+\frac{1}{2^{n-1}}\right)<1+\left(\frac{1-\frac{1}{2^n}}{1-\frac{1}{2}}\right)<3-\frac{1}{2^{n-1}}<3
+$$
+where the formula giving the sum of the geometric progression with ratio $1/2$ has been used.
+\end{proof}
+\noindent In conclusion, we can say that the sequence (\ref{eqn001}) is convergent and its limit corresponds to the supremum of the set $\{a_n\}\subset\left[2,3\right)$, denoted by $e$, that is:
+$$
+\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^n=\sup_{n\in\mathbb{N}}\left\{\left(1+\frac{1}{n}\right)^n\right\}\triangleq e,
+$$
+which is the definition of the Napier's constant.
+%%%%%
+%%%%%
+\end{document}

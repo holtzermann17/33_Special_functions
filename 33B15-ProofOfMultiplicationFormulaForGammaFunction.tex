@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfMultiplicationFormulaForGammaFunction}
+\pmcreated{2013-03-22 14:44:10}
+\pmmodified{2013-03-22 14:44:10}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of multiplication formula for gamma function}
+\pmrecord{9}{36369}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33B15}
+\pmclassification{msc}{30D30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Define the function $f$ as
+ $$f(z) = {n^{nz} \prod\limits_{k=0}^{n-1}
+ \Gamma \left( z + {k \over n} \right) \over \Gamma (nz)}$$
+
+By the functional equation of the gamma function,
+ $$f(z+1) = {n^n n^{nz} \left( \prod\limits_{m=0}^{n-1}
+ \Gamma \left (z + {m \over n} \right) \right) \prod\limits_{k=0}^{n-1}
+ \left( z + {k \over n} \right) \over \Gamma (nz) \prod_{k=0}^{n-1} (nz + k) } = f(z)$$
+
+Hence $f$ is a periodic function of $z$.  However, for large values
+of $z$, we can apply the Stirling approximation formula to conclude
+ $$f(z) = {(2 \pi)^{n/2} n^{nz} \prod\limits_{k=0}^{n-1} \left[ e^{-z-k/n}
+  (z + k/n)^{z + k/n - 1/2} + O(e^{-z} (z+ k/n)^{z + k/n - 3/2}) \right] \over (2 \pi)^{1/2}
+   e^{-nz} (nz)^{nz - 1/2} + O(e^{-nz} (nz)^{nz - 3/2}) } = $$
+$$(2 \pi)^{(n-1)/2} n^{1/2} \, {\prod\limits_{k=0}^{n-1} \left[ e^{-k/n}
+  (z + k/n)^{z + k/n - 1/2} + O((z+ k/n)^{z + k/n - 3/2}) \right] \over
+  z^{nz - 1/2} + O(z^{nz - 3/2}) } = $$
+$$(2 \pi)^{(n-1)/2} n^{1/2} \, {z^{1/2} \prod\limits_{k=0}^{n-1} \left[ e^{-k/n}
+  \left( 1 + {k \over nz} \right)^{z + k/n - 1/2} z^{k/n - 1/2} + O((z+ k/n)^{k/n - 3/2}) \right] \over
+  1 + O(z^{- 1}) }$$
+
+Note that
+ $$\prod\limits_{k=0}^{n-1} e^{-k/n} = e^{- \sum_{k=0}^{n-1}
+k/n} = e^{(1-n)/2}$$
+ $$z^{1/2} \prod\limits_{k=0}^{n-1} z^{k/n - 1/2} = z^{1/2} z^{\sum_{k=0}^{n-1}
+(k/n - 1/2)} = z^{1/2 + (n-1)/2 - n/2} = 1$$
+
+Also,
+ $$\left( 1 + {k \over nz} \right)^z = e^{k/n} + O(z^{-1})$$
+Hence, $f(z) = (2 \pi)^{(n-1)/2} n^{1/2} + O(z^{- 1})$.  Now, the only way for a function to be periodic and have a definite limit is for that function to be constant.  Therefore, $f(z) = (2 \pi)^{(n-1)/2} n^{1/2}$.  Writing out the definition of $f$ and rearranging gives the multiplication formula.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ApplicationOfLogarithmSeries}
+\pmcreated{2013-03-22 18:56:09}
+\pmmodified{2013-03-22 18:56:09}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{application of logarithm series}
+\pmrecord{12}{41790}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Application}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33B10}
+\pmrelated{DilogarithmFunction}
+\pmrelated{ExamplesOnHowToFindTaylorSeriesFromOtherKnownSeries}
+\pmrelated{SubstitutionNotation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+
+\begin{document}
+\PMlinkescapeword{expansion}
+
+The integrand of the improper integral
+\begin{align}
+I \;:=\; \int_0^1\frac{\ln(1\!+\!x)}{x}dx
+\end{align}
+is not defined at the lower limit 0.\, However, from the Taylor series expansion 
+$$\ln(1\!+\!x) \;=\; x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+-\ldots \qquad (-1 < x \leqq 1)$$
+of the natural logarithm we obtain the expansion of the integrand
+$$
+\frac{\ln(1\!+\!x)}{x} \;=\; 1-\frac{x}{2}+\frac{x^2}{3}-\frac{x^3}{4}+-\ldots \qquad (-1 < x < 0,\;\; 0 < x \leqq 1)
+$$
+whence
+\begin{align}
+\lim_{x\to0}\frac{\ln(1\!+\!x)}{x} \;=\; 1.
+\end{align}
+This implies that the integrand of (1) is bounded on the interval \,$[0,\,1]$ and also continuous, if we think that (2) defines its value at\, $x = 0$.\, Accordingly, the integrand is Riemann integrable on the interval, and we can determine the improper integral by integrating termwise:
+\begin{align*}
+I & \;=\; \int_0^1\!\left(1-\frac{x}{2}+\frac{x^2}{3}-\frac{x^3}{4}+-\ldots\right)dx\\
+  & \;=\; \sijoitus{0}{\quad1}\!\left(x-\frac{x^2}{2^2}+\frac{x^3}{3^2}-\frac{x^4}{4^2}+-\ldots\right)\\
+  & \;=\; 1-\frac{1}{2^2}+\frac{1}{3^2}-\frac{1}{4^2}+-\ldots
+\end{align*}
+By the entry on \PMlinkname{Dirichlet eta function at 2}{ValueOfDirichletEtaFunctionAtS2}, the sum of the obtained series is\, $\eta(2) = \frac{\pi^2}{12}$.\, Thus we have the result
+\begin{align}
+\int_0^1\frac{\ln(1\!+\!x)}{x}dx \;=\; \frac{\pi^2}{12}.
+\end{align}
+
+
+Similarly, using the series
+$$\ln(1\!-\!x) \;=\; -x-\frac{x^2}{2}-\frac{x^3}{3}-\frac{x^4}{4}-\ldots \qquad (-1 \leqq x < 1)$$
+and the result in the entry \PMlinkname{Riemann zeta function at 2}{ValueOfTheRiemannZetaFunctionAtS2}, one can calculate that
+\begin{align}
+\int_0^1\frac{\ln(1\!-\!x)}{x}dx \;=\; -\frac{\pi^2}{6}.
+\end{align}
+
+%%%%%
+%%%%%
+\end{document}

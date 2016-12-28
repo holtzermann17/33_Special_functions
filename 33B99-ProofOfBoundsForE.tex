@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBoundsForE}
+\pmcreated{2013-03-22 15:48:51}
+\pmmodified{2013-03-22 15:48:51}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of bounds for e}
+\pmrecord{4}{37779}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33B99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Multiplying and dividing, we have
+\[ \left( 1 + {1 \over n} \right)^n = \left( 1 + {1 \over m} \right)^m
+\prod_{k=m+1}^n { \left( 1 + {1 \over k} \right)^k \over \left( 1 + {1
+\over k-1} \right)^{k-1}} \]
+As was shown in the parent entry, the quotients in the product can
+be simplified to give
+\[ \left( 1 + {1 \over n} \right)^n = \left( 1 + {1 \over m} \right)^m
+\prod_{k=m+1}^n \left( 1 - {1 \over k^2} \right)^k \left( 1 + {1 \over
+k-1} \right) \]
+By the inequality for differences of powers,
+\[ \left( 1 - {1 \over k^2} \right)^k < 1 - {k \over k^2 + k - 1} 
+= {(k+1) (k-1) \over k^2 + k - 1} \]
+Hence, we have the following upper bound:
+\[ \left( 1 + {1 \over n} \right)^n < \left( 1 + {1 \over m} \right)^m
+\prod_{k=m+1}^n {k^2 + k \over k^2 + k - 1} \]
+By cross mutliplying, it is easy to see that
+\[ {k^2 + k \over k^2 + k - 1} \le {k^2 \over k^2 - 1} \]
+and, hence,
+\[ \left( 1 + {1 \over n} \right)^n < \left( 1 + {1 \over m} \right)^m
+\prod_{k=m+1}^n {k^2 \over k^2 - 1}. \]
+Factoring the rational function in the product, terms cancel and we
+have
+\[ \prod_{k=m+1}^n {k^2 \over (k+1)(k-1)} = {n (m+1) \over (n+1)  m}
+= {n \over n+1} \left( 1 + {1 \over m} \right) \]
+Combining,
+\[ \left( 1 + {1 \over n} \right)^n < {n \over n+1} \left( 1
++ {1 \over m} \right)^{m+1} \]
+%%%%%
+%%%%%
+\end{document}

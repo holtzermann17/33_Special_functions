@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EllipticIntegralsAndJacobiEllipticFunctions}
+\pmcreated{2013-03-22 13:58:28}
+\pmmodified{2013-03-22 13:58:28}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{elliptic integrals and Jacobi elliptic functions}
+\pmrecord{7}{34746}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33E05}
+\pmrelated{ArithmeticGeometricMean}
+\pmrelated{PerimeterOfEllipse}
+\pmdefines{elliptic integral}
+\pmdefines{Jacobi elliptic function}
+\pmdefines{Jacobian elliptic function}
+\pmdefines{complementary modulus}
+\pmdefines{complete elliptic integral}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+\PMlinkescapeword{periods} \PMlinkescapeword{simple}
+\PMlinkescapeword{names} \PMlinkescapeword{terms}
+\PMlinkescapeword{Jacobian} \PMlinkescapeword{complex}
+\PMlinkescapeword{complete} \PMlinkescapeword{incomplete}
+\textbf{Elliptic integrals}
+
+For a modulus $0<k<1$ (while here, we define the \emph{complementary modulus} to $k$ to be the positive number $k'$ with $k^2+k'^2=1$) , write
+\begin{eqnarray}
+F(\phi,k)&=&\int_0^\phi\frac{d\theta}{\sqrt{1-k^2\sin^2\theta}} \\
+E(\phi,k)&=&\int_0^\phi\sqrt{1-k^2\sin^2\theta}\,d\theta \\
+\Pi(n,\phi,k)&=&\int_0^\phi\frac{d\theta}{(1+n\sin^2\theta)\sqrt{1-k^2\sin^2\theta}}
+\end{eqnarray}
+The change of variable $x=\sin\phi$ turns these into
+\begin{eqnarray}
+F_1(x,k)&=&\int_0^x\frac{dv}{\sqrt{(1-v^2)(1-k^2v^2)}} \\
+E_1(x,k)&=&\int_0^x\sqrt{\frac{1-k^2v^2}{1-v^2}}\,dv \\
+\Pi_1(n,x,k)&=&\int_0^x\frac{dv}{(1+nv^2)\sqrt{(1-v^2)(1-k^2v^2)}}
+\end{eqnarray}
+The first three functions are known as Legendre's form of the incomplete
+elliptic integrals of the first, second, and third kinds respectively.
+Notice that (2) is the special case $n=0$ of (3).
+The latter three are known as Jacobi's form of those integrals.
+If $\phi=\pi/2$, or $x=1$, they are called complete rather than incomplete
+integrals, and we refer to the auxiliary elliptic integrals $K(k)=F(\pi/2,k)$, $E(k)=E(\pi/2,k)$, etc.
+
+One use for elliptic integrals is to systematize the evaluation of
+certain other integrals.
+In particular, let $p$ be a third- or fourth-degree polynomial
+in one variable, and let $y=\sqrt{p(x)}$.
+If $q$ and $r$ are any two polynomials in two variables, then the
+indefinite integral
+$$\int\frac{q(x,y)}{r(x,y)}\,dx$$
+has a ``closed form'' in terms of the above incomplete elliptic integrals,
+together with elementary functions and their inverses.
+
+\textbf{Jacobi's elliptic functions}
+
+In (1) we may regard $\phi$ as a function of $F$, or vice versa.
+The notation used is
+$$\phi=\mathrm{am}\,u\qquad u=\mathrm{arg}\,\phi$$
+and $\phi$ and $u$ are known as the amplitude and argument respectively.
+But $x=\sin\phi=\sin\mathrm{am}\,u$.
+The function $u\mapsto \sin\mathrm{am}\,u=x$
+is denoted by $\mathrm{sn}$ and is one of four \emph{Jacobi (or Jacobian)
+elliptic functions}. The four are:
+\begin{eqnarray*}
+\mathrm{sn}\,u&=&x \\
+\mathrm{cn}\,u&=&\sqrt{1-x^2} \\
+\mathrm{tn}\,u&=&\frac{\mathrm{sn}\,u}{\mathrm{cn}\,u} \\
+\mathrm{dn}\,u&=&\sqrt{1-k^2x^2}
+\end{eqnarray*}
+
+When the Jacobian elliptic functions are extended to complex arguments,
+they are doubly periodic and have two poles in any parallelogram of
+periods; both poles are simple.
+%%%%%
+%%%%%
+\end{document}

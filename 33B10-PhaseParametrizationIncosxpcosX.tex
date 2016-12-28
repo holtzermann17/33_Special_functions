@@ -1,0 +1,110 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PhaseParametrizationIncosxpcosX}
+\pmcreated{2013-03-22 17:56:15}
+\pmmodified{2013-03-22 17:56:15}
+\pmowner{perucho}{2192}
+\pmmodifier{perucho}{2192}
+\pmtitle{phase parametrization in $\cos(x+p)=\cos x$}
+\pmrecord{4}{40434}
+\pmprivacy{1}
+\pmauthor{perucho}{2192}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33B10}
+\pmclassification{msc}{42-00}
+\pmclassification{msc}{51-00}
+\pmclassification{msc}{43-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{theorem}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\begin{document}
+We obtain a single equation to parametrization of phase's angle $p$ for the periodic cosine function when the typical condition $\cos(x+p)=cos x$ is satisfied. Without losing generality, we will restrict the discussion to the case $0\leq x \leq 2\pi$. We starting setting $\cos x=t$, so that $-1\leq t\leq 1$ is the interval of definition for the real parameter $t$. Next we expand out
+\begin{equation*}
+\cos(x+p)=\cos x\cos p-\sin x\sin p,
+\end{equation*}
+where we introduce $t$ and apply the assumed condition to get
+\begin{equation*}
+t\cos p-\sqrt{1-t^2}\sin p=t.
+\end{equation*} 
+This leads to a quadratic equation in $\cos p$ on terms of parameter $t$, i.e.
+\begin{equation*}
+\cos^2p(t)-2t^2\cos p(t)+(2t^2-1)=0.
+\end{equation*}
+Solving,
+\begin{equation*}
+\cos p(t)=t^2\pm (t^2-1).
+\end{equation*}
+One root has to do with the trivial $\cos(x+2\pi)=\cos x$, but we are interested on the nontrivial one
+\begin{equation}
+\cos p(t)=2t^2-1, \qquad -1<t<1.
+\end{equation}
+Locus of (1) is the below shown parabola. \\ \\
+
+
+\begin{center}
+\psset{unit=2cm}
+\begin{pspicture}(-2.5,-2)(2.5,5)
+\psaxes[Dx=1,Dy=1]{->}(0,0)(-2.2,-1.5)(2.3,2.5)
+\rput(2.3,-0.2){$t$}
+\rput(0.2,2.6){$y$}
+\psplot[linecolor=green]{-1}{-0.707}{2 x x mul mul 1 sub}
+\psplot[linecolor=red]{-0.707}{0.707}{2 x x mul mul 1 sub}
+\psplot[linecolor=green]{0.707}{1}{2 x x mul mul 1 sub}
+\rput(1.1,1.3){$y = 2t^2-1$}
+\psdot(-0.707,0)
+\psdot(0.707,0)
+\psdot(-1,1)
+\psdot(1,1)
+\end{pspicture}
+\end{center}
+
+
+Inverse function of (1) is the wanted parametrization $p(t)$, with codomain $[0,\pi]$ and locus the \emph{``arabian dome''} below shown.{\footnote{Graphics by \emph{pahio}, with permission.}} \\ \\
+
+\begin{center}
+\psset{unit=2cm}
+\begin{pspicture}(-2.5,-2)(2.5,4)
+\psaxes[Dx=1,Dy=1]{->}(0,0)(-2.2,-1.5)(2.3,3.7)
+\rput(2.3,-0.2){$t$}
+\rput(0.2,3.75){$p$}
+\psplot[linecolor=blue]{-1}{1}{2 x mul x mul 1 sub arccos 3.1416 mul 180 div}
+\rput(1.8,2.2){$p = \arccos(2t^2-1)$}
+\end{pspicture}
+\end{center}
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

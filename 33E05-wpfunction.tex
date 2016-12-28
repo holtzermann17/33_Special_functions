@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{wpfunction}
+\pmcreated{2013-03-22 14:51:54}
+\pmmodified{2013-03-22 14:51:54}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{$\wp$-function}
+\pmrecord{10}{36540}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33E05}
+\pmsynonym{$\wp$}{wpfunction}
+\pmsynonym{Weierstrass $\wp$ function}{wpfunction}
+\pmsynonym{Weierstrass p-function}{wpfunction}
+\pmsynonym{p-Weierstrass}{wpfunction}
+\pmsynonym{Weierstrass $\wp$-function}{wpfunction}
+\pmrelated{EllipticCurve}
+\pmrelated{EllipticFunction}
+\pmrelated{ExamplesOfEllipticFunctions}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\newtheorem{dfn}{Definition}
+\begin{document}
+  Let $L$ be a lattice on $\C$. The Weierstrass $\wp$ function associated to $L$ is given by 
+\[
+\wp(z) = \frac{1}{z^2} + \sum_{w\in L\setminus\{0\}} \left(\frac{1}{(z-w)^2} -  \frac{1}{w^2} \right).
+\]
+
+The $\wp$ function is meromorphic and analytic on $\C\setminus L$, whereas at each $w\in L$, it has an order $2$ pole. It is also an even function, because $\wp(z)=\wp(-z)$.
+
+Its derivative 
+\[
+\wp'(z)=-2\sum_{w\in L} \frac{1}{(z-w)^3}
+\]
+is also an odd, meromorphic, and elliptic function, analytic at $\C\setminus L$ and having order $3$ poles at each $w\in L$.
+
+The functions $\wp$ and $\wp'$ form together a generator set for the field of elliptic functions associated to the lattice $L$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,121 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrthogonalityOfChebyshevPolynomials}
+\pmcreated{2013-03-22 18:54:42}
+\pmmodified{2013-03-22 18:54:42}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{orthogonality of Chebyshev polynomials}
+\pmrecord{16}{41761}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33C45}
+\pmclassification{msc}{33D45}
+\pmclassification{msc}{42C05}
+\pmrelated{OrthogonalPolynomials}
+\pmrelated{LaguerrePolynomial}
+\pmrelated{ChangeOfVariableInDefiniteIntegral}
+\pmrelated{DeterminationOfFourierCoefficients}
+\pmrelated{OrthogonalityOfLegendrePolynomials}
+\pmrelated{PropertiesOfOrthogonalPolynomials}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+By expanding the \PMlinkescapetext{right side} of de Moivre identity
+$$\cos{n\varphi} \;=\; (\cos\varphi+i\sin\varphi)^n$$
+to sum, one obtains as real part certain terms containing power products of $\cos\varphi$ and $\sin\varphi$, the latter ones only with even exponents.\, When these are expressed with cosines ($\sin^2\varphi = 1-\cos^2\varphi$), the real part becomes a polynomial $T_n$ of degree $n$ in the \PMlinkname{argument}{Argument2} $\cos\varphi$:
+\begin{align}
+\cos{n\varphi} \;=\; T_n(\cos\varphi)
+\end{align}
+This can be written \PMlinkname{equivalently}{Equivalent3}
+\begin{align}
+T_n(x) \;=\; \cos(n\arccos{x}).
+\end{align}
+It's a question of \emph{Chebyshev polynomial of first kind} and of \PMlinkescapetext{\emph{order}} $n$ (cf. special cases of hypergeometric function).\\ 
+
+For showing the orthogonality of $T_m$ and $T_n$ we start from the integral
+$\displaystyle\int_0^\pi\cos{m\varphi}\cos{n\varphi}\,d\varphi$, which via the substitution
+$$\cos\varphi \,:=\, x, \quad dx \,=\, -\sin\varphi\,d\varphi \,=\, -\sqrt{1\!-\!x^2}\,d\varphi$$
+changes to
+\begin{align}
+\int_0^\pi\cos{m\varphi}\,\cos{n\varphi}\;d\varphi \;=\; -\!\int_1^{-1}T_m(x)T_n(x)\frac{dx}{\sqrt{1\!-\!x^2}}.
+\end{align}
+The left \PMlinkescapetext{side} of this equation is evaluated by using the product formula in the entry trigonometric identities:
+\begin{align*}
+\int_0^\pi\!\cos{m\varphi}\,\cos{n\varphi}\;d\varphi \;=\; 
+\frac{1}{2}\int_0^\pi(\cos{(m\!-\!n)\varphi}+\cos{(m\!+\!n)\varphi})\,d\varphi \;=\, 
+\begin{cases} 
+ 0 \mbox{\, for\, } m \neq n,\\ 
+ \frac{\pi}{2} \mbox{\, for\, } m = n \neq 0.
+\end{cases}
+\end{align*}
+By (3), we thus have
+\begin{align*}
+\int_{-1}^1\!T_m(x)T_n(x)\frac{dx}{\sqrt{1\!-\!x^2}} \;=\;
+\begin{cases} 
+ 0 \mbox{\, for\, } m \neq n,\\ 
+ \frac{\pi}{2} \mbox{\, for\, } m = n \neq 0,
+\end{cases}
+\end{align*}
+which means the orthogonality of the polynomials $T_m(x)$ and $T_n(x)$ weighted by $\frac{1}{\sqrt{1\!-\!x^2}}$.\\
+
+Any Riemann integrable real function $f$, defined on\, $[-1,\,1]$,\, may be expanded to the series
+$$f(x) \;=\; \frac{a_0}{2}T_0(x)+\sum_{j=1}^\infty a_jT_j(x),$$
+where
+$$a_j \;=\; \frac{2}{\pi}\int_{-1}^1\!f(x)T_j(x)\frac{dx}{\sqrt{1\!-\!x^2}} \qquad (j = 0,\,1,\,2,\,\ldots)$$
+This concerns especially the polynomials \,$f(x) := x^n$,\, for which we obtain
+\begin{align*}
+x^n & \;=\; \cos^n\varphi \;=\; \cosh^n{i\varphi} \;=\; 2^{-n}(e^{i\varphi}+e^{-i\varphi})\\
+    & \;=\;
+2^{-n}\left[{n\choose0}(e^{ni\varphi}+e^{-ni\varphi})+{n\choose1}(e^{(n-2)i\varphi}+e^{-(n-2)i\varphi})+\ldots\right]\\
+    & \;=\;
+2^{1-n}\left[{n\choose0}T_{n}(x)+{n\choose1}T_{n-2}(x)+{n\choose2}T_{n-4}(x)+\ldots\right]\!.
+\end{align*}
+(If $n$ is even, the last term contains $T_0(x)$ but its coefficient is only a half of the middle number of the Pascal's triangle row in question.)\, Explicitly:\\
+
+$1  \;=\; T_0$\\
+$x  \;=\; T_1$\\
+$x^2 \;=\; 2^{-1}(T_2+T_0)$\\
+$x^3 \;=\; 2^{-2}(T_3+3T_1)$\\
+$x^4 \;=\; 2^{-3}(T_4+4T_2+3T_0)$\\
+$x^5 \;=\; 2^{-4}(T_5+5T_3+10T_1)$\\
+$x^6 \;=\; 2^{-5}(T_6+6T_4+15T_2+10T_0)$\\
+$x^7 \;=\; 2^{-6}(T_7+7T_5+21T_3+35T_1)$\\
+$x^8 \;=\; 2^{-7}(T_8+8T_6+28T_4+56T_2+36T_0)$\\
+$x^9 \;=\; 2^{-8}(T_9+9T_7+36T_5+84T_3+126T_1)$\\
+$\mbox{  }\; \cdots \qquad \cdots$
+
+\begin{thebibliography}{9}
+\bibitem{LP}{\sc Pentti Laasonen:} {\em Matemaattisia erikoisfunktioita}.\, Handout No. 261. Teknillisen Korkeakoulun Ylioppilaskunta; Otaniemi, Finland (1969).
+\end{thebibliography}
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfJacobisIdentityForvarthetaFunctions}
+\pmcreated{2013-03-22 14:47:01}
+\pmmodified{2013-03-22 14:47:01}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of Jacobi's identity for $\vartheta$ functions}
+\pmrecord{19}{36434}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33E05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+We start with the Fourier transform of $f(x) = e^{i \pi \tau x^2 + 2 i x z}$:
+ $$\int_{-\infty}^{+\infty} e^{i \pi \tau x^2 + 2 i x z} e^{2 \pi ixy} \, dx = (- i \tau)^{-1/2} e^{-i {(z + \pi y)^2 \over \pi \tau}}$$
+
+Applying the Poisson summation formula, we obtain the following:
+ $$\sum_{n=-\infty}^{+\infty} e^{i \pi \tau n^2 + 2 i n z} = (- i \tau)^{-1/2} \sum_{n=-\infty}^{+\infty} e^{-i {(z + \pi n)^2 \over \pi \tau}}$$
+
+The left hand \PMlinkescapetext{side} equals $\vartheta_3 (z \mid \tau)$.  The right hand \PMlinkescapetext{side} can be rewritten as follows:
+ $$\sum_{n=-\infty}^{+\infty} e^{-i {(z + \pi n)^2 \over \pi \tau}} = e^{-i {z^2 \over \pi \tau}} \sum_{n=-\infty}^{+\infty} e^{-i {\pi n^2 \over \tau} - {2 i n z \over \tau}} = e^{-i {z^2 \over \pi \tau}} \vartheta_3 (z / \tau  \mid -1 / \tau)$$
+
+Combining the two expressions yields
+ $$\vartheta_3 (z \mid \tau) = e^{-i {z^2 \over \pi \tau}} \vartheta_3 (z / \tau  \mid -1 / \tau)$$
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneratingFunctionOfHermitePolynomials}
+\pmcreated{2013-03-22 19:05:25}
+\pmmodified{2013-03-22 19:05:25}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{generating function of Hermite polynomials}
+\pmrecord{9}{41980}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33E30}
+\pmclassification{msc}{33B99}
+\pmclassification{msc}{26C05}
+\pmclassification{msc}{26A09}
+\pmclassification{msc}{12D99}
+\pmrelated{OrthogonalPolynomials}
+\pmrelated{ExampleOfFindingTheGeneratingFunction}
+\pmrelated{GeneratingFunctionOfLaguerrePolynomials}
+\pmrelated{VariantOfCauchyIntegralFormula}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+We start from the definition of Hermite polynomials via their \PMlinkid{Rodrigues formula}{11983}
+\begin{align}
+H_n(z) \;:=\; (-1)^ne^{z^2}\frac{d^{\,n}}{dz^n}e^{-z^2} \qquad (n \;=\; 0,\,1,\,2,\,\ldots).
+\end{align}
+The consequence 
+\begin{align}
+f^{(n)}(z) \;=\; \frac{n!}{2 \pi i} \oint_C \frac{f(\zeta)}{(\zeta-z)^{n+1}}\ d\zeta
+\end{align}
+of \PMlinkid{Cauchy integral formula}{1150} allows to write (1) as the complex integral
+$$H_n(z) \;=\; (-1)^n\frac{n!}{2i\pi}\oint_C\frac{e^{z^2-\zeta^2}}{(\zeta\!-\!z)^{n+1}}\,d\zeta,$$
+where $C$ is any \PMlinkescapetext{closed} contour around the point $z$ and the direction is anticlockwise.\, The \PMlinkid{substitution}{11373} \,$z\!-\!\zeta := t$\, here yields
+
+$$H_n(z) \;=\; \frac{n!}{2i\pi}\oint_{C'}\frac{e^{z^2-(z-t)^2}}{t^{n+1}}\,dt,$$
+where the contour $C'$ goes round the origin.\, Accordingly, by (2) we can infer that
+$$H_n(z) \;=\; \left[\frac{d^{\,n}}{dt^n}e^{z^2-(z-t)^2}\right]_{t=0},$$
+whence we have found the generating function
+$$e^{z^2-(z-t)^2} \;=\; \sum_{n=0}^\infty H_n(z)\frac{t^n}{n!}$$
+of the Hermite polynomials.
+
+
+
+%%%%%
+%%%%%
+\end{document}

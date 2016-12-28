@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WeierstrassSigmaFunction}
+\pmcreated{2013-03-22 13:54:06}
+\pmmodified{2013-03-22 13:54:06}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{Weierstrass sigma function}
+\pmrecord{4}{34650}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33E05}
+\pmsynonym{sigma function}{WeierstrassSigmaFunction}
+\pmsynonym{zeta function}{WeierstrassSigmaFunction}
+\pmsynonym{eta function}{WeierstrassSigmaFunction}
+%\pmkeywords{Weierstrass}
+%\pmkeywords{sigma}
+%\pmkeywords{eta}
+%\pmkeywords{zeta}
+\pmrelated{EllipticFunction}
+\pmrelated{ModularDiscriminant}
+\pmdefines{Weierstrass sigma function}
+\pmdefines{Weierstrass zeta function}
+\pmdefines{Weierstrass eta function}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\begin{document}
+\begin{defn}
+Let $\Lambda\subset\Complex$ be a lattice. Let $\Lambda^{\ast}$
+denote $\Lambda-\{ 0 \}$.
+\begin{enumerate}
+\item The \emph{Weierstrass sigma function} is defined as the
+product
+$$\sigma(z;\Lambda)=z\prod_{w\in\Lambda^{\ast}}\left(1-\frac{z}{w}\right)e^{z/w+\frac{1}{2}(z/w)^2}$$
+
+\item The \emph{Weierstrass zeta function} is defined by the sum
+$$\zeta(z;\Lambda)=\frac{\sigma'(z;\Lambda)}{\sigma(z;\Lambda)}=\frac{1}{z}+\sum_{w\in\Lambda^{\ast}}\left( \frac{1}{z-w}+\frac{1}{w}+\frac{z}{w^2}\right)$$
+Note that the Weierstrass zeta function is basically the
+derivative of the logarithm of the sigma function. The zeta
+function can be rewritten as:
+$$\zeta(z;\Lambda)=\frac{1}{z}-\sum_{k=1}^{\infty}\mathcal{G}_{2k+2}(\Lambda)z^{2k+1}$$
+where $\mathcal{G}_{2k+2}$ is the Eisenstein series of weight
+$2k+2$.
+
+\item The \emph{Weierstrass eta function} is defined to be
+$$\eta(w;\Lambda)=\zeta(z+w;\Lambda)-\zeta(z;\Lambda), \text{for
+any } z\in\Complex$$ (It can be proved that this is well defined,
+i.e. $\zeta(z+w;\Lambda)-\zeta(z;\Lambda)$ only depends on $w$).
+The Weierstrass eta function must not be confused with the
+Dedekind eta function.
+\end{enumerate}
+\end{defn}
+%%%%%
+%%%%%
+\end{document}

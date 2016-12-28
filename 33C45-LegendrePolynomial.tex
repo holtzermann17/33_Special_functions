@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LegendrePolynomial}
+\pmcreated{2013-03-22 15:12:10}
+\pmmodified{2013-03-22 15:12:10}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{Legendre polynomial}
+\pmrecord{14}{36961}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33C45}
+\pmrelated{OrthogonalPolynomials}
+\pmdefines{Rodrigues's Formula}
+\pmdefines{Legendre's Differential Equation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The \emph{Legendre polynomials} are a set of polynomials $\{P_n\}_{n=0}^{\infty}$ each of order $n$ that satisfy Legendre's ODE: $$\frac{d}{dx}[(1-x^2) P_n'(x)] + n(n+1)P_n(x) = 0.$$
+
+Alternatively $P_n$ is an eigenfunction of the self-adjoint differential operator $\frac{d}{dx}(1-x^2) \frac{d}{dx}$ with eigenvalue $-n(n+1)$.
+
+The Legendre polynomials are also known as Legendre functions of the first kind.
+
+By Sturm-Liouville theory, this means they're orthogonal over some interval with
+some weight function.  In fact it can be shown that they're orthogonal on $[-1, 1]$ with weight function $W(x) = 1$.  As with any set of orthogonal polynomials, this can be used to generate them (up to normalization) by Gram-Schmidt orthogonalization of the monomials $\{x^i\}$.  The normalization used
+is $\langle P_n \| P_n \rangle = 2 / (2n + 1)$, which makes $P_n(\pm 1) = (\pm 1)^n$
+
+Rodrigues's Formula (which can be generalized to some other polynomial sets) is a sometimes convenient form of $P_n$ in terms of derivatives:
+$$P_n(x) = \frac{1}{2^n n!} \left( \frac{d}{dx} \right)^n (x^2 - 1)^n$$
+
+The first few explicitly are: 
+
+\begin{eqnarray*}
+P_0(x) &=& 1 \\
+P_1(x) &=& x \\
+P_2(x) &=& \frac{1}{2} (3x^2 - 1) \\
+P_3(x) &=& \frac{1}{2} (5x^3 - 3x) \\
+P_4(x) &=& \frac{1}{8} (35x^4 - 30x^2 + 3) \\
+...
+\end{eqnarray*}
+
+As all orthogonal polynomials do, these satisfy a three-term recurrence relation:
+$$(n+1)P_{n+1}(x) = (2n+1)xP_{n}(x) - (n)P_{n-1}(x)$$
+
+The Legendre functions of the second kind also satisfy the Legendre ODE but are not regular at the origin.
+
+Related are the associated Legendre functions, and spherical harmonics.
+%%%%%
+%%%%%
+\end{document}

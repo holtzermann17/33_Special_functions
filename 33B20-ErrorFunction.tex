@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ErrorFunction}
+\pmcreated{2013-03-22 14:46:51}
+\pmmodified{2013-03-22 14:46:51}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{error function}
+\pmrecord{10}{36429}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33B20}
+\pmrelated{AreaUnderGaussianCurve}
+\pmrelated{ListOfImproperIntegrals}
+\pmrelated{UsingConvolutionToFindLaplaceTransform}
+\pmdefines{complementary error function}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The \emph{error function} ${\rm erf} \colon \mathbb{C} \to \mathbb{C}$ is defined as follows:
+ $${\rm erf} (z) = {2 \over \sqrt{\pi}} \int_0^z e^{-t^2} \, dt$$
+The \emph{complementary error function} ${\rm erfc} \colon \mathbb{C} \to \mathbb{C}$ is defined as
+ $${\rm erfc} (z) = {2 \over \sqrt{\pi}} \int_z^\infty e^{-t^2} \, dt$$
+
+The name ``error function'' comes from the role that these functions play in the theory of the normal random variable.  It is also worth noting that the error function is a special case of the confluent hypergeometric functions and of the Mittag-Leffler function.
+
+\textbf{Note.}\,  By \PMlinkname{Cauchy integral theorem}{SecondFormOfCauchyIntegralTheorem}, the choice path of integration in the definition of ${\rm erf}$ is irrelevant since the integrand is an entire function.   In the definition of ${\rm erfc}$, the path may be taken to be a half-line parallel to the positive real axis with endpoint $z$.
+
+%%%%%
+%%%%%
+\end{document}

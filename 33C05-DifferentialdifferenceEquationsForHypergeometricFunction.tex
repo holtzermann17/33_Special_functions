@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DifferentialdifferenceEquationsForHypergeometricFunction}
+\pmcreated{2013-03-22 17:36:18}
+\pmmodified{2013-03-22 17:36:18}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{differential-difference equations for hypergeometric function}
+\pmrecord{6}{40020}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33C05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The hypergeometric function satisfies several equations which
+relate derivatives with respect to the argument $z$ to
+shifting the parameters $a, b, c, d$ by unity (Here, the
+prime denotes derivative with respect to $z$.):
+\begin{align*}
+z F' (a, b; c; z) + a F (a, b; c; z) &= F (a+1, b; c; z) \\
+z F' (a, b; c; z) + b F (a, b; c; z) &= F (a, b+1; c; z) \\
+z F' (a, b; c; z) + (c-1) F (a, b; c; z) &= F (a, b; c-1; z) \\
+(1 - z) z F' (a, b; c; z) &= (c - a) F (a-1, b; c; z) + (a - c + bz) F (a, b; c; z) \\
+(1 - z) z F' (a, b; c; z) &= (c - b) F (a, b-1; c; z) + (b - c + az) F (a, b; c; z) \\
+(1 - z) z F' (a, b; c; z) &= z (c - a) (c - b) F (a, b; c+1; z) +
+zc (a + b - c) F (a, b; c; z)
+\end{align*}
+These equations may readily be verified by differentiating the series
+which defines the hypergeometric equation.  By eliminating the derivatives
+between these equations, one obtains the contiguity relations for the 
+hypergeometric function.  By differentiating them once more and taking
+suitable linear combinations, one may obtain the differential equation
+of the hypergeometric function.
+%%%%%
+%%%%%
+\end{document}

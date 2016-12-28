@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SpecialCasesOfHypergeometricFunction}
+\pmcreated{2013-03-22 18:54:39}
+\pmmodified{2013-03-22 18:54:39}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{special cases of hypergeometric function}
+\pmrecord{8}{41760}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33C05}
+\pmrelated{FrobeniusMethod}
+\pmrelated{IndexOfSpecialFunctions}
+\pmrelated{GettingTaylorSeriesFromDifferentialEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Many \PMlinkname{elementary}{ElementaryFunction} and non-elementary transcendental functions may be expressed as special cases of the hypergeometric functions
+$$F(a,\,b,\,c;\,x) \;=\; 1+\frac{ab}{1!c}x+\frac{a(a+1)b(b+1)}{2!c(c+1)}x^2
++\frac{a(a+1)(a+2)b(b+1)(b+2)}{3!c(c+1)(c+2)}x^3+\ldots,$$
+which are solutions of the hypergeometric equation
+$$x(x-1)\frac{d^2y}{dx^2}+(c-(a+b+1))\frac{dy}{dx}-aby \;=\;0.$$
+For example:
+\begin{itemize}
+\item $(1\!+\!x)^n \;=\; F(-n,\,1,\,1;\,-x)$
+\item $\ln(1\!+\!x) \;=\; xF(1,\,1,\,2;\,-x)$
+\item $\ln\frac{1+x}{1-x} \;=\; 2xF(\frac{1}{2},\,1,\,\frac{3}{2};\,x^2)$
+\item $\arcsin{x} \;=\; xF(\frac{1}{2},\,\frac{1}{2},\,\frac{3}{2};\,x^2)$
+\item $\arctan{x} \;=\; xF(\frac{1}{2},\,1,\,\frac{3}{2};\,-x^2)$
+\item $\sin(m\arcsin{x}) \;=\; mxF(\frac{1+m}{2},\,\frac{1-m}{2},\,\frac{3}{2};\,x^2)$
+\item $\cos(m\arcsin{x}) \;=\; F(\frac{m}{2},\,-\frac{m}{2},\,\frac{1}{2};\,x^2)$
+\item $T_n(x) \;=\; F(n,\,-n,\,\frac{1}{2};\,\frac{1-x}{2})$\, (Chebyshev polynomials)
+\item $P_n(x) \;=\; F(-n,\,n+1,\,1;\,\frac{1-x}{2})$\, (Legendre polynomials)
+\item $\displaystyle\int_0^{\frac{\pi}{2}}\!\frac{d\varphi}{\sqrt{1\!-\!x^2\sin^2\varphi}}$ 
+$\;=\; \frac{\pi}{2}F(\frac{1}{2},\,\frac{1}{2},\,1;\,x^2)$\, (complete elliptic integral of 1st kind)
+\item $\displaystyle\int_0^{\frac{\pi}{2}}\!\sqrt{1\!-\!x^2\sin^2\varphi}\;d\varphi$ 
+$\;=\; \frac{\pi}{2}F(-\frac{1}{2},\,\frac{1}{2},\,1;\,x^2)$\, (complete elliptic integral of 2nd kind)
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LogarithmSeries}
+\pmcreated{2013-03-22 18:56:13}
+\pmmodified{2013-03-22 18:56:13}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{logarithm series}
+\pmrecord{8}{41791}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33B10}
+\pmrelated{TaylorSeriesOfArcusSine}
+\pmrelated{TaylorSeriesOfArcusTangent}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The derivative of\, $\ln(1\!+\!x)$\, is $\displaystyle\frac{1}{1\!+\!x}$, which can be represented as the sum of geometric series:
+$$\frac{1}{1\!+\!x} \;=\; 1-x+x^2-x^3+-\ldots \qquad\mbox{for}\;\; -1 < x < 1.$$
+Integrating both \PMlinkescapetext{sides} from 0 to $x$ gives
+\begin{align}
+\ln(1\!+\!x) \;=\; x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+-\ldots \qquad\mbox{for}\;\; -1 < x < 1.
+\end{align}
+which is valid on the whole open interval of convergence \,$-1 < x < 1$\, of this power series and in 
+\PMlinkescapetext{addition} for\, $x = 1$, as one may prove.
+
+Replacing $x$ with $-x$ in (1) yields the series
+\begin{align}
+\ln(1\!-\!x) \;=\; -x-\frac{x^2}{2}-\frac{x^3}{3}-\frac{x^4}{4}-\ldots \qquad\mbox{for}\;\; -1 < x < 1.
+\end{align}
+Subtracting (2) from (1) gives
+\begin{align}
+\ln\frac{1\!+\!x}{1\!-\!x} \;=\; 2\left(x+\frac{x^3}{3}+\frac{x^5}{5}+\frac{x^7}{7}+\ldots\right)
+\end{align}
+which also is true for\, $-1 < x < 1$.\, Here the inner function of the logarithm attains all positive real values when\, $0 < x < 1$ (its \PMlinkname{graph}{Graph2} is a \PMlinkname{hyperbola}{Hyperbola2} with \PMlinkname{asymptotes}{AsymptotesOfGraphOfRationalFunction} \,$x = 1$\, and\, $y = -1$).\, Thus, in principle, the series (3) can be used for calculating any values of \PMlinkname{natural logarithm}{NaturalLogarithm2}.\, For this purpose, one could denote
+$$\frac{1\!+\!x}{1\!-\!x} \;:=\; t,$$
+which implies
+$$x \;=\;\frac{t\!-\!1}{t\!+\!1},$$
+and accordingly
+\begin{align}
+\ln{t} \;=\; 2\left[\frac{t\!-\!1}{t\!+\!1}
+            +\frac{1}{3}\left(\frac{t\!-\!1}{t\!+\!1}\right)^3
+            +\frac{1}{5}\left(\frac{t\!-\!1}{t\!+\!1}\right)^5+\ldots\right]\!.
+\end{align}
+For example, 
+$$\ln{3} \;=\; 2\left(\frac{1}{2}+\frac{1}{3\cdot2^3}+\frac{1}{5\cdot2^5}+\ldots\right)\!.$$
+The convergence of (4) is the slower the greater is $t$.
+
+
+
+%%%%%
+%%%%%
+\end{document}

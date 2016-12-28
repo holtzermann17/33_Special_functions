@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneratingFunctionOfLaguerrePolynomials}
+\pmcreated{2013-03-22 19:06:51}
+\pmmodified{2013-03-22 19:06:51}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{generating function of Laguerre polynomials}
+\pmrecord{8}{42007}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33B99}
+\pmclassification{msc}{30B10}
+\pmclassification{msc}{26C05}
+\pmclassification{msc}{26A09}
+\pmclassification{msc}{33E30}
+\pmrelated{ExampleOfFindingTheGeneratingFunction}
+\pmrelated{GeneratingFunctionOfHermitePolynomials}
+\pmrelated{VariantOfCauchyIntegralFormula}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+We start from the definition of Laguerre polynomials via their \PMlinkid{Rodrigues formula}{11983}
+\begin{align}
+L_n(z) \;:=\; e^z\frac{d^n}{dz^n}e^{-z}z^n \qquad (n \;=\; 0,\,1,\,2,\,\ldots).
+\end{align}
+The consequence 
+\begin{align}
+f^{(n)}(z) \;=\; \frac{n!}{2 \pi i} \oint_C \frac{f(\zeta)}{(\zeta-z)^{n+1}}\ d\zeta
+\end{align}
+of \PMlinkid{Cauchy integral formula}{1150} allows to write (1) as the complex integral
+$$L_n(z) \;=\; \frac{n!}{2i\pi}\oint_C\frac{e^ze^{-\zeta}}{(\zeta\!-\!z)^{n+1}}\,d\zeta
+ \;=\; \frac{n!}{2i\pi}\oint_C\frac{e^{z-\zeta}\,d\zeta}{(1\!-\!\frac{z}{\zeta})^n(\zeta\!-\!z)},$$
+where $C$ is any \PMlinkescapetext{closed} contour around the point $z$ and the direction is anticlockwise.\, The \PMlinkid{substitution}{11373}
+$$\zeta\!-\!z \;:=\; \frac{zt}{1\!-\!t}, \quad \zeta \;=\; \frac{z}{1\!-\!t}, 
+\quad t \;=\; 1\!-\!\frac{z}{\zeta} \quad d\zeta \;=\; \frac{z\,dt}{(1\!-\!t)^2}$$
+here yields
+$$L_n(z) \;=\; \frac{n!}{2i\pi}\oint_{C'}\frac{e^{-\frac{zt}{1-t}}z\,dt}{(1\!-\!t)^2t^n\cdot\frac{zt}{1-t}}
+\;=\; \frac{n!}{2i\pi}\oint_{C'}\frac{e^{-\frac{zt}{1-t}}\,dt}{(1\!-\!t)t^{n+1}}$$
+where the contour $C'$ goes round the origin.\, Accordingly, by (2) we can infer that
+$$L_n(z) \;=\; \left[\frac{d^{\,n}}{dt^n}\frac{e^{-\frac{zt}{1-t}}}{1\!-\!t}\right]_{t=0},$$
+whence we have found the generating function
+$$\frac{e^{-\frac{zt}{1-t}}}{1\!-\!t} \;=\; \sum_{n=0}^\infty\frac{L_n(z)}{n!}t^n$$
+of the Laguerre polynomials.
+
+%%%%%
+%%%%%
+\end{document}

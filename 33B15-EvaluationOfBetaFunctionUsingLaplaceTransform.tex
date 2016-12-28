@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EvaluationOfBetaFunctionUsingLaplaceTransform}
+\pmcreated{2013-03-22 14:37:36}
+\pmmodified{2013-03-22 14:37:36}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{evaluation of beta function using Laplace transform}
+\pmrecord{10}{36206}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33B15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The beta integral can be evaluated elegantly using the \PMlinkname{convolution theorem}{LaplaceTransform} for Laplace transforms.
+
+Start with the following Laplace transform:
+\[
+s^{-\alpha} = {\cal L} \left[ {t^{\alpha - 1} \over \Gamma(\alpha)} \right] = \int_0^\infty e^{-st} {t^{\alpha - 1} \over \Gamma(\alpha)} dt
+\]
+
+Since $s^{-q} s^{-p} = s^{-q - p}$, the convolution theorem imples that
+\[
+{t^{q - 1} \over \Gamma(q)} *  {t^{p - 1} \over \Gamma(p)} =  {t^{q + p - 1} \over \Gamma(q + p)}
+\]
+
+Writing out the definition of convolution, this becomes
+\[
+\int_0^t {(t-s)^{q - 1} \over \Gamma(q)} {s^{p - 1} \over \Gamma(p)} ds = {t^{q + p - 1} \over \Gamma(p + q)}
+\]
+
+Setting $t=1$ and simplifying, we conclude that
+\[
+\int_0^1 x^{p - 1} (1-x)^{q - 1}  \,dx= {\Gamma(p) \Gamma(q)  \over \Gamma(p + q)}
+\]
+
+\rightline{QED}
+%%%%%
+%%%%%
+\end{document}

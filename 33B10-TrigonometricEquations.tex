@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TrigonometricEquations}
+\pmcreated{2013-03-22 17:46:25}
+\pmmodified{2013-03-22 17:46:25}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{trigonometric equations}
+\pmrecord{12}{40230}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33B10}
+\pmclassification{msc}{26A09}
+\pmclassification{msc}{00A35}
+\pmrelated{Equation}
+\pmdefines{trigonometric equation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{argument} \PMlinkescapeword{line}
+
+A {\em trigonometric equation} \PMlinkescapetext{contains} values of given trigonometric functions whose arguments are unknown angles.  The task is to determine all possible values of those angles.  For obtaining the \PMlinkescapetext{complete} solution one needs the following properties of the trigonometric functions:
+\begin{itemize}
+\item Two angles have the same value of sine iff the angles are equal or supplementary angles or differ of each other by a multiple of full angle. 
+\item Two angles have the same value of cosine iff the angles are equal or \PMlinkname{opposite}{OppositeNumber} angles or differ of each other by a multiple of full angle. 
+\item Two angles have the same value of tangent iff the angles are equal or differ of each other by a multiple of straight angle. 
+\item Two angles have the same value of cotangent iff the angles are equal or differ of each other by a multiple of straight angle.\\
+\end{itemize}
+
+
+The first principle in solving a trigonometric equation is that try to elaborate with goniometric formulae or else it so that only one trigonometric function on one angle remains in the equation.  Then the equation is usually resolved to the form
+\begin{align}
+f(kx) = a,
+\end{align}
+where $k$ and $a$ are known numbers and $f$ is one of the functions sin, cos, tan, cot.  Thereafter one can solve the values of the angle $kx$ and, dividing these by $k$, at last the values of the angle $x$.
+
+\textbf{Example 1.}\, 
+$$\sin{x}\cos{x}+\frac{1}{4} = 0$$
+$$2\sin{x}\cos{x} = -\frac{1}{2}$$
+$$\sin{2x} = -\frac{1}{2}$$
+$$\sin{2x} = \sin{210^\circ}$$
+$$2x = 210^\circ+n\cdot360^\circ \quad \lor \quad 2x = 180^\circ-210^\circ+n\cdot360^\circ$$
+$$x = 105^\circ+n\cdot180^\circ \quad \lor \quad x = -15^\circ+n\cdot180^\circ$$
+On the third line one used the double angle formula of sine.\\
+
+
+It may happen that the form (1) cannot be attained, but instead e.g. the form
+\begin{align}
+f(kx) = f(\alpha),
+\end{align}
+where $x$ can be \PMlinkescapetext{contained} in $\alpha$.
+
+\textbf{Example 2.} $$\sin2x = \cos3x$$
+$$\cos(90^\circ-2x) = \cos3x$$
+$$90^\circ-2x = 3x+n\cdot360^\circ \quad \lor \quad 90^\circ-2x = -3x+n\cdot360^\circ$$
+$$-2x-3x = -90^\circ+n\cdot360^\circ \quad \lor \quad -2x+3x = -90^\circ+n\cdot360^\circ$$
+$$x = 18^\circ+n\cdot72^\circ \quad \lor \quad x = -90^\circ+n\cdot360^\circ$$
+On the second line one of the complement formulas was utilized.\\
+
+\textbf{Example 3.} $$\sin{2x} = -\sin{3x}$$
+$$\sin{2x} = \sin(-3x)$$
+$$2x = -3x+n\cdot360^\circ \quad \lor \quad 2x = 180^\circ-(-3x)+n\cdot360^\circ$$
+$$x = n\cdot72^\circ \quad \lor \quad x = 180^\circ+n\cdot360^\circ$$
+On the second line the \PMlinkname{opposite angle formula}{GoniometricFormulae} of sine was utilized.\\
+
+\textbf{Example 4.} $$\cos{2x} = -\cos{3x}$$
+$$\cos{2x} = \cos(180^\circ-3x)$$
+$$2x = \pm(180^\circ-3x)+n\cdot360^\circ$$
+$$x = 36^\circ+n\cdot72^\circ \quad \lor \quad x = 180^\circ+n\cdot360^\circ$$
+On the second line the \PMlinkname{supplement formula}{GoniometricFormulae} of sine was utilized.
+
+%%%%%
+%%%%%
+\end{document}

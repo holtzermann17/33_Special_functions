@@ -1,0 +1,384 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BesselFunctionsAndHelicalStructureDiffractionPatterns}
+\pmcreated{2013-03-22 19:23:04}
+\pmmodified{2013-03-22 19:23:04}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{Bessel functions and helical structure diffraction patterns}
+\pmrecord{6}{42339}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33C10}
+\pmclassification{msc}{78A45}
+\pmclassification{msc}{00A79}
+%\pmkeywords{helical structure diffraction patterns}
+%\pmkeywords{Bessel functions}
+\pmrelated{BesselFunction}
+\pmrelated{BesselsEquation}
+\pmdefines{helical structure diffraction patterns}
+\pmdefines{cylinder functions}
+\pmdefines{Bessel functions}
+
+% this is the default preamble.
+
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym, enumerate}
+\usepackage{xypic, xspace}
+\usepackage[mathscr]{eucal}
+\usepackage[dvips]{graphicx}
+\usepackage[curve]{xy}
+
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+\begin{document}
+\PMlinkescapeword{constant} \PMlinkescapeword{order}
+
+\section{The Bessel functions and Helical Structure \\
+Diffraction represented by Bessel functions.}
+
+The linear differential equation 
+\begin{align}
+  x^2\frac{d^2y}{dx^2}+x\frac{dy}{dx}+(x^2-p^2)y = 0,
+\end{align}
+in which $p$ is a constant (non-negative if it is real), is called the {\em Bessel's equation}.\, We derive its general solution by trying the series form
+\begin{align}
+               y = x^r\sum_{k=0}^\infty a_kx^k = \sum_{k=0}^\infty a_kx^{r+k},
+\end{align}
+due to Frobenius.\, Since the parameter $r$ is indefinite, we may regard $a_0$ as distinct from 0.
+
+We substitute (2) and the derivatives of the series in (1):
+$$
+x^2\sum_{k=0}^\infty(r+k)(r+k-1)a_kx^{r+k-2}+
+  x\sum_{k=0}^\infty(r+k)a_kx^{r+k-1}+
+(x^2-p^2)\sum_{k=0}^\infty a_kx^{r+k} = 0.
+$$
+Thus the coefficients of the powers $x^r$, $x^{r+1}$, $x^{r+2}$ and so on must vanish, and we get the system of equations
+\begin{align}
+\begin{cases}
+{[}r^2-p^2{]}a_0 = 0,\\
+{[}(r+1)^2-p^2{]}a_1 = 0,\\
+{[}(r+2)^2-p^2{]}a_2+a_0 = 0,\\
+\qquad \qquad \ldots\\
+{[}(r+k)^2-p^2{]}a_k+a_{k-2} = 0.
+\end{cases}
+\end{align}
+The last of those can be written
+$$(r+k-p)(r+k+p)a_k+a_{k-2} = 0.$$
+Because\, $a_0 \neq 0$,\, the first of those (the indicial equation) gives\, $r^2-p^2 = 0$,\, i.e. we have the roots
+$$r_1 =  p,\,\, r_2 = -p.$$
+Let's first look the the solution of (1) with\, $r = p$;\, then\, $k(2p+k)a_k+a_{k-2} = 0$,\, and thus\,
+$$a_k = -\frac{a_{k-2}}{k(2p+k).}$$
+From the system (3) we can solve one by one each of the coefficients $a_1$, $a_2$, $\ldots$\, and express them with $a_0$ which remains arbitrary.\, Setting for $k$ the integer values we get
+\begin{align}
+\begin{cases}
+a_1 = 0,\,\,a_3 = 0,\,\ldots,\, a_{2m-1} = 0;\\
+a_2 = -\frac{a_0}{2(2p+2)},\,\,a_4 = \frac{a_0}{2\cdot4(2p+2)(2p+4)},\,\ldots,\,\,
+a_{2m} = \frac{(-1)^ma_0}{2\cdot4\cdot6\cdots(2m)(2p+2)(2p+4)\ldots(2p+2m)}
+\end{cases}
+\end{align}
+(where\, $m = 1,\,2,\,\ldots$).
+Putting the obtained coefficients to (2) we get the particular solution 
+\begin{align}
+ y_1 := a_0x^p \left[1\!-\!\frac{x^2}{2(2p\!+\!2)}\!
++\!\frac{x^4}{2\!\cdot\!4(2p\!+\!2)(2p\!+\!4)}
+\!-\!\frac{x^6}{2\!\cdot\!4\!\cdot\!6(2p\!+\!2)(2p\!+\!4)(2p\!+\!6)}\!+-\ldots\right]
+\end{align}
+
+In order to get the coefficients $a_k$ for the second root\, $r_2 = -p$\, we have to look after that
+$$(r_2+k)^2-p^2 \neq 0,$$
+or\, $r_2+k \neq p = r_1$.\, Therefore
+$$r_1-r_2 = 2p \neq k$$
+where $k$ is a positive integer.\, Thus, when $p$ is not an integer and not an integer added by $\frac{1}{2}$, we get the second particular solution, gotten of (5) by replacing $p$ by $-p$:
+\begin{align}
+ y_2 := a_0x^{-p}\!\left[1
+\!-\!\frac{x^2}{2(-2p\!+\!2)}\!+\!\frac{x^4}{2\!\cdot\!4(-2p\!+\!2)(-2p\!+\!4)}
+\!-\!\frac{x^6}{2\!\cdot\!4\!\cdot\!6(-2p\!+\!2)(-2p\!+\!4)(-2p\!+\!6)}\!+-\ldots\right]
+\end{align}
+
+The power series of (5) and (6) converge for all values of $x$ and are linearly independent (the ratio $y_1/y_2$ tends to 0 as\, $x\to\infty$).\, With the appointed value
+$$a_0 = \frac{1}{2^p\,\Gamma(p+1)},$$
+the solution $y_1$ is called the {\em Bessel function of the first kind and of order $p$} and denoted by $J_p$.\, The similar definition is set for the first kind Bessel function of an arbitrary order\, $p\in \mathbb{R}$ (and $\mathbb{C}$).
+ For\, $p\notin \mathbb{Z}$\, the general solution of the Bessel's differential equation is thus
+$$y := C_1J_p(x)+C_2J_{-p}(x),$$
+where\, $J_{-p}(x) = y_2$\, with\, $a_0 = \frac{1}{2^{-p}\Gamma(-p+1)}$.
+
+The explicit expressions for $J_{\pm p}$ are
+\begin{align}
+J_{\pm p}(x) = 
+ \sum_{m=0}^\infty 
+  \frac{(-1)^m}{m!\,\Gamma(m\pm p+1)}\left(\frac{x}{2}\right)^{2m\pm p},
+\end{align}
+which are obtained from (5) and (6) by using the last \PMlinkescapetext{formula} for gamma function.
+
+E.g. when\, $p = \frac{1}{2}$\, the series in (5) gets the form
+$$y_1 = \frac{x^{\frac{1}{2}}}{\sqrt{2}\,\Gamma(\frac{3}{2})}\left[1\!-\!\frac{x^2}{2\!\cdot\!3}\!+\!\frac{x^4}{2\!\cdot\!4\!\cdot\!3\!\cdot\!5}\!-\!\frac{x^6}{2\!\cdot\!4\cdot\!6\!\cdot\!3\!\cdot\!5\!\cdot\!7}\!+-\ldots\right] =
+\sqrt{\frac{2}{\pi x}}\left(x\!-\!\frac{x^3}{3!}\!+\!\frac{x^5}{5!}\!-+\ldots\right).$$
+Thus we get
+$$J_{\frac{1}{2}}(x) = \sqrt{\frac{2}{\pi x}}\sin{x};$$
+analogically (6) yields
+$$J_{-\frac{1}{2}}(x) = \sqrt{\frac{2}{\pi x}}\cos{x},$$
+and the general solution of the equation (1) for\, $p = \frac{1}{2}$\, is
+$$y := C_1J_{\frac{1}{2}}(x)+C_2J_{-\frac{1}{2}}(x).$$
+
+
+In the case that $p$ is a non-negative integer $n$, the ``+'' case of (7) gives the solution
+$$J_{n}(x) = 
+ \sum_{m=0}^\infty 
+  \frac{(-1)^m}{m!\,(m+n)!}\left(\frac{x}{2}\right)^{2m+n},
+$$
+but for\, $p = -n$\, the expression of $J_{-n}(x)$ is $(-1)^nJ_n(x)$, i.e. linearly dependent of $J_n(x)$.\, It can be shown that the other solution of (1) ought to be searched in the form\, 
+$y = K_n(x) = J_n(x)\ln{x}+x^{-n}\sum_{k=0}^\infty b_kx^k$.\, Then the general solution is\, $y := C_1J_n(x)+C_2K_n(x)$.\\
+
+\textbf{Other formulae}
+
+The first kind Bessel functions of integer order have the generating function $F$:
+\begin{align}
+F(z,\,t) = e^{\frac{z}{2}(t-\frac{1}{t})}
+= \sum_{n=-\infty}^\infty J_n(z)t^n
+\end{align}
+This function has an essential singularity at\, $t = 0$\, but is analytic elsewhere in $\mathbb{C}$; thus $F$ has the Laurent expansion in that point.\, Let us prove (8) by using the general expression
+$$c_n = \frac{1}{2\pi i}\oint_{\gamma} \frac{f(t)}{(t-a)^{n+1}}\,dt$$
+of the coefficients of Laurent series.\, Setting to this\, $a := 0$,\, 
+$f(t) := e^{\frac{z}{2}(t-\frac{1}{t})}$,\, $\zeta := \frac{zt}{2}$\, gives
+$$c_n = \frac{1}{2\pi i}
+\oint_\gamma\frac{e^{\frac{zt}{2}}e^{-\frac{z}{2t}}}{t^{n+1}}\,dt = 
+\frac{1}{2\pi i}\left(\frac{z}{2}\right)^n\!
+\oint_\delta\frac{e^\zeta e^{-\frac{z^2}{4\zeta}}}{\zeta^{n+1}}\,d\zeta = 
+\sum_{m=0}^\infty\frac{(-1)^m}{m!}\left(\frac{z}{2}\right)^{2m+n}\!
+\frac{1}{2\pi i}\oint_\delta \zeta^{-m-n-1}e^\zeta\,d\zeta.$$
+The paths $\gamma$ and $\delta$ go once round the origin anticlockwise in the $t$-plane and $\zeta$-plane, respectively.\, Since the residue of $\zeta^{-m-n-1}e^\zeta$ in the origin is\, $\frac{1}{(m+n)!} = \frac{1}{\Gamma(m+n+1)}$,\, the \PMlinkname{residue theorem}{CauchyResidueTheorem} gives
+$$c_n = \sum_{m=0}^\infty
+\frac{(-1)^m}{m!\Gamma(m+n+1)}\left(\frac{z}{2}\right)^{2m+n} = J_n(z).$$
+This \PMlinkescapetext{means} that $F$ has the Laurent expansion (8).
+
+By using the generating function, one can easily derive other formulae, e.g.
+the \PMlinkescapetext{integral representation} of the Bessel functions of integer order:
+$$J_n(z) = \frac{1}{\pi}\int_0^\pi\cos(n\varphi-z\sin{\varphi})\,d\varphi$$
+Also one can obtain the addition formula
+$$J_n(x+y) = \sum_{\nu=-\infty}^{\infty}J_\nu(x)J_{n-\nu}(y)$$
+and the series \PMlinkescapetext{representations} of cosine and sine:
+$$\cos{z} = J_0(z)-2J_2(z)+2J_4(z)-+\ldots$$
+$$\sin{z} = 2J_1(z)-2J_3(z)+2J_5(z)-+\ldots$$
+
+\section{Applications of Bessel functions in Physics and Engineering}
+
+One notes also that Bessel's equation arises in the derivation of separable solutions to Laplace's equation, and also for the Helmholtz equation in either cylindrical or spherical coordinates. The Bessel functions are therefore very important in many physical problems involving wave propagation, wave diffraction phenomena--including X-ray diffraction by certain molecular crystals, and also static potentials. The solutions to most problems in cylindrical coordinate systems are found in terms of Bessel functions of integer order ($\alpha = n$), whereas in spherical coordinates, such solutions involve Bessel functions of half-integer orders ($\alpha = n + 1/2$). 
+Several examples of Bessel function solutions are:
+
+\begin{enumerate}
+\item the diffraction pattern of a helical molecule wrapped around a cylinder computed from the Fourier transform of the helix in cylindrical coordinates;
+\item electromagnetic waves in a cylindrical waveguide 
+\item diffusion problems on a lattice. 
+\item vibration modes of a thin circular, tubular or annular membrane (such as a drum, other membranophone, the vocal cords, etc.)
+\item heat conduction in a cylindrical object   
+\end{enumerate}
+
+In engineering Bessel functions also have useful properties for signal processing and filtering noise as for example by using Bessel filters, or in FM synthesis and windowing signals.
+
+\subsection{Applications of Bessel functions in Physical Crystallography}
+The first example listed above was shown to be especially important in molecular
+biology for the structures of helical secondary structures in certain proteins (e.g. $\alpha-helix$) or in molecular genetics for finding the double-helix
+structure of Deoxyribonucleic Acid (DNA) molecular crystals with extremely important consequences for genetics, biology, mutagenesis, molecular evolution,
+contemporary life sciences and medicine. This finding is further detailed in a related entry.
+
+\begin{thebibliography}{99}
+\bibitem{FBessel1824}
+F. Bessel, ``Untersuchung des Theils der planetarischen St\"orungen'', {\em Berlin Abhandlungen} (1824), article 14.
+
+\bibitem{FRGG53}
+Franklin, R.E. and Gosling, R.G. received. 6th March 1953. Acta Cryst. (1953). 6, 673 The Structure of Sodium Thymonucleate Fibres I. The Influence of Water Content Acta Cryst. (1953). 6,678 : The Structure of Sodium Thymonucleate Fibres II. The Cylindrically Symmetrical Patterson Function. 
+
+\bibitem{Arfken-Weber2k5}
+Arfken, George B. and Hans J. Weber, {\em Mathematical Methods for Physicists}, 6th edition, Harcourt: San Diego, 2005. ISBN 0-12-059876-0.
+ 
+\bibitem{Bowman58}
+Bowman, Frank. {\em Introduction to Bessel Functions.}. Dover: New York, 1958). ISBN 0-486-60462-4. 
+
+\bibitem{Cochran-Crick-Vand52}
+Cochran, W., Crick, F.H.C. and Vand V. 1952. The Structure of Synthetic Polypeptides. 1. The Transform of atoms on a helic. {\em Acta Cryst.} {\bf 5}(5):581-586. 
+
+\bibitem{Crick53a}
+Crick, F.H.C. 1953a. The Fourier Transform of a Coiled-Coil., {\em Acta Crystallographica} {\bf 6}(8-9):685-689. 
+
+\bibitem{Crick53b}
+Crick, F.H.C. 1953. The packing of $\alpha$-helices- Simple coiled-coils. 
+{\em Acta Crystallographica}, {\bf 6}(8-9):689-697. 
+
+\bibitem{WJ-CFC53a}
+Watson, J.D; Crick F.H.C. 1953a. Molecular Structure of Nucleic Acids - A Structure for Deoxyribose Nucleic Acid., {\em Nature} 171(4356):737-738. 
+
+\bibitem{NP}{\sc N. Piskunov:} {\em Diferentsiaal- ja integraalarvutus k\~{o}rgematele tehnilistele \~{o}ppeasutustele}.\, Kirjastus Valgus, Tallinn  (1966).
+\bibitem{KK}{\sc K. Kurki-Suonio:} {\em Matemaattiset apuneuvot}.\, Limes r.y., Helsinki (1966).
+
+\bibitem{WJ-CFC53c}
+Watson, J.D; Crick F.H.C. 1953c. The Structure of DNA., {\em Cold Spring Harbor Symposia on Qunatitative Biology} {\bf 18}:123-131. 
+ 
+\bibitem{GRJZ2k7}
+I.S. Gradshteyn, I.M. Ryzhik, Alan Jeffrey, Daniel Zwillinger, editors. {\em Table of Integrals, Series, and Products.},  Academic Press, 2007. 
+ISBN 978-0-12-373637-6.
+
+\bibitem{Spain-Smith70}
+Spain,B., and M. G. Smith, {\em Functions of mathematical physics.}, Van Nostrand Reinhold Company, London, 1970. Chapter 9: Bessel functions.
+
+\bibitem{AM-SI1972}
+Abramowitz, M. and Stegun, I. A. (Eds.). Bessel Functions , Ch.9.1 in {\em Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables}, 9th printing. New York: Dover, pp. 358-364, 1972. 
+
+\bibitem{Arfken1985}
+Arfken, G. Bessel Functions of the First Kind, and ``Orthogonality.'' Chs.11.1 and 11.2 in {\em Mathematical Methods for Physicists}, 3rd ed. Orlando, FL: Academic Press, pp. 573-591 and 591-596, 1985.
+
+\bibitem{Hansen1843}
+Hansen, P. A. 1843. Ermittelung der absoluten Strungen in Ellipsen von beliebiger Excentricitat und Neigung, I. {\em Schriften der Sternwarte Seeberg. Gotha}, 1843. 
+
+\bibitem{Lehmer1932}
+Lehmer, D. H. Arithmetical Periodicities of Bessel Functions. Ann. Math. 33, 143-150, 1932. 
+
+\bibitem{LL83}
+Le Lionnais, F. {\em Les nombres remarquables} (En: Remarcable numbers). Paris: Hermann, 1983. 
+
+\bibitem{MP-FH53}
+Morse, P. M. and Feshbach, H. {\em Methods of Theoretical Physics, Part I}. New York: McGraw-Hill, pp. 619-622, 1953. 
+
+\bibitem{Schl1857}
+Schl\"omilch, O. X.  1857. Ueber die Bessel'schen Function. {\em Z. f\"ur Math. u. Phys.} 2: 137-165. 
+
+\bibitem{Spanier87}
+Spanier, J. and Oldham, K. B. "The Bessel Coefficients  and " and "The Bessel Function ." Chs. 52-53 in An Atlas of Functions. Washington, DC: Hemisphere, pp. 509-520 and 521-532, 1987. 
+
+\bibitem{Wall1948}
+Wall, H. S. Analytic Theory of Continued Fractions. New York: Chelsea, 1948. 
+
+\bibitem{Weisstein2009}
+Weisstein, Eric W. "Bessel Functions of the First Kind." 
+\PMlinkexternal{From MathWorld--A Wolfram Web Resource.}{http://mathworld.wolfram.com/BesselFunctionoftheFirstKind.html} and
+\PMlinkexternal{Graphs of Bessel Functions of the Second Kind}{http://mathworld.wolfram.com/BesselFunctionoftheSecondKind.html}
+
+\bibitem{Watson66} 
+Watson, G. N. A Treatise on the Theory of Bessel Functions, 2nd ed. Cambridge, England: Cambridge University Press, 1966.
+
+\bibitem{Watson95}
+Watson, G. N. {\em A Treatise on the Theory of Bessel Functions.}, (1995) Cambridge University Press. ISBN 0-521-48391-3.
+
+
+\end{thebibliography}
+
+\subsection{Linked files PDFs:}
+
+http://aux.planetmath.org/files/objects//BesselFunctions-DiffractionHelices.pdf
+http://aux.pp-dev.org:8080/files/objects/716/BesselFunctions_AppsToDiffraction_HelicalStructures.pdf
+
+%%%%%
+%%%%%
+\end{document}

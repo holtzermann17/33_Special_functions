@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LimitsOfNaturalLogarithm}
+\pmcreated{2014-12-12 10:15:50}
+\pmmodified{2014-12-12 10:15:50}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{limits of natural logarithm}
+\pmrecord{11}{41859}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33B10}
+\pmrelated{ImproperLimits}
+\pmrelated{GrowthOfExponentialFunction}
+\pmrelated{FundamentalTheoremOfCalculusClassicalVersion}
+\pmrelated{DifferentiableFunctionsAreContinuous}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The \PMlinkname{parent entry}{NaturalLogarithm} defines the natural logarithm as
+\begin{align}
+\ln{x} \;=\; \int_1^x\frac{1}{t}\,dt \qquad (x > 0)
+\end{align}
+and derives the \PMlinkescapetext{formula}
+$$\ln{xy} \;=\; \ln{x}+\ln{y}$$
+which implies easily by induction that
+\begin{align}
+\ln{a}^n \;=\; n\ln{a}.
+\end{align}\\
+
+Basing on (1), we prove here the
+
+\textbf{Theorem.}\, The function \,$x \mapsto \ln{x}$ is strictly increasing and continuous on $\mathbb{R}_+$.\, It has the limits
+\begin{align}
+\lim_{x\to+\infty}\ln{x} \;=\; +\infty \quad\mbox{and}\quad \lim_{x\to 0+}\ln{x} \;=\; -\infty.
+\end{align}
+
+
+\emph{Proof.}\, By the above definition, $\ln{x}$ is differentiable:
+$$\frac{d}{dx}\ln{x} \;=\; \frac{1}{x} \;>\; 0$$
+Accordingly, $\ln{x}$ is also continuous and strictly increasing.
+
+Let $M$ be an arbitrary positive number.\, We have\, $\ln2 = \int_1^2\frac{dt}{t} > 0$.\, There exists a positive integer $n$ such that\, $n\ln2 > M$ (see Archimedean property).\, By (2) we thus get\, $\ln{2^n} > M$, and since 
+$\ln{x}$ is strictly increasing, we see that
+$$\ln{x} > M \quad \forall x > 2^n.$$
+Hence the first limit assertion is true.
+Now\, $-M < 0$.\, If\, $x > 2^n$,\, then\, $\ln{x} > M$\, and
+$$0 \;<\; \frac{1}{x} \;<\; 2^{-n}, \qquad 
+\ln\frac{1}{x} \;=\; \int_1^{\frac{1}{x}}\frac{dt}{t} \;=\; \int_x^1\frac{du}{u} \;=\; -\ln{x} \;<\; -M$$
+(\PMlinkname{substitution}{SubstitutionForIntegration}\, $xt := u$).\, From this we can infer the second limit assertion.
+
+
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,117 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ReductionOfEllipticIntegralsToStandardForm}
+\pmcreated{2014-02-01 18:13:38}
+\pmmodified{2014-02-01 18:13:38}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{reduction of elliptic integrals to standard form}
+\pmrecord{30}{38610}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33E05}
+\pmrelated{ExpressibleInClosedForm}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Any integral of the form $\int R(x,\sqrt{P(x)}) \, dx$, where $R$ is a rational 
+function and $P$ is a polynomial of degree 3 or 4 can be expressed as a linear 
+combination of elementary functions and elliptic integrals of the first, second, 
+and third kinds.
+
+To begin, we will assume that $P$ has no repeated roots.  Were this not the case, 
+we could simply pull the repeated factor out of the radical and be left with a 
+polynomial of degree of 1 or 2 inside the square root and express the integral in 
+terms of inverse trigonometric functions.
+
+Make a change of variables $z = (a x + b) / (c x + d)$.  By choosing the coefficients 
+$a, b, c, d$ suitably, one can cast P into either Jacobi's normal form 
+$P(z) = (1 - z^2) (1 - k^2 z^2)$ or Weierstrass' normal form 
+$P(z) = 4 z^3 - g_2 z - g_3$.
+
+Note that 
+ \[R (z, \sqrt{P(z)}) = \frac{A(z) + B(z) \sqrt{P(z)}}{C(z) + D(z) \sqrt{P(z)}}\]
+for suitable polynomials $A, B, C, D$.  We can rationalize the denominator like so:
+ \[\frac{A(z) + B(z) \sqrt{P(z)}}{C(z) + D(z) \sqrt{P(z)}} \times \frac{C(z) -
+D(z) \sqrt{P(z)}}{C(z) - D(z) \sqrt{P(z)}} = F(z) + G(z) \sqrt{P(z)}\]
+The rational functions $F$ and $G$ appearing in the foregoing equation are defined like so:
+\begin{eqnarray*} F(z) &=& \frac{A(z) C(z) - B(z) D(z) P(z)}{C^2 (z) - D^2(z) P(z)} \\ G(z) &=& 2 \frac{B(z) C(z) - A(z) D(z)}{C^2 (z) - D^2(z) P(z)} \end{eqnarray*}
+
+Since $\int F(z) \, dz$ may be expressed in terms of elementary functions, 
+we shall focus our attention on the remaining piece, $\int G(z) \sqrt{P(z)} \, dz$,
+which we shall write as $\int H(z) / \sqrt{P(z)} \, dz$, where $H = PG$.. 
+Because we may decompose $H$ into partial fractions, it suffices to consider
+the following cases, which we shall all $A_n$ and $B_n$: 
+ \[ A_n(z) = \int \frac{z^n}{\sqrt{P(z)}} \, dz\]
+ \[ B_n(z,r) = \int \frac{1}{(z - r)^n \sqrt{P(z)}} \, dz\]
+Here, $n$ is a non-negative integer and $r$ is a complex number.
+
+We will reduce thes further using integration by parts.  
+Taking antiderivatives, we have:
+ \[ \int \frac{z^{n-1} (zP'(z) + 2nP(z))}{2\sqrt{P(z)}} \, dz = z^n \sqrt{P(z)} + C \]
+ \[  \int \frac{(z-r) P'(z) - 2nP(z)}{2(z-r)^{n+1} \sqrt{P(z)}} \, dz
+ = \frac{\sqrt{P(z)}}{(z-r)^n} + C \]
+ These identities will allow us to express $A_n$'s and $B_n$'s with large
+ $n$ in terms of ones with smaller $n$'s.
+
+At this point, it is convenient to employ the specific form of the polynominal $P$.  
+We will first conside the Weierstrass normal form and then the Jacobi normal form.
+
+Substituting into our identities and collecting terms, we find 
+ \[ 4 (2n + 3) A_{n+2} = (2n + 1) g_2 A_n + 2n g_3 A_{n-1} + z^n \sqrt{4z^3 - g_2 x - g_3} + C \] 
+
+\[ 2n (4r^3 - g_2 r - g_3) B_{n+1} + (2n - 1) (12 r^2 - g_2) B_n 
+  + 24 (n - 1) r B_{n-1} + 4(2n - 3) B_{n-2} + \frac{\sqrt{4z^3 - g_2 x - g_3}}{(z-r)^n} + C = 0 \]
+
+Note that there are some cases which can be integrated in elementary terms.  Namely, suppose that the power is odd:
+ \[\int z^{2m+1} \sqrt{(1 - z^2) (1 - k^2 z^2)} \, dz\]
+Then we may make a change of variables $y = z^2$ to obtain
+ \[\frac{1}{2} \int y^{2m} \sqrt{(1 - y) (1 - k^2 y)} \, dy ,\]
+which may be integrated using elementary functions. 
+
+Next, we derive some identities using integration by parts.  Since
+\[ d \left( (1 - z^2) (1 - k^2 z^2) \sqrt{(1 - z^2) (1 - k^2 z^2)} \right) 
+= 
+\left( \frac{9}{2} k^2 z^3 - 3 (1 + k^2) z \right)
+\sqrt{(1 - z^2) (1 - k^2 z^2)} \, dz , \]
+we have
+\begin{eqnarray*} (2 m + 1) &&\int z^{2m} (1 - z^2) (1 - k^2 z^2) \sqrt{(1 - z^2) (1 - 
+k^2 z^2)} \, dz \\ + &&\int z^{2m+1} \left( \frac{9}{2} k^2 z^3 - 3 (1 + k^2) z \right)
+\sqrt{(1 - z^2) (1 - k^2 z^2)} \, dz \\
+= && z^{2m+1} (1 - z^2) (1 - k^2 z^2) \sqrt{(1 - z^2) (1 - k^2 z^2)} + C 
+\end{eqnarray*}
+By colecting terms, this identity may be rewritten as follows:
+\begin{eqnarray*} \left( 1 + 2 m + \frac{9}{2} k^2 \right) &&\int z^{2m+4} \sqrt{(1 - z^2) (1 - k^2 z^2)} \, dz  - \\ (4 + 2 m) (1 + k^2) &&\int z^{2m+2} \sqrt{(1 - z^2) (1 - k^2 z^2)} \, dz + \\ &&\int z^{2m} \sqrt{(1 - z^2) (1 - k^2 z^2)} = \\ && x^{2k+1} (1 - z^2) (1 - k^2 z^2) \sqrt{(1 - z^2) (1 - k^2 z^2)} + C 
+\end{eqnarray*}
+By repeated use of this identity, we may express any integral of the form $\int z^{2m} \sqrt{P(z)} \, dz$ as the sum of a linear combination of $\int z^2 \sqrt{P(z)} \, dz$ and $\int \sqrt{P(z)} \, dz$ and the product of a polyomial and $\sqrt{P(z)}$.
+
+Likewise, we can use integration by parts to simplify integrals of the form 
+ \[\int \frac{\sqrt{P(z)}}{(z - r)^n} \, dz\]
+
+\emph{ Will finish later --- saving in case of computer crash.}
+%%%%%
+%%%%%
+\end{document}

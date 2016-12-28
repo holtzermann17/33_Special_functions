@@ -1,0 +1,131 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrthogonalityOfLegendrePolynomials}
+\pmcreated{2013-03-22 18:55:30}
+\pmmodified{2013-03-22 18:55:30}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{orthogonality of Legendre polynomials}
+\pmrecord{14}{41777}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33C45}
+\pmrelated{OrthogonalPolynomials}
+\pmrelated{OrthogonalityOfChebyshevPolynomials}
+\pmrelated{SubstitutionNotation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+\begin{document}
+We start from the first order differential equation
+\begin{align}
+(1\!-\!x^2)\frac{du}{dx}+2nxu \;=\; 0,
+\end{align}
+where one can \PMlinkname{separate the variables}{SeparationOfVariables} and then get the general solution
+\begin{align}
+u \;=\; C(1\!-\!x^2)^n.
+\end{align}
+Differentiating $n\!+\!1$ times the equation (1) it takes the form
+$$(1\!-\!x^2)\frac{d^{n+2}u}{dx^{n+2}}-2x\frac{d^{n+1}u}{dx^{n+1}}+n(n+1)\frac{d^{n}u}{dx^{n}} \;=\; 0$$
+or
+\begin{align}
+(1\!-\!x^2)\frac{d^2y}{dx^2}-2x\frac{dy}{dx}+n(n+1)y \;=\; 0
+\end{align}
+where
+$$y \;=\; \frac{d^nu}{dx^n} \;=\; C\frac{d^n}{dx^n}(1\!-\!x^2)^n.$$
+Especially, the particular solution
+\begin{align}
+y \;=\; P_n(x) \;:=\; \frac{1}{2^nn!}\frac{d^n}{dx^n}(1\!-\!x^2)^n,
+\end{align}
+which which is the Legendre polynomial of degree $n$, has been seen to satisfy the Legendre's differential equation (3).
+
+The equality (4) is \PMlinkname{Rodrigues formula}{RodriguesFormula}.\, We use it to find the leading coefficient of $P_n(x)$ and to show the \PMlinkname{orthogonality}{OrthogonalPolynomials} of the Legendre polynomials $P_0(x),\,P_1(x),\;P_2(x),\,...$
+
+\subsection{The coefficient of $x^n$}
+
+By the binomial theorem, 
+\begin{align*}
+P_n(x) &\;=\; \frac{1}{2^nn!}\frac{d^n}{dx^n}\sum_{j=0}^n{n \choose j}x^{2(n-j)}(-1)^j\\
+ &\;=\; \frac{1}{2^nn!}\sum_{j=0}^n{n \choose j}(2n\!-\!2j)(2n\!-\!2j\!-\!1)\cdots(2n\!-\!2j\!-\!n\!+\!1)x^{n-2j}(-1)^j.
+\end{align*}
+From the term with\, $j = 0$\, we get as the coefficient of $x^n$ the following:
+\begin{align}
+\frac{1}{2^nn!}{n\choose0}(2n)(2n\!-\!1)(2n\!-\!2)\cdots(2n\!-\!n\!+\!1)(-1)^0
+\;=\; \frac{1}{2^nn!}\cdot\frac{(2n)!}{(2n\!-\!n)!} \;=\; \frac{(2n)!}{2^n(n!)^2}
+\end{align}
+
+
+\subsection{Orthogonality}
+
+Let\, $f_m(x) := a_0\!+\!a_1x\!+\ldots+\!a_mx^m$\, be any polynomial of degree\, $m < n$.\, \PMlinkname{Integrating by parts}{IntegrationByParts} $m$ times we obtain
+\begin{align*}
+\int_{-1}^1f_m(x)P_n(x)\,dx & \;=\; \frac{1}{2^nn!}\int_{-1}^1f_m(x)\frac{d^n}{dx^n}(x^2\!-\!1)^n\,dx \\
+& \;=\; \frac{1}{2^nn!}\sijoitus{-1}{\quad 1}\!f_m(x)\frac{d^{n-1}}{dx^{n-1}}(x^2\!-\!1)^n
+-\frac{1}{2^nn!}\int_{-1}^1f'_m(x)\frac{d^{n-1}}{dx^{n-1}}(x^2\!-\!1)^n\,dx\\
+& \cdots \qquad \cdots\\
+& \;=\; (-1)^m\frac{a_mm!}{2^nn!}\int_{-1}^1\frac{d^{n-m}}{dx^{n-m}}(x^2\!-\!1)^n\,dx\\
+& \;=\; (-1)^m\frac{a_mm!}{2^nn!}\sijoitus{-1}{\quad1}\!f_m(x)\frac{d^{n-m-1}}{dx^{n-m-1}}(x^2\!-\!1)^n \;=\; 0,
+\end{align*}
+since\, $x = \pm1$\, are zeros of the derivatives $\frac{d^{n-k}}{dx^{n-k}}(x^2\!-\!1)^n$.
+
+If, on the other hand,\, $m = n$,\, the calculation gives firstly
+\begin{align}
+\int_{-1}^1f_n(x)P_n(x)\,dx \;=\; 2(-1)^n\frac{a_n}{2^n}\int_0^1(x^2\!-\!1)^n\,dx 
+\;=\; 2(-1)^n\frac{a_n}{2^n}\cdot I_n,
+\end{align}
+where the integral $I_n$ is gotten from
+$$I_n \;=\; \sijoitus{0}{\quad 1}\!x(x^2\!-\!1)^n-2n\int_0^1\!x^2(x^2\!-\!1)^{n-1}dx
+\;=\; -2n\int_0^1\left[(x^2\!-\!1)^n+(x^2\!-\!1)^{n-1}\right]dx \;=\; -2nI_n-2nI_{n-1},$$
+Thus we infer the recurrence relation
+$$I_n \;=\; -\frac{2n}{2n\!+\!1}I_{n-1}.$$
+Using this and\, $I_0 = 1$\, one easily arrives at
+\begin{align}
+I_n \;=\; (-1)^n\frac{2\cdot4\cdot6\cdots(2n)}{3\cdot5\cdot7\cdots(2n\!+\!1)}
+\;=\; (-1)^n\frac{[2\cdot4\cdot6\cdots(2n)]^2}{(2n\!+\!1)!}
+\;=\; (-1)^n\frac{2^{2n}(n!)^2}{(2n\!+\!1)!}.
+\end{align}
+
+
+If $f_n(x)$ also is a Legendre polynomial $P_n(x)$, we can in (6) by (5) put
+$$a_n \;=\; \frac{(2n)!}{2^n(n!)^2}$$
+and taking into account (7), too, (6) reads
+$$\int_{-1}^1\left[P_n(x)\right]^2dx \;=\; 
+\frac{(-1)^n}{2^{n-1}}\cdot\frac{(2n)!}{2^n(n!)^2}\cdot(-1)^n\frac{2^{2n}(n!)^2}{(2n\!+\!1)!}
+\;=\; \frac{2}{2n\!+\!1}.$$
+
+Our results imply the \PMlinkname{orthonormality}{Orthonormal} condition
+\begin{align}
+\int_{-1}^1\!P_m(x)P_n(x)\,dx \;=\; \frac{2}{2n\!+\!1}\delta_{mn},
+\end{align}
+where $\delta_{mn}$ is the Kronecker delta.
+
+\begin{thebibliography}{9}
+\bibitem{KK}{\sc K. Kurki-Suonio:} {\em Matemaattiset apuneuvot}.\, Limes r.y., Helsinki (1966).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

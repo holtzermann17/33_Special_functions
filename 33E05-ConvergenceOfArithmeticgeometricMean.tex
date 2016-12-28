@@ -1,0 +1,124 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConvergenceOfArithmeticgeometricMean}
+\pmcreated{2013-03-22 17:09:46}
+\pmmodified{2013-03-22 17:09:46}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{convergence of arithmetic-geometric mean}
+\pmrecord{13}{39474}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33E05}
+\pmclassification{msc}{26E60}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+In this entry, we show that the arithmetic-geometric mean converges.
+By the arithmetic-geometric means inequality, we know that the sequences 
+of arithmetic and geometric means are both monotonic and bounded, so
+they converge individually.  What still needs to be shown is that they 
+converge to the same limit.
+
+Define $x_n = a_n / g_n$.  By the arithmetic-geometric inequality, we
+have $x_n \ge 1$.  By the defining recursions, we have
+\[
+x_{n+1} =
+{a_{n+1} \over g_{n+1}} =
+{a_n + g_n \over 2 \sqrt{a_n g_n}} =
+{1 \over 2}
+\left(
+\sqrt{a_n \over g_n} + \sqrt{g_n \over a_n}
+\right) =
+{1 \over 2}
+\left(
+\sqrt{x_n} + 
+{1 \over \sqrt{x_n}}
+\right)
+\]
+Since $x_n \ge 1$, we have $1 / \sqrt{x_n} \le 1$, and $\sqrt{x_n} \le x_n$, hence
+\[
+x_{n+1} - 1 =
+{1 \over 2}
+\left(
+\sqrt{x_n} + 
+{1 \over \sqrt{x_n}}
+-2
+\right) \le
+{1 \over 2}
+({x_n} + 1-2) \le
+{1 \over 2}
+(x_n - 1) .
+\]
+From this inequality
+\[
+0 \le x_{n+1} - 1 \le
+{1 \over 2} (x_n - 1) ,
+\]
+we may conclude that $x_n \to 1$ as $n \to \infty$, which , by the definition of $x_n$,
+is equivalent to
+\[
+\lim_{n \to \infty} g_n =
+\lim_{n \to \infty} a_n .
+\]
+
+Not only have we proven that the arithmetic-geometric mean converges, but we can infer
+a rate of convergence from our proof.  Namely, we have that $0 \le x_n - 1 \le (x_0 - 1) 
+/ 2^n$.  Hence, we see that the rate of convergence of $a_n$ and $g_n$ to the answer goes
+as $O(2^{-n})$.
+
+By more carefully bounding the recursion for $x_n$ above, we may obtain better estimates
+of the rate of convergence.  We will now derive an inequality. Suppose that $y \ge 0$.
+\begin{align*}
+0 &\le y^5 + y^4 + 4 y^3 + 3 y^2 \\
+y^2 + 4 y + 4 &\le y^5 + y^4 + 4 y^3 + 4 y^2 + 4 y + 4 \\
+(y + 2)^2 &\le (y + 1) (y^2 + 2)^2
+\end{align*}
+Set $x = y + 1$ (so we have $x \ge 1$).
+\begin{align*}
+(x + 1)^2 &\le x ( (x - 1)^2 + 2)^2 \\
+x &\le {x^2 ( (x - 1)^2 + 2)^2 \over (x + 1)^2} \\
+\sqrt{x} &\le {x ((x - 1)^2 + 2) \over x + 1} \\
+{x + 1 \over x} \sqrt{x} &\le (x - 1)^2 + 2 \\
+{1 \over 2}
+\left(
+\sqrt{x} + {1 \over \sqrt{x}}
+\right) &\le
+1 + {1 \over 2} (x - 1)^2
+\end{align*}
+Thus, because $x_{n+1} = (\sqrt{x_n} + 1 /\sqrt{x_n})/2$, we have
+\[
+x_{n+1} - 1 \le {1 \over 2} (x_n - 1)^2 .
+\]
+From this equation, we may derive the bound
+\[
+x_n -1 \le \frac{1}{2^{2^n-1}} (x_0 - 1)^{2^n} .
+\]
+This is a much better bound!  It approaches zero far more rapidly
+than any exponential function, so we have superlinear convergence.
+%%%%%
+%%%%%
+\end{document}

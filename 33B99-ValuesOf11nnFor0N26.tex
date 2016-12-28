@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ValuesOf11nnFor0N26}
+\pmcreated{2013-03-22 17:02:26}
+\pmmodified{2013-03-22 17:02:26}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{values of $(1 + 1/n)^n$ for $0 < n < 26$}
+\pmrecord{5}{39328}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Data Structure}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33B99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The following table gives the numerator and denominator of $\left( 1 + {1 \over n} \right)^n$ as well as the decimal expansion to 20 places.
+
+\begin{tabular}{|r|r|r|l|}
+$n$ & Numerator of $\left( 1 + {1 \over n} \right)^n$ & Denominator of $\left( 1 + {1 \over n} \right)^n$ & Decimal value of $\left( 1 + {1 \over n} \right)^n$ \\
+1 & 2 & 1 & 2.0000000000000000000 \\ 
+2 & 9 & 4 & 2.2500000000000000000 \\ 
+3 & 64 & 27 & 2.3703703703703703704 \\ 
+4 & 625 & 256 & 2.4414062500000000000 \\ 
+5 & 7776 & 3125 & 2.4883200000000000000 \\ 
+6 & 117649 & 46656 & 2.5216263717421124829 \\ 
+7 & 2097152 & 823543 & 2.5464996970407131139 \\ 
+8 & 43046721 & 16777216 & 2.5657845139503479004 \\ 
+9 & 1000000000 & 387420489 & 2.5811747917131971820 \\ 
+10 & 25937424601 & 10000000000 & 2.5937424601000000000 \\ 
+11 & 743008370688 & 285311670611 & 2.6041990118975308782 \\ 
+12 & 23298085122481 & 8916100448256 & 2.6130352902246781603 \\ 
+13 & 793714773254144 & 302875106592253 & 2.6206008878857322211 \\ 
+14 & 29192926025390625 & 11112006825558016 & 2.6271515563008693884 \\ 
+15 & 1152921504606846976 & 437893890380859375 & 2.6328787177279190470 \\ 
+16 & 48661191875666868481 & 18446744073709551616 & 2.6379284973665998588 \\ 
+17 & 2185911559738696531968 & 827240261886336764177 & 2.6424143751831096203 \\ 
+18 & 104127350297911241532841 & 39346408075296537575424 & 2.6464258210976854673 \\ 
+19 & 5242880000000000000000000 & 1978419655660313589123979 & 2.6500343266404449073 \\ 
+20 & 278218429446951548637196401 & 104857600000000000000000000 & 2.6532977051444201339 \\ 
+21 & 15519448971100888972574851072 & 5842587018385982521381124421 & 2.6562632139261049855 \\ 
+22 & 907846434775996175406740561329 & 341427877364219557396646723584 & 2.6589698585377882029 \\ 
+23 & 55572324035428505185378394701824 & 20880467999847912034355032910567 & 2.6614501186387814545 \\ 
+24 & 3552713678800500929355621337890625 & 1333735776850284124449081472843776 & 2.6637312580685940367 \\ 
+25 & 236773830007967588876795164938469376 & 88817841970012523233890533447265625 & 2.6658363314874199930 \\
+\end{tabular}
+
+With a large enough value of $n$, this formula approximates the natural log base $e$. For example, with $n$ set to ten million, we get 2.7182816925449662712, which is 0.000000135914078964161737245574 short of 2.7182818284590452354 (this calculation took almost four minutes with Mathematica 4.2). It is less computationally intensive to use $$\sum_{i = 0}^n \frac{1}{i!},$$ which with $n$ set to 100 gives in less than a second a result to 20 places that is indistinguishable from $e$.
+%%%%%
+%%%%%
+\end{document}

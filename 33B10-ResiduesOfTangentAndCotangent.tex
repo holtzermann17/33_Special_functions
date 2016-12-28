@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ResiduesOfTangentAndCotangent}
+\pmcreated{2013-03-22 18:57:35}
+\pmmodified{2013-03-22 18:57:35}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{residues of tangent and cotangent}
+\pmrecord{6}{41817}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33B10}
+\pmclassification{msc}{30D10}
+\pmclassification{msc}{30A99}
+\pmrelated{Residue}
+\pmrelated{TechniqueForComputingResidues}
+\pmrelated{ResiduesOfGammaFunction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+We will determine the residues of the tangent and the cotangent at their poles, which by the \PMlinkid{parent entry}{9074} are \PMlinkname{simple}{SimplePole}.
+
+By the rule in the entry coefficients of Laurent series, in a simple pole \,$z = a$\, of $f$ one has
+$$\mbox{Res}(f;\, a) \;=\; \lim_{z \to a}(z\!-\!a)f(z).$$
+
+\begin{itemize}
+
+\item We get first
+\begin{align}
+\mbox{Res}(\cot;\,0) \;=\; \lim_{z \to 0}z\cot{z} \;=\; \lim_{z \to 0}\frac{\cos{z}}{\frac{\sin{z}}{z}} 
+\;=\; \frac{1}{1} \;=\;1.
+\end{align}
+
+\item All the poles of cotangent are \,$n\pi$\, with\, $n \in \mathbb{Z}$.\, Since $\pi$ is the period of cotangent, we could infer that the residues in all poles are the same as (1).\, We may also calculate (with the change of variable 
+\,$z\!-\!n\pi = w$) directly
+$$\mbox{Res}(\cot;\,n\pi) \;=\; \lim_{z \to n\pi}(z\!-\!n\pi)\cot{z} 
+\;=\; \lim_{w \to 0}w\cot(w\!+\!n\pi) \;=\; \lim_{w \to 0}w\cot{w} \;=\; 1.$$
+
+\item In the \PMlinkname{parent entry}{ComplexTangentAndCotangent}, the complement formula for the tangent function is derived.\, Using it, we can find the residues of tangent at its poles $\displaystyle\frac{\pi}{2}+n\pi$, which are \PMlinkescapetext{simple}.\, For example,
+$$\mbox{Res}(\tan;\,\frac{\pi}{2}) \;=\; 
+\lim_{z \to \frac{\pi}{2}}\left(z\!-\!\frac{\pi}{2}\right)\cot\left(\frac{\pi}{2}\!-\!z\right)
+\;=\; \lim_{w \to 0}w\cot(-w) \;=\; -\mbox{Res}(\cot;\,0) \;=\; -1.$$
+Similarly as above, the residues in other poles are $-1$.
+
+\end{itemize}
+
+Consequently, the residues of cotangent are equal to 1 and the residues of tangent equal to $-1$.
+%%%%%
+%%%%%
+\end{document}

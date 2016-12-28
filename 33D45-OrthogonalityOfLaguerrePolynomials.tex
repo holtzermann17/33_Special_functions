@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrthogonalityOfLaguerrePolynomials}
+\pmcreated{2013-03-22 19:05:50}
+\pmmodified{2013-03-22 19:05:50}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{orthogonality of Laguerre polynomials}
+\pmrecord{8}{41989}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33D45}
+\pmclassification{msc}{33C45}
+\pmclassification{msc}{26C05}
+%\pmkeywords{orthogonal polynomials}
+\pmrelated{SubstitutionNotation}
+\pmrelated{PropertiesOfOrthogonalPolynomials}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+
+\begin{document}
+We use the definition of Laguerre polynomials $L_n(x)$ via their \PMlinkname{Rodrigues formula}{RodriguesFormula}
+\begin{align}
+L_n(x) \;:=\; e^x\frac{d^n}{dx^n}(x^ne^{-x}).
+\end{align}
+The polynomials (1) themselves are not orthogonal to each other, but the expressions $e^{-\frac{x}{2}}L_n(x)$\, ($n = 0,\,1,\,2,\ldots$) are \PMlinkname{orthogonal}{OrthogonalPolynomials} on the interval from 0 to $\infty$, i.e. the polynomials are orthogonal with respect to the weighting function $e^{-x}$ on that interval, as is seen in the following.\\
+
+
+Let $m$ be another nonnegative integer.\, We \PMlinkname{integrate by parts}{IntegrationByParts} $m$ times in
+$$\int_0^\infty\!e^{-x}x^mL_n(x)\,dx \;=\; \int_0^\infty\!x^m\frac{d^n}{dx^n}(x^ne^{-x})\,dx 
+\;=\; (-1)^mm!\int_0^\infty\!\frac{d^{n-m}}{dx^{n-m}}(x^me^{-x})\,dx.$$
+When\, $m < n$,\, this yields
+\begin{align}
+\int_0^\infty\!e^{-x}x^mL_n(x)\,dx \;=\; 
+(-1)^mm!\sijoitus{x=0}{\quad \infty}\!\frac{d^{n-m-1}}{dx^{n-m-1}}(x^me^{-x}) \;=\; 0.
+\end{align}
+and for\, $m = n$\, it gives
+\begin{align}
+\int_0^\infty\!e^{-x}x^mL_n(x)\,dx \;=\; (-1)^nn!\int_0^\infty\!x^ne^{-x}\,dx \;=\; (-1)^n(n!)^2.
+\end{align}
+The result (2) implies, because $L_m(x)$ is a polynomial of degree $m$, that
+$$\int_0^\infty\!e^{-x}L_m(x)L_n(x)\,dx \;=\; 0 \qquad (m \;<\; n),$$
+whence also
+\begin{align}
+\int_0^\infty\!e^{-x}L_m(x)L_n(x)\,dx \;=\; 0 \qquad (m \;\neq\; n).
+\end{align}
+Thus the orthogonality has been shown.\, Therefore, since the leading term of $L_n(x)$ is $(-1)^nx^n$, we infer by (3) and (4) that 
+$$\int_0^\infty\!e^{-x}[L_n(x)]^2\,dx \;=\; (-1)^n\!\int_0^\infty\!e^{-x}x^nL_n(x)\,ds \;=\; (n!)^2,$$
+so that the expressions $\frac{L_n(x)}{n!}$ form a system of orthonormal polynomials.\\
+
+\begin{thebibliography}{9}
+\bibitem{QC}{\sc H. Eyring, J. Walter, G. Kimball:} {\em Quantum chemistry}.\, Eight printing.\, Wiley \& Sons, New York (1958).
+\end{thebibliography}
+
+
+
+%%%%%
+%%%%%
+\end{document}

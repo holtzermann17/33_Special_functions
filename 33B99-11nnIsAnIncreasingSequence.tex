@@ -1,0 +1,123 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{11nnIsAnIncreasingSequence}
+\pmcreated{2013-03-22 15:48:39}
+\pmmodified{2013-03-22 15:48:39}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{$(1 + 1/n)^n$ is an increasing sequence}
+\pmrecord{14}{37775}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33B99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+
+\begin{document}
+\begin{thm}
+The sequence $(1 + 1/n)^n$ is increasing.
+\end{thm}
+
+\begin{proof}
+To see this, rewrite $1 + (1/n) = (1 + n)/n$ and divide two
+consecutive terms of the sequence:
+\begin{eqnarray*}
+{ \left( 1 + {1 \over n} \right)^n \over  \left( 1 + {1
+\over n-1} \right)^{n-1} } &=&
+{ \left( {n+1 \over n} \right)^n \over \left( {n \over n-1}
+\right)^{n-1} } \\
+&=& \left( {(n-1)(n+1) \over n^2} \right)^{n-1} {n+1 \over n} \\
+&=& \left( 1 - {1 \over n^2} \right)^{n-1} \left( 1 + {1 \over n}
+\right) \\ 
+\end{eqnarray*}
+
+Since $(1 - x)^n \ge 1 - nx$, we have 
+\begin{eqnarray*}
+{ \left( 1 + {1 \over n} \right)^n \over  \left( 1 + {1
+\over n-1} \right)^{n-1} } &\ge&
+\left( 1 - {n-1 \over n^2} \right) \left( 1 + {1 \over n}
+\right) \\
+&=& 1 + {1 \over n^3}\\
+&>& 1,
+\end{eqnarray*}
+hence the sequence is increasing.
+\end{proof}
+
+\begin{thm}
+The sequence $(1 + 1/n)^{n+1}$ is decreasing.
+\end{thm}
+
+\begin{proof}
+
+As before, rewrite $1 + (1/n) = (1 + n)/n$ and divide two
+consecutive terms of the sequence:
+\begin{eqnarray*}
+{ \left( 1 + {1 \over n} \right)^{n+1} \over  \left( 1 + {1
+\over n-1} \right)^{n} } &=&
+{ \left( {n+1 \over n} \right)^{n+1} \over \left( {n \over n-1}
+\right)^{n} } \\
+&=& \left( {(n-1)(n+1) \over n^2} \right)^{n} {n+1 \over n} \\
+&=& \left( 1 - {1 \over n^2} \right)^{n} \left( 1 + {1 \over n}
+\right) \\ 
+\end{eqnarray*}
+
+Writing $1 + 1/n$ as $1 + n/n^2$ and applying the inequality
+$1 + n/n^2 \le (1 + 1/n^2)^n$, we obtain
+\begin{eqnarray*}
+{ \left( 1 + {1 \over n} \right)^{n+1} \over  \left( 1 + {1
+\over n-1} \right)^{n} } &\le&
+\left( 1 - {1 \over n^2} \right)^{n} \left( 1 + {1 \over n^2}
+\right)^n \\ 
+&=& \left( 1 - {1 \over n^4} \right)^{n} \\
+&<& 1, \\
+\end{eqnarray*}
+hence the sequence is decreasing.
+
+\end{proof}
+
+\begin{thm}
+For all positive integers $m$ and $n$, we have $(1 + 1/m)^{m} < (1 + 1/n)^{n+1}$.
+\end{thm}
+
+\begin{proof}
+We consider three cases.
+
+Suppose that $m = n$.  Since $n > 0$, we have $1/n >0$ and $1 < 1 + 1/n$.  Hence,
+$(1 + 1/n)^{n} < (1 + 1/n)^{n+1}$.
+
+Suppose that $m < n$.  By the previous case, $(1 + 1/n)^{n} < (1 + 1/n)^{n+1}$.
+By theorem 1, $(1 + 1/m)^{m} < (1 + 1/n)^{n}$.  Combining,
+$(1 + 1/m)^{m} < (1 + 1/n)^{n+1}$.
+
+Suppose that $m > n$.
+By the first case, $(1 + 1/m)^{m} <(1 + 1/m)^{m+1}$
+By theorem 2, $(1 + 1/m)^{m+1} < (1 + 1/n)^{n+1}$.
+Combining, $(1 + 1/m)^{m} < (1 + 1/n)^{n+1}$.
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

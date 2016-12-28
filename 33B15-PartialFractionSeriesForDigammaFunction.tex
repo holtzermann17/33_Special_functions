@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PartialFractionSeriesForDigammaFunction}
+\pmcreated{2013-03-22 16:23:40}
+\pmmodified{2013-03-22 16:23:40}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{partial fraction series for digamma function}
+\pmrecord{6}{38540}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33B15}
+\pmclassification{msc}{30D30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\begin{document}
+\begin{thm}
+\[\psi (z) = - \gamma -\frac{1}{z} +
+\sum_{k=1}^\infty \left( \frac{1}{k} - \frac{1}{z + k} \right)=-\gamma+\sum_{k=0}^{\infty}\left(\frac{1}{k+1}-\frac{1}{z+k}\right)\]
+\end{thm}
+\textbf{Proof:}
+Start with
+\[
+\Gamma(z) = \frac{e^{-\gamma z}}{z}
+\prod_{k=1}^\infty \left(1 + \frac{z}{k}\right)^{-1} e^{z/k},
+\]
+so
+\[
+\ln\Gamma(z)=-\gamma z - \ln z +\sum_{k=1}^{\infty}\left(-\ln\left(1+\frac{z}{k}\right)+\frac{z}{k}\right)\]
+and thus, taking derivatives,
+\[\psi(z)=-\gamma-\frac{1}{z}+\sum_{k=1}^{\infty}\left(-\frac{1/k}{1+\frac{z}{k}}+\frac{1}{k}\right)
+=-\gamma-\frac{1}{z}+\sum_{k=1}^{\infty}\left(\frac{1}{k}-\frac{1}{z+k}\right)\]
+The second formula follows after rearranging terms (the rearrangement is legal since we are simply exchanging adjacent terms, so partial sums remain the same).
+
+%%%%%
+%%%%%
+\end{document}

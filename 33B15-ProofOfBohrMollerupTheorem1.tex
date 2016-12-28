@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBohrMollerupTheorem}
+\pmcreated{2013-03-22 13:18:14}
+\pmmodified{2013-03-22 13:18:14}
+\pmowner{lieven}{1075}
+\pmmodifier{lieven}{1075}
+\pmtitle{proof of Bohr-Mollerup theorem}
+\pmrecord{6}{33808}
+\pmprivacy{1}
+\pmauthor{lieven}{1075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33B15}
+\pmdefines{Gau\ss's product}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+We prove this theorem in two stages: first, we establish that the gamma function satisfies the given conditions and then we prove that these conditions uniquely determine a function on $(0,\infty)$.
+
+By its definition, $\Gamma(x)$ is positive for positive $x$. Let $x,y>0$ and $0\leq \lambda \leq 1$. 
+
+\begin{eqnarray*}
+\log \Gamma(\lambda x+(1-\lambda)y) &=& \log \int_0^\infty e^{-t}t^{\lambda x+(1-\lambda)y-1}dt\\
+&=&\log\int_0^\infty (e^{-t}t^{x-1})^\lambda (e^{-t}t^{y-1})^{1-\lambda}dt\\
+&\leq&\log ((\int_0^\infty e^{-t}t^{x-1}dt)^\lambda(\int_0^\infty e^{-t}t^{y-1}dt)^{1-\lambda})\\
+&=& \lambda\log\Gamma(x)+(1-\lambda)\log\Gamma(y)
+\end{eqnarray*}
+
+The inequality follows from H\"older's inequality, where $p=\frac{1}{\lambda}$ and $q=\frac{1}{1-\lambda}$.
+
+This proves that $\Gamma$ is log-convex. Condition 2 follows from the definition by applying integration by parts. Condition 3 is a trivial verification from the definition.
+
+Now we show that the 3 conditions uniquely determine a function. By condition 2, it suffices to show that the conditions uniquely determine a function on $(0,1)$.
+
+Let $G$ be a function satisfying the 3 conditions, $0\leq x\leq 1$ and $n\in{\mathbb N}$.
+
+$n+x=(1-x)n+x(n+1)$ and by log-convexity of $G$, $G(n+x)\leq G(n)^{1-x}G(n+1)^x=G(n)^{1-x}G(n)^xn^x=(n-1)!n^x$.
+
+Similarly $n+1=x(n+x)+(1-x)(n+1+x)$ gives $n!\leq G(n+x)(n+x)^{1-x}$.
+
+Combining these two we get
+
+$$ n!(n+x)^{x-1}\leq G(n+x) \leq (n-1)!n^x $$
+
+and by using condition 2 to express $G(n+x)$ in terms of $G(x)$ we find
+
+
+$$ a_n:=\frac{n!(n+x)^{x-1}}{x(x+1)\dots(x+n-1)}\leq G(x) \leq \frac{(n-1)!n^x}{x(x+1)\dots(x+n-1)}=:b_n.$$
+
+Now these inequalities hold for every positive integer $n$ and the terms on the left and right side have a common limit ($\lim_{n\rightarrow\infty}\frac{a_n}{b_n}=1$) so we find this determines $G$.
+
+As a corollary we find another expression for $\Gamma$.
+
+For $0\leq x\leq 1$,
+
+$$ \Gamma(x)=\lim_{n\rightarrow\infty} \frac{n!n^x}{x(x+1)\dots(x+n)}.$$
+
+In fact, this equation, called Gau\ss's product, goes for the whole complex plane minus the negative integers.
+%%%%%
+%%%%%
+\end{document}

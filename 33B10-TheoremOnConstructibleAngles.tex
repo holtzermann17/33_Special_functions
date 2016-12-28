@@ -1,0 +1,142 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TheoremOnConstructibleAngles}
+\pmcreated{2013-03-22 17:15:59}
+\pmmodified{2013-03-22 17:15:59}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{theorem on constructible angles}
+\pmrecord{13}{39605}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33B10}
+\pmclassification{msc}{51M15}
+\pmclassification{msc}{12D15}
+\pmrelated{ConstructibleNumbers}
+\pmrelated{CompassAndStraightedgeConstruction}
+\pmrelated{ConstructibleAnglesWithIntegerValuesInDegrees}
+\pmrelated{ExactTrigonometryTables}
+\pmrelated{ClassicalProblemsOfConstructibility}
+\pmrelated{CriterionForConstructibilityOfRegularPolygon}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+\newtheorem{thm*}{Theorem}
+\begin{document}
+\PMlinkescapeword{constructible}
+\PMlinkescapeword{even}
+\PMlinkescapeword{label}
+\PMlinkescapeword{leg}
+\PMlinkescapeword{measure}
+\PMlinkescapeword{measures}
+\PMlinkescapeword{perpendicular}
+\PMlinkescapeword{similar}
+\PMlinkescapeword{vertex}
+
+\begin{thm*}
+Let $\theta \in \mathbb{R}$.  Then the following are equivalent:
+
+\begin{enumerate}
+\item An angle of \PMlinkname{measure}{AngleMeasure} $\theta$ is \PMlinkname{constructible}{Constructible2};
+\item $\sin \theta$ is a constructible number;
+\item $\cos \theta$ is a constructible number.
+\end{enumerate}
+\end{thm*}
+
+\begin{proof}
+First of all, due to periodicity, we can restrict our attention to the interval $0 \le \theta <2\pi$.  Even better, we can further restrict our attention to the interval $0 \le \theta \le \frac{\pi}{2}$ for the following reasons:
+
+\begin{enumerate}
+\item If an angle whose measure is $\theta$ is constructible, then so are angles whose measures are $\pi-\theta$, $\pi+\theta$, and $2\pi-\theta$;
+\item If $x$ is a constructible number, then so is $|x|$.
+\end{enumerate}
+
+If $\theta \in \{0, \frac{\pi}{2} \}$, then clearly an angle of measure $\theta$ is constructible, and $\{\sin \theta, \cos \theta \}=\{0,1\}$.  Thus, \PMlinkname{equivalence}{Equivalent3} has been established in the case that $\theta \in \{0,\frac{\pi}{2}\}$.  Therefore, we can restrict our attention even further to the interval $0<\theta<\frac{\pi}{2}$.
+
+Assume that an angle of measure $\theta$ is constructible.  Construct such an angle and mark off a line segment of length $1$ from the \PMlinkname{vertex}{Vertex5} of the angle.  Label the endpoint that is not the vertex of the angle as $A$.
+
+\begin{center}
+\begin{pspicture}(-1,-1)(2,3)
+\rput[l](-0.1,0){.}
+\rput[r](2,0){.}
+\rput[a](2,3.464){.}
+\psline{->}(0,0)(2,0)
+\psline{->}(0,0)(2,3.464)
+\psarc(0,0){0.3}{0}{60}
+\rput[r](0.5,0.3){$\theta$}
+\psarc[linecolor=blue](0,0){3}{50}{70}
+\psdots(0,0)(1.5,2.598)
+\rput[b](1.2,2.3){$A$}
+\end{pspicture}
+\end{center}
+
+Drop the perpendicular from $A$ to the other ray of the angle.  Since the legs of the triangle are of lengths $\sin \theta$ and $\cos \theta$, both of these are constructible numbers.
+
+\begin{center}
+\begin{pspicture}(-1,-1)(2,4)
+\rput[l](-0.1,0){.}
+\rput[r](2,0){.}
+\rput[a](2,3.464){.}
+\rput[b](1.5,-1){.}
+\psline{->}(0,0)(2,0)
+\psline{->}(0,0)(2,3.464)
+\psarc(0,0){0.3}{0}{60}
+\rput[r](0.5,0.3){$\theta$}
+\psarc(0,0){3}{50}{70}
+\psline[linecolor=blue]{<->}(1.5,3)(1.5,-1)
+\psdots(0,0)(1.5,2.598)(1.5,0)
+\rput[b](1.2,2.3){$A$}
+\rput[a](0.7,-0.3){$\cos \theta$}
+\rput[l](1.7,1.3){$\sin \theta$}
+\end{pspicture}
+\end{center}
+
+Now assume that $\sin \theta$ is a constructible number.  At one endpoint of a line segment of length $\sin \theta$, erect the perpendicular to the line segment.
+
+\begin{center}
+\begin{pspicture}(-1,-1)(3,2)
+\rput[l](-0.1,0){.}
+\rput[r](3,0){.}
+\rput[a](2.598,2){.}
+\rput[b](2.598,-1){.}
+\psline{->}(0,0)(3,0)
+\psline[linecolor=blue]{<->}(2.598,-1)(2.598,2)
+\psdots(0,0)(2.598,0)
+\end{pspicture}
+\end{center}
+
+From the other endpoint of the given line segment, draw an arc of a circle with radius $1$ so that it intersects the erected perpendicular.  Label this point of intersection as $A$.  Connect $A$ to the endpoint of the line segment which was used to draw the arc.  Then an angle of measure $\theta$ and a line segment of length $\cos \theta$ have been constructed.
+
+\begin{center}
+\begin{pspicture}(-1,-1)(3,2)
+\rput[l](-0.1,0){.}
+\rput[r](3,0){.}
+\rput[a](2.598,2){.}
+\rput[b](2.598,-1){.}
+\psline{->}(0,0)(3,0)
+\psline{<->}(2.598,-1)(2.598,2)
+\psarc[linecolor=blue](0,0){3}{20}{40}
+\psline[linecolor=blue](0,0)(2.598,1.5)
+\psarc(2.598,1.5){0.3}{210}{270}
+\rput[a](2.4,1){$\theta$}
+\rput[l](2.8,0.8){$\cos \theta$}
+\psdots(0,0)(2.598,0)(2.598,1.5)
+\rput[b](2.3,1.5){$A$}
+\end{pspicture}
+\end{center}
+
+A similar procedure can be used given that $\cos \theta$ is a constructible number to prove the other two statements.
+\end{proof}
+
+Note that, if $\cos \theta \neq 0$, then any of the three statements thus implies that $\tan \theta$ is a constructible number.  Moreover, if $\tan \theta$ is constructible, then a right triangle having a leg of length $1$ and another leg of length $\tan \theta$ is constructible, which implies that the three listed conditions are true.
+%%%%%
+%%%%%
+\end{document}

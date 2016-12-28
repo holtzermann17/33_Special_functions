@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{JacobivarthetaFunctions}
+\pmcreated{2013-03-22 14:08:10}
+\pmmodified{2013-03-22 14:08:10}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{Jacobi $\vartheta$ functions}
+\pmrecord{21}{35550}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33E05}
+\pmdefines{Jacobi theta functions}
+\pmdefines{nome}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The Jacobi $\vartheta$ functions are 4 basic functions of Jacobi's theory of elliptic functions.  They are functions of two complex variables, $z$ and $\tau$, known as the argument and the half-period ratio, respectively.  It is often convenient to use the quantity $q=e^{\pi i \tau}$, which is known as the \emph{nome}.   When the half-period ratio is used, these functions are denoted $\vartheta_{j}(z|\tau)$ (the index $j$ runs from 1 to 4), and when the nome is used, the functions are denoted $\vartheta_{j}(z;q)$.  $q$ and $\tau$ are sometimes snipped for brevity when they are obvious from the context, and when that is done, the functions are denoted $\vartheta_{j}(z)$.
+
+These functions can be defined by the following series.  It is also possible to express them as products and \PMlinkname{as integrals}{IntegralRepresetationsOfJacobiVarthetaFunctions} --- see the attachments to this entry for details.
+\begin{equation}
+\vartheta_{1}(z;q)=\sum_{n=-\infty}^{\infty} (-1)^n q^{(n+1/2)^2} e^{(2n+1)iz}  = 2 \sum_{n=0}^\infty (-1)^n  q^{(n+1/2)^2} \sin (2n+1) z
+\end{equation}
+\begin{equation}
+\vartheta_{1}(z \mid \tau)=\sum_{n=-\infty}^{\infty} (-1)^n e^{i \pi \tau (n+1/2)^2 +(2n+1)iz}
+\end{equation}
+\begin{equation}
+\vartheta_{2}(z;q)=\sum_{n=-\infty}^{\infty} q^{(n+1/2)^2} e^{(2n+1)iz} = 2 \sum_{n=0}^\infty q^{(n+1/2)^2} \cos (2n+1) z
+\end{equation}
+\begin{equation}
+\vartheta_{2}(z \mid \tau)=\sum_{n=-\infty}^{\infty} e^{i \pi \tau (n+1/2)^2 +(2n+1)iz}
+\end{equation}
+\begin{equation}
+\vartheta_{3}(z;q)=\sum_{n=-\infty}^{\infty} q^{n^2} e^{2inz} = 1 + 2 \sum_{n=1}^\infty q^{n^2} \cos (2nz)
+\end{equation}
+\begin{equation}
+\vartheta_{3}(z \mid \tau)=\sum_{n=-\infty}^{\infty} e^{i \pi \tau n^2 + 2inz}
+\end{equation}
+\begin{equation}
+\vartheta_{4}(z;q)=\sum_{n=-\infty}^{\infty} (-1)^{n} q^{n^2} e^{2inz} = 1 + 2 \sum_{n=1}^\infty (-1)^{n} q^{n^2} \cos (2nz)
+\end{equation}
+\begin{equation}
+\vartheta_{4}(z \mid \tau)=\sum_{n=-\infty}^{\infty} (-1)^{n} e^{i \pi \tau n^2 + 2inz}
+\end{equation}
+
+Note that these series converge for all complex values of $z$ whenever $|q| < 1$ (equivalently, when $\Im \tau > 0$).  Furthermore, these series converge uniformly on compact subsets (this may be shown using the Weierstrass M-test) so these functions are analytic.
+
+The theta functions satisfy many identities, the most important of which are  \PMlinkname{the quasiperiodicity identities}{QuasiperiodAndHalfquasipreiodRelationsForJacobiVarthetaFunctions}, \PMlinkname{Jacobi's identity}{JacobisIdentityForVarthetaFunctions}, and Landen's transformation.  For these identities and others, please see the attachments.
+
+The theta functions were originally introduced because it is possible to express the Jacobi elliptic functions as ratios of theta functions.  In some ways, this role is similar to the role the complex exponential plays in the theory of trigonometric functions.  Just as one can derive complicated trigonometric identities form the properties of the exponential functions, so too one can derive complicated identites for elliptic functions using the properties of theta functions.
+
+They are very useful in the numerical analysis of elliptic functions, since the series given above converge rapidly.  Hence (as was realized early on by Jacobi), it is usually better to compute elliptic functions by first computing theta functions.
+
+In addition, theta functions are interesting in their own right and appear in numerous, often surprising contexts, as the following exampes show.  Theta functions appear as Green's functions for the heat equation.  In number theory, they are used to study the representations of integers as sums of squares.  Theta functions can be used to construct modular functions.  They can be used to construct integral representations of generating functions.  In theoretical physics, they are used to perform sums over crystals and describe hexagonal lattices of vortices.
+%%%%%
+%%%%%
+\end{document}

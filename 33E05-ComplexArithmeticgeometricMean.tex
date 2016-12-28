@@ -1,0 +1,170 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ComplexArithmeticgeometricMean}
+\pmcreated{2013-03-22 17:10:05}
+\pmmodified{2013-03-22 17:10:05}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{complex arithmetic-geometric mean}
+\pmrecord{15}{39480}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{33E05}
+\pmclassification{msc}{26E60}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+It is also possible to define the arithmetic-geometric mean for
+complex numbers.  To do this, we first must make the geometric
+mean unambiguous by choosing a branch of the square root.  We
+may do this as follows: Let $a$ and $b$ br two non-zero complex 
+numbers such that $a \neq sb$ for any real number $s < 0$.  Then
+we will say that $c$ is the geometric mean of $a$ and $b$ if
+$c^2 = ab$ and $c$ is a convex combination of $a$ and $b$ (i.e.
+$c = s a + t b$ for positive real numbers $s$ and $t$). 
+
+Geometrically, this may be understood as follows:  The condition
+$a \neq sb$ means that the angle between $0a$ and $0b$ differs
+from $\pi$.  The square root of $ab$ will lie on a line bisecting
+this angle, at a distance $\sqrt{|ab|}$ from $0$.  Our condition
+states that we should choose $c$ such that $0c$ bisects the angle
+smaller than $\pi$, as in the figure below:
+
+\[
+\begin{xy}
+,(2,-1)*{0}
+,(0,0)
+;(50,50)**@{-}
+;(52,52)*{b}
+,(0,0)
+;(-16,16)**@{-}
+,(-18,18)*{a}
+,(0,0)
+;(0,40)**@{-}
+,(0,42)*{c}
+,(0,0)
+;(0,-40)**@{-}
+,(0,-42)*{-c}
+\end{xy}
+\]
+
+Analytically, if we pick a polar representation $a = |a| e^{i \alpha}$,
+$b = |b| e^{i \beta}$ with $|\alpha - \beta| < \pi$, then $c = \sqrt{|ab|}
+e^{i {\alpha + \beta \over 2}}$.  Having clarified this preliminary item,
+we now proceed to the main definition.
+
+As in the real case, we will define sequences of geometric and arithmetic
+means recursively and show that they converge to the same limit.  With our
+convention, these are defined as follows:
+\begin{align*}
+g_0 &= a \\
+a_0 &= b \\
+g_{n+1} &= \sqrt{a_n g_n} \\
+a_{n+1} &= {a_n + g_n \over 2}
+\end{align*}
+
+We shall first show that the phases of these sequences converge.  As above,
+let us define $\alpha$ and $\beta$ by the conditions $a = |a| e^{i \alpha}$,
+$b = |b| e^{i \beta}$, and $|\alpha - \beta| < \pi$.  Suppose that $z$ and
+$w$ are any two complex numbers such that $z = |z| e^{i \theta}$ and $w = 
+|w| e^{i \phi}$ with $|\phi - \theta| < \pi$.  Then we have the following:
+\begin{itemize}
+\item  The phase of the geometric mean of $z$ and $w$ can be chosen to lie
+between $\theta$ and $\phi$.  This is because, as described earlier, this
+phase can be chosen as $(\theta + \phi)/2$.
+\item The phase of the arithmetic mean of $z$ and $w$ can be chosen to lie
+between $\theta$ and $\phi$.
+\end{itemize}
+By a simple induction argument, these two facts imply that we can introduce
+polar representations $a_n = |a_n| e^{i \theta_n}$ and $g_n = |g_n|
+e^{i \phi_n}$ where, for every $n$, we find that $\theta_n$ lies between
+$\alpha$ and $\beta$ and likewise $\phi_n$ lies between $\alpha$ and $\beta$.
+Furthermore, since $\phi_{n+1} = (\phi_n + \theta_n) / 2$ and $\theta_{n+1}$ 
+lies between $\phi_n$ and $\theta_n$, it follows that
+\[
+|\phi_{n+1} - \theta_{n+1}| \le
+{1 \over 2} |\phi_n - \theta_n| .
+\]
+Hence, we conclude that $|\phi_n - \theta_n| \to 0$ as $n \to \infty$.  By 
+the principle of nested intervals, we further conclude that the sequences
+$\{\theta_n\}_{n=0}^\infty$ and $\{\phi_n\}_{n=0}^\infty$ are both convergent 
+and converge to the same limit.
+
+Having shown that the phases converge, we now turn our attention to the
+moduli.  Define $m_n = \max (|a_n|, |g_n|)$.  Given any two complex
+numbers $z,w$, we have
+\[
+|\sqrt{zw}| \le \max (|z|,|w|)
+\]
+and
+\[
+\left| {z + w \over 2} \right| \le
+\max (|z|,|w|) ,
+\]
+so this sequence $\{m_n\}_{n=0}^\infty$ is decreasing.  Since it bounded from
+below by $0$, it converges.
+
+Finally, we consider the ratios of the moduli of the arithmetic and geometric 
+means.  Define $x_n = |a_n| / |g_n|$.  As in the real case, we shall derive a
+recursion relation for this quantity:
+\begin{align*}
+x_{n+1} &= 
+{|a_{n+1}| \over |g_{n+1}|} \\ &= 
+{|a_n + g_n| \over 2 \sqrt{|a_n g_n|}} \\&=
+{\sqrt{|a_n^2| + 2 |a_n| |g_n| \cos (\theta_n - \phi_n) + |g_n|^2} 
+\over 2 \sqrt{|a_n g_n|}} \\&=
+{1 \over 2}
+\sqrt{ {|a_n| \over |g_n|} +
+2 \cos (\theta_n - \phi_n) +
+{|g_n| \over |a_n|}} \\ &=
+{1 \over 2}
+\sqrt {x_n + 2 \cos (\theta_n - \phi_n) + {1 \over x_n}}
+\end{align*}
+
+For any real number $x \ge 1$, we have the following:
+\begin{align*}
+x - 1 &\ge 0 \\
+(x - 1)^2 &\ge 0 \\
+x^2 - 2 x + 1 &\ge 0 \\
+x^2 + 1 &\ge 2x \\
+x + {1 \over x} &\ge 2
+\end{align*}
+If $0 < x < 1$, then $1/x > 1$, so we can swithch the roles of $x$ and $1/x$ and
+conclude that, for all real $x > 0$, we have
+\[
+x + {1 \over x} \ge 2 .
+\]
+Applying this to the recursion we just derived and making use of the half-angle
+identity for the cosine, we see that
+\[
+x_{n+1} \ge
+{1 \over 2}
+\sqrt{2 + 2 \cos (\theta_n - \phi_n)} =
+\cos \left( {\theta_n - \phi_n \over 2} \right) . 
+\]
+%%%%%
+%%%%%
+\end{document}

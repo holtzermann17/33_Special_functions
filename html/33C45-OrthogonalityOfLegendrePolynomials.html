@@ -1,0 +1,336 @@
+<!DOCTYPE html><html>
+<head>
+<title>orthogonality of Legendre polynomials</title>
+<!--Generated on Fri Feb  9 20:37:05 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">orthogonality of Legendre polynomials</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">We start from the first order differential equation</p>
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle(1\!-\!x^{2})\frac{du}{dx}+2nxu\;=\;0," display="inline"><mrow><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mpadded width="+2.8pt"><mi>u</mi></mpadded></mrow></mrow><mo>=</mo><mn> 0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where one can separate the variables (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/SeparationOfVariables</span>) and then get the general solution
+</p>
+<table id="A0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle u\;=\;C(1\!-\!x^{2})^{n}." display="inline"><mrow><mrow><mpadded width="+2.8pt"><mi>u</mi></mpadded><mo rspace="5.3pt">=</mo><mrow><mi>C</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Differentiating <math id="p1.m1" class="ltx_Math" alttext="n\!+\!1" display="inline"><mrow><mpadded width="-1.7pt"><mi>n</mi></mpadded><mo rspace="0.8pt">+</mo><mn>1</mn></mrow></math> times the equation (1) it takes the form</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="(1\!-\!x^{2})\frac{d^{n+2}u}{dx^{n+2}}-2x\frac{d^{n+1}u}{dx^{n+1}}+n(n+1)\frac%
+{d^{n}u}{dx^{n}}\;=\;0" display="block"><mrow><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mfrac><mrow><msup><mi>d</mi><mrow><mi>n</mi><mo>+</mo><mn>2</mn></mrow></msup><mo>⁢</mo><mi>u</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mrow><mi>n</mi><mo>+</mo><mn>2</mn></mrow></msup></mrow></mfrac></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mfrac><mrow><msup><mi>d</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>u</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></mfrac></mrow></mrow><mo>+</mo><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+2.8pt"><mfrac><mrow><msup><mi>d</mi><mi>n</mi></msup><mo>⁢</mo><mi>u</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></mfrac></mpadded></mrow></mrow><mo>=</mo><mn> 0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">or</p>
+<table id="A0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E3.m1" class="ltx_Math" alttext="\displaystyle(1\!-\!x^{2})\frac{d^{2}y}{dx^{2}}-2x\frac{dy}{dx}+n(n+1)y\;=\;0" display="inline"><mrow><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi>y</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac></mstyle></mrow></mrow><mo>+</mo><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+2.8pt"><mi>y</mi></mpadded></mrow></mrow><mo>=</mo><mn> 0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="y\;=\;\frac{d^{n}u}{dx^{n}}\;=\;C\frac{d^{n}}{dx^{n}}(1\!-\!x^{2})^{n}." display="block"><mrow><mrow><mpadded width="+2.8pt"><mi>y</mi></mpadded><mo rspace="5.3pt">=</mo><mpadded width="+2.8pt"><mfrac><mrow><msup><mi>d</mi><mi>n</mi></msup><mo>⁢</mo><mi>u</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></mfrac></mpadded><mo rspace="5.3pt">=</mo><mrow><mi>C</mi><mo>⁢</mo><mfrac><msup><mi>d</mi><mi>n</mi></msup><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></mfrac><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Especially, the particular solution</p>
+<table id="A0.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E4.m1" class="ltx_Math" alttext="\displaystyle y\;=\;P_{n}(x)\;:=\;\frac{1}{2^{n}n!}\frac{d^{n}}{dx^{n}}(1\!-\!%
+x^{2})^{n}," display="inline"><mrow><mrow><mpadded width="+2.8pt"><mi>y</mi></mpadded><mo rspace="5.3pt">=</mo><mrow><msub><mi>P</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">:=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>⁢</mo><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><msup><mi>d</mi><mi>n</mi></msup><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></mfrac></mstyle><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">which which is the Legendre polynomial of degree <math id="p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, has been seen to satisfy the Legendre’s differential equation (3).</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The equality (4) is Rodrigues formula (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/RodriguesFormula</span>).  We use it to find the leading coefficient of <math id="p2.m1" class="ltx_Math" alttext="P_{n}(x)" display="inline"><mrow><msub><mi>P</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> and to show the orthogonality (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/OrthogonalPolynomials</span>) of the Legendre polynomials <math id="p2.m2" class="ltx_Math" alttext="P_{0}(x),\,P_{1}(x),\;P_{2}(x),\,..." display="inline"><mrow><mrow><msub><mi>P</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="4.2pt">,</mo><mrow><msub><mi>P</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">,</mo><mrow><msub><mi>P</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="4.2pt">,</mo><mi mathvariant="normal">…</mi></mrow></math></p>
+</div>
+<section id="S0.SS1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.1 </span>The coefficient of <math id="S0.SS1.m1" class="ltx_Math" alttext="x^{n}" display="inline"><msup><mi>x</mi><mi>n</mi></msup></math>
+</h2>
+
+<div id="S0.SS1.p1" class="ltx_para">
+<p class="ltx_p">By the binomial theorem,</p>
+<table id="A0.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle P_{n}(x)" display="inline"><mrow><msub><mi>P</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle\;=\;\frac{1}{2^{n}n!}\frac{d^{n}}{dx^{n}}\sum_{j=0}^{n}{n\choose
+j%
+}x^{2(n-j)}(-1)^{j}" display="inline"><mrow><mi mathvariant="normal"> </mi><mo rspace="5.3pt">=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>⁢</mo><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><msup><mi>d</mi><mi>n</mi></msup><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac linethickness="0pt"><mi>n</mi><mi>j</mi></mfrac></mstyle><mo>)</mo></mrow><mo>⁢</mo><msup><mi>x</mi><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mi>j</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>j</mi></msup></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle\;=\;\frac{1}{2^{n}n!}\sum_{j=0}^{n}{n\choose j}(2n\!-\!2j)(2n\!-%
+\!2j\!-\!1)\cdots(2n\!-\!2j\!-\!n\!+\!1)x^{n-2j}(-1)^{j}." display="inline"><mrow><mrow><mi mathvariant="normal"> </mi><mo rspace="5.3pt">=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>⁢</mo><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac linethickness="0pt"><mi>n</mi><mi>j</mi></mfrac></mstyle><mo>)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>n</mi></mpadded></mrow><mo rspace="0.8pt">-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>j</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>n</mi></mpadded></mrow><mo rspace="0.8pt">-</mo><mrow><mn>2</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>j</mi></mpadded></mrow><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>n</mi></mpadded></mrow><mo rspace="0.8pt">-</mo><mrow><mn>2</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>j</mi></mpadded></mrow><mo rspace="0.8pt">-</mo><mpadded width="-1.7pt"><mi>n</mi></mpadded></mrow><mo rspace="0.8pt">+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>x</mi><mrow><mi>n</mi><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>j</mi></mrow></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>j</mi></msup></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">From the term with  <math id="S0.SS1.p1.m1" class="ltx_Math" alttext="j=0" display="inline"><mrow><mi>j</mi><mo>=</mo><mn>0</mn></mrow></math>  we get as the coefficient of <math id="S0.SS1.p1.m2" class="ltx_Math" alttext="x^{n}" display="inline"><msup><mi>x</mi><mi>n</mi></msup></math> the following:</p>
+<table id="A0.EGx6" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E5.m1" class="ltx_Math" alttext="\displaystyle\frac{1}{2^{n}n!}{n\choose 0}(2n)(2n\!-\!1)(2n\!-\!2)\cdots(2n\!-%
+\!n\!+\!1)(-1)^{0}\;=\;\frac{1}{2^{n}n!}\cdot\frac{(2n)!}{(2n\!-\!n)!}\;=\;%
+\frac{(2n)!}{2^{n}(n!)^{2}}" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>⁢</mo><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac linethickness="0pt"><mi>n</mi><mn>0</mn></mfrac></mstyle><mo>)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>n</mi></mpadded></mrow><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>n</mi></mpadded></mrow><mo rspace="0.8pt">-</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>n</mi></mpadded></mrow><mo rspace="0.8pt">-</mo><mpadded width="-1.7pt"><mi>n</mi></mpadded></mrow><mo rspace="0.8pt">+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+2.8pt"><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mn>0</mn></msup></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>⁢</mo><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mfrac></mstyle><mo>⋅</mo><mpadded width="+2.8pt"><mstyle displaystyle="true"><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>n</mi></mpadded></mrow><mo rspace="0.8pt">-</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle></mpadded></mrow><mo rspace="5.3pt">=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr></tbody>
+</table>
+</div>
+</section>
+<section id="S0.SS2" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.2 </span>Orthogonality</h2>
+
+<div id="S0.SS2.p1" class="ltx_para">
+<p class="ltx_p">Let  <math id="S0.SS2.p1.m1" class="ltx_Math" alttext="f_{m}(x):=a_{0}\!+\!a_{1}x\!+\ldots+\!a_{m}x^{m}" display="inline"><mrow><mrow><msub><mi>f</mi><mi>m</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mpadded width="-1.7pt"><msub><mi>a</mi><mn>0</mn></msub></mpadded><mo rspace="0.8pt">+</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mpadded width="-1.7pt"><mi>x</mi></mpadded></mrow><mo rspace="0.8pt">+</mo><mi mathvariant="normal">…</mi><mo rspace="0.8pt">+</mo><mrow><msub><mi>a</mi><mi>m</mi></msub><mo>⁢</mo><msup><mi>x</mi><mi>m</mi></msup></mrow></mrow></mrow></math>  be any polynomial of degree  <math id="S0.SS2.p1.m2" class="ltx_Math" alttext="m&lt;n" display="inline"><mrow><mi>m</mi><mo>&lt;</mo><mi>n</mi></mrow></math>.  Integrating by parts (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/IntegrationByParts</span>) <math id="S0.SS2.p1.m3" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> times we obtain</p>
+<table id="A0.EGx7" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\displaystyle\int_{-1}^{1}f_{m}(x)P_{n}(x)\,dx" display="inline"><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mn>1</mn></mrow><mn>1</mn></msubsup></mstyle><mrow><msub><mi>f</mi><mi>m</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>P</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle\;=\;\frac{1}{2^{n}n!}\int_{-1}^{1}f_{m}(x)\frac{d^{n}}{dx^{n}}(x%
+^{2}\!-\!1)^{n}\,dx" display="inline"><mrow><mi mathvariant="normal"> </mi><mo rspace="5.3pt">=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>⁢</mo><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mn>1</mn></mrow><mn>1</mn></msubsup></mstyle><mrow><msub><mi>f</mi><mi>m</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><msup><mi>d</mi><mi>n</mi></msup><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></mfrac></mstyle><mo>⁢</mo><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><msup><mi>x</mi><mn>2</mn></msup></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle\;=\;\frac{1}{2^{n}n!}\operatornamewithlimits{\Big{/}}_{\!\!\!-1}%
+^{\,\quad 1}\!f_{m}(x)\frac{d^{n-1}}{dx^{n-1}}(x^{2}\!-\!1)^{n}-\frac{1}{2^{n}%
+n!}\int_{-1}^{1}f^{\prime}_{m}(x)\frac{d^{n-1}}{dx^{n-1}}(x^{2}\!-\!1)^{n}\,dx" display="inline"><mrow><mi mathvariant="normal"> </mi><mo rspace="5.3pt">=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>⁢</mo><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mpadded width="-1.7pt"><munderover><mo mathsize="160%" movablelimits="false" stretchy="false">/</mo><mrow><mo lspace="0pt">-</mo><mn>1</mn></mrow><mpadded lspace="11.7pt" width="+11.7pt"><mn>1</mn></mpadded></munderover></mpadded><mo>⁡</mo><msub><mi>f</mi><mi>m</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><msup><mi>d</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mfrac></mstyle><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><msup><mi>x</mi><mn>2</mn></msup></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>⁢</mo><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mn>1</mn></mrow><mn>1</mn></msubsup></mstyle><mrow><msubsup><mi>f</mi><mi>m</mi><mo>′</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><msup><mi>d</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mfrac></mstyle><mo>⁢</mo><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><msup><mi>x</mi><mn>2</mn></msup></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle\cdots\qquad\cdots" display="inline"><mrow><mi mathvariant="normal">⋯</mi><mo mathvariant="italic" separator="true">  </mo><mi mathvariant="normal">⋯</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m2" class="ltx_Math" alttext="\displaystyle\;=\;(-1)^{m}\frac{a_{m}m!}{2^{n}n!}\int_{-1}^{1}\frac{d^{n-m}}{%
+dx^{n-m}}(x^{2}\!-\!1)^{n}\,dx" display="inline"><mrow><mi mathvariant="normal"> </mi><mo rspace="5.3pt">=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msub><mi>a</mi><mi>m</mi></msub><mo>⁢</mo><mrow><mi>m</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>⁢</mo><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mn>1</mn></mrow><mn>1</mn></msubsup></mstyle><mrow><mstyle displaystyle="true"><mfrac><msup><mi>d</mi><mrow><mi>n</mi><mo>-</mo><mi>m</mi></mrow></msup><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mrow><mi>n</mi><mo>-</mo><mi>m</mi></mrow></msup></mrow></mfrac></mstyle><mo>⁢</mo><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><msup><mi>x</mi><mn>2</mn></msup></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex9.m2" class="ltx_Math" alttext="\displaystyle\;=\;(-1)^{m}\frac{a_{m}m!}{2^{n}n!}\operatornamewithlimits{\Big{%
+/}}_{\!\!\!-1}^{\,\quad 1}\!f_{m}(x)\frac{d^{n-m-1}}{dx^{n-m-1}}(x^{2}\!-\!1)^%
+{n}\;=\;0," display="inline"><mrow><mrow><mi mathvariant="normal"> </mi><mo rspace="5.3pt">=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msub><mi>a</mi><mi>m</mi></msub><mo>⁢</mo><mrow><mi>m</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>⁢</mo><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mpadded width="-1.7pt"><munderover><mo mathsize="160%" movablelimits="false" stretchy="false">/</mo><mrow><mo lspace="0pt">-</mo><mn>1</mn></mrow><mpadded lspace="11.7pt" width="+11.7pt"><mn>1</mn></mpadded></munderover></mpadded><mo>⁡</mo><msub><mi>f</mi><mi>m</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><msup><mi>d</mi><mrow><mi>n</mi><mo>-</mo><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msup><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mrow><mi>n</mi><mo>-</mo><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mfrac></mstyle><mo>⁢</mo><mpadded width="+2.8pt"><msup><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><msup><mi>x</mi><mn>2</mn></msup></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mpadded></mrow><mo>=</mo><mn> 0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">since  <math id="S0.SS2.p1.m4" class="ltx_Math" alttext="x=\pm 1" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mo>±</mo><mn>1</mn></mrow></mrow></math>  are zeros of the derivatives <math id="S0.SS2.p1.m5" class="ltx_Math" alttext="\frac{d^{n-k}}{dx^{n-k}}(x^{2}\!-\!1)^{n}" display="inline"><mrow><mfrac><msup><mi>d</mi><mrow><mi>n</mi><mo>-</mo><mi>k</mi></mrow></msup><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mrow><mi>n</mi><mo>-</mo><mi>k</mi></mrow></msup></mrow></mfrac><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><msup><mi>x</mi><mn>2</mn></msup></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow></math>.</p>
+</div>
+<div id="S0.SS2.p2" class="ltx_para">
+<p class="ltx_p">If, on the other hand,  <math id="S0.SS2.p2.m1" class="ltx_Math" alttext="m=n" display="inline"><mrow><mi>m</mi><mo>=</mo><mi>n</mi></mrow></math>,  the calculation gives firstly</p>
+<table id="A0.EGx8" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E6.m1" class="ltx_Math" alttext="\displaystyle\int_{-1}^{1}f_{n}(x)P_{n}(x)\,dx\;=\;2(-1)^{n}\frac{a_{n}}{2^{n}%
+}\int_{0}^{1}(x^{2}\!-\!1)^{n}\,dx\;=\;2(-1)^{n}\frac{a_{n}}{2^{n}}\cdot I_{n}," display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mn>1</mn></mrow><mn>1</mn></msubsup></mstyle><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>P</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded></mrow></mrow></mrow><mo>=</mo><mrow><mn> 2</mn><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><msub><mi>a</mi><mi>n</mi></msub><msup><mn>2</mn><mi>n</mi></msup></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mn>1</mn></msubsup></mstyle><mrow><mpadded width="+1.7pt"><msup><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><msup><mi>x</mi><mn>2</mn></msup></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mn> 2</mn><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><msub><mi>a</mi><mi>n</mi></msub><msup><mn>2</mn><mi>n</mi></msup></mfrac></mstyle></mrow><mo>⋅</mo><msub><mi>I</mi><mi>n</mi></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where the integral <math id="S0.SS2.p2.m2" class="ltx_Math" alttext="I_{n}" display="inline"><msub><mi>I</mi><mi>n</mi></msub></math> is gotten from</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="I_{n}\;=\;\operatornamewithlimits{\Big{/}}_{\!\!\!0}^{\,\quad 1}\!x(x^{2}\!-\!%
+1)^{n}-2n\int_{0}^{1}\!x^{2}(x^{2}\!-\!1)^{n-1}dx\;=\;-2n\int_{0}^{1}\left[(x^%
+{2}\!-\!1)^{n}+(x^{2}\!-\!1)^{n-1}\right]dx\;=\;-2nI_{n}-2nI_{n-1}," display="block"><mrow><mrow><mpadded width="+2.8pt"><msub><mi>I</mi><mi>n</mi></msub></mpadded><mo rspace="5.3pt">=</mo><mrow><mrow><mrow><mpadded width="-1.7pt"><munderover><mo mathsize="160%" movablelimits="false" stretchy="false">/</mo><mpadded lspace="-5pt" width="-5pt"><mn>0</mn></mpadded><mpadded lspace="11.7pt" width="+11.7pt"><mn>1</mn></mpadded></munderover></mpadded><mo>⁡</mo><mi>x</mi></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><msup><mi>x</mi><mn>2</mn></msup></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mrow><mpadded width="-1.7pt"><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mn>1</mn></msubsup></mpadded><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><msup><mi>x</mi><mn>2</mn></msup></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded></mrow></mrow></mrow></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mn>1</mn></msubsup><mrow><mrow><mo>[</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><msup><mi>x</mi><mn>2</mn></msup></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><msup><mi>x</mi><mn>2</mn></msup></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded></mrow></mrow></mrow></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi><mo>⁢</mo><msub><mi>I</mi><mi>n</mi></msub></mrow></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi><mo>⁢</mo><msub><mi>I</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus we infer the recurrence relation</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="I_{n}\;=\;-\frac{2n}{2n\!+\!1}I_{n-1}." display="block"><mrow><mrow><mpadded width="+2.8pt"><msub><mi>I</mi><mi>n</mi></msub></mpadded><mo rspace="5.3pt">=</mo><mrow><mo>-</mo><mrow><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>n</mi></mpadded></mrow><mo rspace="0.8pt">+</mo><mn>1</mn></mrow></mfrac><mo>⁢</mo><msub><mi>I</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Using this and  <math id="S0.SS2.p2.m3" class="ltx_Math" alttext="I_{0}=1" display="inline"><mrow><msub><mi>I</mi><mn>0</mn></msub><mo>=</mo><mn>1</mn></mrow></math>  one easily arrives at</p>
+<table id="A0.EGx9" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E7"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E7.m1" class="ltx_Math" alttext="\displaystyle I_{n}\;=\;(-1)^{n}\frac{2\cdot 4\cdot 6\cdots(2n)}{3\cdot 5\cdot
+7%
+\cdots(2n\!+\!1)}\;=\;(-1)^{n}\frac{[2\cdot 4\cdot 6\cdots(2n)]^{2}}{(2n\!+\!1%
+)!}\;=\;(-1)^{n}\frac{2^{2n}(n!)^{2}}{(2n\!+\!1)!}." display="inline"><mrow><mrow><mpadded width="+2.8pt"><msub><mi>I</mi><mi>n</mi></msub></mpadded><mo rspace="5.3pt">=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>⁢</mo><mpadded width="+2.8pt"><mstyle displaystyle="true"><mfrac><mrow><mrow><mn>2</mn><mo>⋅</mo><mn>4</mn><mo>⋅</mo><mn>6</mn></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mrow><mn>3</mn><mo>⋅</mo><mn>5</mn><mo>⋅</mo><mn>7</mn></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>n</mi></mpadded></mrow><mo rspace="0.8pt">+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>⁢</mo><mpadded width="+2.8pt"><mstyle displaystyle="true"><mfrac><msup><mrow><mo stretchy="false">[</mo><mrow><mrow><mn>2</mn><mo>⋅</mo><mn>4</mn><mo>⋅</mo><mn>6</mn></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">]</mo></mrow><mn>2</mn></msup><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>n</mi></mpadded></mrow><mo rspace="0.8pt">+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle></mpadded></mrow><mo rspace="5.3pt">=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mn>2</mn><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>n</mi></mpadded></mrow><mo rspace="0.8pt">+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(7)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S0.SS2.p3" class="ltx_para">
+<p class="ltx_p">If <math id="S0.SS2.p3.m1" class="ltx_Math" alttext="f_{n}(x)" display="inline"><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> also is a Legendre polynomial <math id="S0.SS2.p3.m2" class="ltx_Math" alttext="P_{n}(x)" display="inline"><mrow><msub><mi>P</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>, we can in (6) by (5) put</p>
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="a_{n}\;=\;\frac{(2n)!}{2^{n}(n!)^{2}}" display="block"><mrow><mpadded width="+2.8pt"><msub><mi>a</mi><mi>n</mi></msub></mpadded><mo rspace="5.3pt">=</mo><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and taking into account (7), too, (6) reads</p>
+<table id="S0.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex13.m1" class="ltx_Math" alttext="\int_{-1}^{1}\left[P_{n}(x)\right]^{2}dx\;=\;\frac{(-1)^{n}}{2^{n-1}}\cdot%
+\frac{(2n)!}{2^{n}(n!)^{2}}\cdot(-1)^{n}\frac{2^{2n}(n!)^{2}}{(2n\!+\!1)!}\;=%
+\;\frac{2}{2n\!+\!1}." display="block"><mrow><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mn>1</mn></mrow><mn>1</mn></msubsup><mrow><msup><mrow><mo>[</mo><mrow><msub><mi>P</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>]</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded></mrow></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mrow><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><msup><mn>2</mn><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mfrac><mo>⋅</mo><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mfrac><mo>⋅</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow><mo>⁢</mo><mpadded width="+2.8pt"><mfrac><mrow><msup><mn>2</mn><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>n</mi></mpadded></mrow><mo rspace="0.8pt">+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mpadded></mrow><mo rspace="5.3pt">=</mo><mfrac><mn>2</mn><mrow><mrow><mn>2</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>n</mi></mpadded></mrow><mo rspace="0.8pt">+</mo><mn>1</mn></mrow></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SS2.p4" class="ltx_para">
+<p class="ltx_p">Our results imply the orthonormality (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Orthonormal</span>) condition</p>
+<table id="A0.EGx10" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E8"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E8.m1" class="ltx_Math" alttext="\displaystyle\int_{-1}^{1}\!P_{m}(x)P_{n}(x)\,dx\;=\;\frac{2}{2n\!+\!1}\delta_%
+{mn}," display="inline"><mrow><mrow><mrow><mpadded width="-1.7pt"><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mn>1</mn></mrow><mn>1</mn></msubsup></mstyle></mpadded><mrow><msub><mi>P</mi><mi>m</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>P</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded></mrow></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>2</mn><mrow><mrow><mn>2</mn><mo>⁢</mo><mpadded width="-1.7pt"><mi>n</mi></mpadded></mrow><mo rspace="0.8pt">+</mo><mn>1</mn></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>δ</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where <math id="S0.SS2.p4.m1" class="ltx_Math" alttext="\delta_{mn}" display="inline"><msub><mi>δ</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub></math> is the Kronecker delta.</p>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock"><span class="ltx_text ltx_font_smallcaps">K. Kurki-Suonio:</span> <span class="ltx_text ltx_font_italic">Matemaattiset apuneuvot</span>.  Limes r.y., Helsinki (1966).
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p3" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">orthogonality of Legendre polynomials</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">OrthogonalityOfLegendrePolynomials</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:55:30</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:55:30</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">14</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Derivation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 33C45</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">OrthogonalPolynomials</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">OrthogonalityOfChebyshevPolynomials</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">SubstitutionNotation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:37:05 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

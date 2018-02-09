@@ -1,0 +1,252 @@
+<!DOCTYPE html><html>
+<head>
+<title>Hermite polynomials</title>
+<!--Generated on Fri Feb  9 20:38:06 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Hermite polynomials</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">The polynomial solutions of the Hermite differential equation, with <math id="p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> a non-negative integer, are usually normed so that the highest degree (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/PolynomialRing</span>)  is <math id="p1.m2" class="ltx_Math" alttext="(2z)^{n}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>z</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></math> and called the <span class="ltx_text ltx_font_italic">Hermite polynomials</span> <math id="p1.m3" class="ltx_Math" alttext="H_{n}(z)" display="inline"><mrow><msub><mi>H</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math>.  The Hermite polynomials may be defined explicitly by</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle H_{n}(z)\;:=\;(-1)^{n}e^{z^{2}}\frac{d^{n}}{dz^{n}}e^{-z^{2}}," display="inline"><mrow><mrow><mrow><msub><mi>H</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">:=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>⁢</mo><msup><mi>e</mi><msup><mi>z</mi><mn>2</mn></msup></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><msup><mi>d</mi><mi>n</mi></msup><mrow><mi>d</mi><mo>⁢</mo><msup><mi>z</mi><mi>n</mi></msup></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">since this is a polynomial having the highest  <math id="p1.m4" class="ltx_Math" alttext="(2z)^{n}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>z</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></math> and satisfying the Hermite equation.  The equation (1) is the Rodrigues’s formula for Hermite polynomials.  Using the Faà di Bruno’s formula, one gets from (1) also</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="H_{n}(x)\;=\;(-1)^{n}\!\sum_{m_{1}+2m_{2}=n}\frac{n!}{m_{1}!m_{2}!}(-1)^{m_{1}%
++m_{2}}(2x)^{m_{1}}." display="block"><mrow><mrow><mrow><msub><mi>H</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mpadded width="-1.7pt"><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mpadded><mo>⁢</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mrow><msub><mi>m</mi><mn>1</mn></msub><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>m</mi><mn>2</mn></msub></mrow></mrow><mo>=</mo><mi>n</mi></mrow></munder><mrow><mfrac><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mrow><mrow><msub><mi>m</mi><mn>1</mn></msub><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>⁢</mo><mrow><msub><mi>m</mi><mn>2</mn></msub><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mfrac><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><msub><mi>m</mi><mn>1</mn></msub><mo>+</mo><msub><mi>m</mi><mn>2</mn></msub></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><msub><mi>m</mi><mn>1</mn></msub></msup></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The first six Hermite polynomials are</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><math id="p3.m1" class="ltx_Math" alttext="H_{0}(z)\;\equiv\;1," display="inline"><mrow><mrow><mrow><msub><mi>H</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo>≡</mo><mn> 1</mn></mrow><mo>,</mo></mrow></math>
+<br class="ltx_break"><math id="p3.m2" class="ltx_Math" alttext="H_{1}(z)\;\equiv\;2z," display="inline"><mrow><mrow><mrow><msub><mi>H</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo>≡</mo><mrow><mn> 2</mn><mo>⁢</mo><mi>z</mi></mrow></mrow><mo>,</mo></mrow></math>
+<br class="ltx_break"><math id="p3.m3" class="ltx_Math" alttext="H_{2}(z)\;\equiv\;4z^{2}\!-\!2," display="inline"><mrow><mrow><mrow><msub><mi>H</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo>≡</mo><mrow><mrow><mn> 4</mn><mo>⁢</mo><mpadded width="-1.7pt"><msup><mi>z</mi><mn>2</mn></msup></mpadded></mrow><mo rspace="0.8pt">-</mo><mn>2</mn></mrow></mrow><mo>,</mo></mrow></math>
+<br class="ltx_break"><math id="p3.m4" class="ltx_Math" alttext="H_{3}(z)\;\equiv\;8z^{3}\!-\!12z," display="inline"><mrow><mrow><mrow><msub><mi>H</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo>≡</mo><mrow><mrow><mn> 8</mn><mo>⁢</mo><mpadded width="-1.7pt"><msup><mi>z</mi><mn>3</mn></msup></mpadded></mrow><mo rspace="0.8pt">-</mo><mrow><mn>12</mn><mo>⁢</mo><mi>z</mi></mrow></mrow></mrow><mo>,</mo></mrow></math>
+<br class="ltx_break"><math id="p3.m5" class="ltx_Math" alttext="H_{4}(z)\;\equiv\;16z^{4}\!-\!48z^{2}\!+\!12," display="inline"><mrow><mrow><mrow><msub><mi>H</mi><mn>4</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo>≡</mo><mrow><mrow><mrow><mn> 16</mn><mo>⁢</mo><mpadded width="-1.7pt"><msup><mi>z</mi><mn>4</mn></msup></mpadded></mrow><mo rspace="0.8pt">-</mo><mrow><mn>48</mn><mo>⁢</mo><mpadded width="-1.7pt"><msup><mi>z</mi><mn>2</mn></msup></mpadded></mrow></mrow><mo rspace="0.8pt">+</mo><mn>12</mn></mrow></mrow><mo>,</mo></mrow></math>
+<br class="ltx_break"><math id="p3.m6" class="ltx_Math" alttext="H_{5}(z)\;\equiv\;32z^{5}\!-\!160z^{3}\!+\!120z," display="inline"><mrow><mrow><mrow><msub><mi>H</mi><mn>5</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo>≡</mo><mrow><mrow><mrow><mn> 32</mn><mo>⁢</mo><mpadded width="-1.7pt"><msup><mi>z</mi><mn>5</mn></msup></mpadded></mrow><mo rspace="0.8pt">-</mo><mrow><mn>160</mn><mo>⁢</mo><mpadded width="-1.7pt"><msup><mi>z</mi><mn>3</mn></msup></mpadded></mrow></mrow><mo rspace="0.8pt">+</mo><mrow><mn>120</mn><mo>⁢</mo><mi>z</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">and the general  is</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="H_{n}(z)\;\equiv\;(2z)^{n}-\frac{n(n\!-\!1)}{1!}(2z)^{n-2}+\frac{n(n\!-\!1)(n%
+\!-\!2)(n\!-\!3)}{2!}(2z)^{n-4}-+\ldots" display="block"><mrow><msub><mi>H</mi><mi>n</mi></msub><mrow><mo stretchy="false">(</mo><mi>z</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow><mo rspace="5.3pt">≡</mo><msup><mrow><mo stretchy="false">(</mo><mn>2</mn><mi>z</mi><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>-</mo><mfrac><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>n</mi></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mn>1</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac><msup><mrow><mo stretchy="false">(</mo><mn>2</mn><mi>z</mi><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mn>2</mn></mrow></msup><mo>+</mo><mfrac><mrow><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>n</mi></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>n</mi></mpadded><mo rspace="0.8pt">-</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>n</mi></mpadded><mo rspace="0.8pt">-</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mn>2</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac><msup><mrow><mo stretchy="false">(</mo><mn>2</mn><mi>z</mi><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mn>4</mn></mrow></msup><mo>-</mo><mo>+</mo><mi mathvariant="normal">…</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<br class="ltx_break">
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Differentiating this termwise gives</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="H^{\prime}_{n}(z)\;=\;2n\!\left[(2z)^{n-1}-\frac{(n\!-\!1)(n\!-\!2)}{1!}(2z)^{%
+n-3}+\frac{(n\!-\!1)(n\!-\!2)(n\!-\!3)(n\!-\!4)}{2!}(2z)^{n-5}-+\ldots\right]\!," display="block"><mrow><msubsup><mi>H</mi><mi>n</mi><mo>′</mo></msubsup><mrow><mo stretchy="false">(</mo><mi>z</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow><mo>=</mo><mn> 2</mn><mpadded width="-1.7pt"><mi>n</mi></mpadded><mrow><mo>[</mo><msup><mrow><mo stretchy="false">(</mo><mn>2</mn><mi>z</mi><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>-</mo><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>n</mi></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>n</mi></mpadded><mo rspace="0.8pt">-</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mn>1</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac><msup><mrow><mo stretchy="false">(</mo><mn>2</mn><mi>z</mi><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mn>3</mn></mrow></msup><mo>+</mo><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>n</mi></mpadded><mo rspace="0.8pt">-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>n</mi></mpadded><mo rspace="0.8pt">-</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>n</mi></mpadded><mo rspace="0.8pt">-</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mi>n</mi></mpadded><mo rspace="0.8pt">-</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mn>2</mn><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac><msup><mrow><mo stretchy="false">(</mo><mn>2</mn><mi>z</mi><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mn>5</mn></mrow></msup><mo>-</mo><mo>+</mo><mi mathvariant="normal">…</mi><mo rspace="0.8pt">]</mo></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">i.e.</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle H^{\prime}_{n}(z)\;=\;2nH_{n-1}(z)." display="inline"><mrow><mrow><mrow><msubsup><mi>H</mi><mi>n</mi><mo>′</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn> 2</mn><mo>⁢</mo><mi>n</mi><mo>⁢</mo><msub><mi>H</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">The Hermite polynomials are sometimes scaled to such ones <math id="p5.m1" class="ltx_Math" alttext="\mathrm{He_{n}}" display="inline"><msub><mi>He</mi><mi mathvariant="normal">n</mi></msub></math> which obey the differentiation rule</p>
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E3.m1" class="ltx_Math" alttext="\displaystyle\mathrm{He}^{\prime}_{n}(z)\;=\;n\mathrm{He}_{n-1}(z)." display="inline"><mrow><mrow><mrow><msubsup><mi>He</mi><mi>n</mi><mo>′</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mi>n</mi><mo>⁢</mo><msub><mi>He</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Such Hermite polynomials form an Appell sequence.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">We shall now show that the Hermite polynomials form an orthogonal set (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/OrthogonalPolynomials</span>) on the interval  <math id="p6.m1" class="ltx_Math" alttext="(-\infty,\,\infty)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo rspace="4.2pt">,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></math>  with the weight factor (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/OrthogonalPolynomials</span>) <math id="p6.m2" class="ltx_Math" alttext="e^{-x^{2}}" display="inline"><msup><mi>e</mi><mrow><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></math>.  Let 
+<math id="p6.m3" class="ltx_Math" alttext="m&lt;n" display="inline"><mrow><mi>m</mi><mo>&lt;</mo><mi>n</mi></mrow></math>;  using (1) and integrating by parts (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/IntegrationByParts</span>) we get</p>
+<table id="S0.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\displaystyle(-1)^{n}\!\int_{-\infty}^{\infty}H_{m}(x)H_{n}(x)e^{-x^{2}}\,dx" display="inline"><mrow><mpadded width="-1.7pt"><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mpadded><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><msub><mi>H</mi><mi>m</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>H</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle\;=\;\int_{-\infty}^{\infty}H_{m}(x)\frac{d^{n}e^{-x^{2}}}{dx^{n}%
+}\,dx" display="inline"><mrow><mi mathvariant="normal"> </mi><mo rspace="5.3pt">=</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><msub><mi>H</mi><mi>m</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mrow><msup><mi>d</mi><mi>n</mi></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></mfrac></mstyle></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle\;=\;\operatornamewithlimits{\Big{/}}_{\!\!\!-\infty}^{\,\quad%
+\infty}\!H_{m}(x)\frac{d^{n-1}e^{-x^{2}}}{dx^{n-1}}-\int_{-\infty}^{\infty}H^{%
+\prime}_{m}(x)\frac{d^{n-1}e^{-x^{2}}}{dx^{n-1}}\,dx." display="inline"><mrow><mrow><mi mathvariant="normal"> </mi><mo rspace="5.3pt">=</mo><mrow><mrow><mrow><mpadded width="-1.7pt"><munderover><mo mathsize="160%" movablelimits="false" stretchy="false">/</mo><mrow><mo lspace="0pt">-</mo><mi mathvariant="normal">∞</mi></mrow><mpadded lspace="11.7pt" width="+11.7pt"><mi mathvariant="normal">∞</mi></mpadded></munderover></mpadded><mo>⁡</mo><msub><mi>H</mi><mi>m</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mi>d</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mfrac></mstyle></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><msubsup><mi>H</mi><mi>m</mi><mo>′</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mrow><msup><mi>d</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mfrac></mstyle></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The substitution portion here equals to zero because <math id="p6.m4" class="ltx_Math" alttext="e^{-x^{2}}" display="inline"><msup><mi>e</mi><mrow><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></math> and its derivatives vanish at <math id="p6.m5" class="ltx_Math" alttext="\pm\infty" display="inline"><mrow><mo>±</mo><mi mathvariant="normal">∞</mi></mrow></math>.  Using then (2) we obtain</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\int_{-\infty}^{\infty}H_{m}(x)H_{n}(x)e^{-x^{2}}\,dx\;=\;2(-1)^{1+n}m\int_{-%
+\infty}^{\infty}H_{m-1}(x)\frac{d^{n-1}e^{-x^{2}}}{dx^{n-1}}\,dx." display="block"><mrow><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><msub><mi>H</mi><mi>m</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>H</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded></mrow></mrow></mrow><mo>=</mo><mrow><mn> 2</mn><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>1</mn><mo>+</mo><mi>n</mi></mrow></msup><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><msub><mi>H</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+1.7pt"><mfrac><mrow><msup><mi>d</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Repeating the integration by parts gives the result</p>
+<table id="S0.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\displaystyle\int_{-\infty}^{\infty}H_{m}(x)H_{n}(x)e^{-x^{2}}\,dx" display="inline"><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><msub><mi>H</mi><mi>m</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>H</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle\;=\;2^{m}(-1)^{m+n}m!\int_{-\infty}^{\infty}H_{0}(x)\frac{d^{n-m%
+}e^{-x^{2}}}{dx^{n-m}}\,dx" display="inline"><mrow><mi mathvariant="normal"> </mi><mo>=</mo><mrow><msup><mn> 2</mn><mi>m</mi></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msup><mo>⁢</mo><mrow><mi>m</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><msub><mi>H</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mrow><msup><mi>d</mi><mrow><mi>n</mi><mo>-</mo><mi>m</mi></mrow></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mrow><mi>n</mi><mo>-</mo><mi>m</mi></mrow></msup></mrow></mfrac></mstyle></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m2" class="ltx_Math" alttext="\displaystyle\;=\;2^{m}(-1)^{m+n}m!\!\operatornamewithlimits{\Big{/}}_{\!\!\!-%
+\infty}^{\,\quad\infty}\frac{d^{n-m-1}e^{-x^{2}}}{dx^{n-m-1}}\;=\;0," display="inline"><mrow><mrow><mi mathvariant="normal"> </mi><mo>=</mo><mrow><msup><mn> 2</mn><mi>m</mi></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msup><mo>⁢</mo><mrow><mi>m</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>⁢</mo><mrow><munderover><mo mathsize="160%" movablelimits="false" stretchy="false">/</mo><mrow><mo lspace="0pt">-</mo><mi mathvariant="normal">∞</mi></mrow><mpadded lspace="11.7pt" width="+11.7pt"><mi mathvariant="normal">∞</mi></mpadded></munderover><mo>⁡</mo><mpadded width="+2.8pt"><mstyle displaystyle="true"><mfrac><mrow><msup><mi>d</mi><mrow><mi>n</mi><mo>-</mo><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mrow><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mrow><mi>n</mi><mo>-</mo><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mfrac></mstyle></mpadded></mrow></mrow><mo>=</mo><mn> 0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">whereas in the case  <math id="p6.m6" class="ltx_Math" alttext="m=n" display="inline"><mrow><mi>m</mi><mo>=</mo><mi>n</mi></mrow></math>  the result</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\int_{-\infty}^{\infty}(H_{n}(x))^{2}e^{-x^{2}}\,dx\;=\;2^{n}(-1)^{2n}n!\int_{%
+-\infty}^{\infty}e^{-x^{2}}\,dx\;=\;2^{n}n!\sqrt{\pi}" display="block"><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>H</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded></mrow></mrow></mrow><mo>=</mo><mrow><msup><mn> 2</mn><mi>n</mi></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msup><mo>⁢</mo><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>⁢</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded></mrow></mrow></mrow></mrow><mo>=</mo><mrow><msup><mn> 2</mn><mi>n</mi></msup><mo>⁢</mo><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>⁢</mo><msqrt><mi>π</mi></msqrt></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(see area under Gaussian curve).
+The results  that the functions  <math id="p6.m7" class="ltx_Math" alttext="x\mapsto\frac{H_{n}(x)}{\sqrt{2^{n}n!\sqrt{\pi}}}e^{-\frac{x^{2}}{2}}" display="inline"><mrow><mi>x</mi><mo>↦</mo><mrow><mfrac><mrow><msub><mi>H</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><msqrt><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>⁢</mo><mrow><mi>n</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>⁢</mo><msqrt><mi>π</mi></msqrt></mrow></msqrt></mfrac><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mfrac><msup><mi>x</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow></mrow></math>  form an orthonormal set on  <math id="p6.m8" class="ltx_Math" alttext="(-\infty,\,\infty)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo rspace="4.2pt">,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></math>.
+<br class="ltx_break"></p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">The Hermite polynomials are used in the quantum mechanical treatment of a harmonic oscillator, the wave functions of which have the form</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="\xi\;\,\mapsto\,\;\Psi_{n}(\xi)\;=\;C_{n}H_{n}(\xi)e^{-\frac{\xi^{2}}{2}}." display="block"><mrow><mrow><mpadded width="+4.4pt"><mi>ξ</mi></mpadded><mo rspace="6.9pt">↦</mo><mrow><msub><mi mathvariant="normal">Ψ</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><msub><mi>C</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>H</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mfrac><msup><mi>ξ</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Hermite polynomials</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">HermitePolynomials</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:16:25</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:16:25</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">28</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 33E30</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 33B99</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 26C05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 26A09</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 12D99</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SubstitutionNotation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">AppellSequence</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">LaguerrePolynomial</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:38:06 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

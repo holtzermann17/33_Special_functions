@@ -1,0 +1,186 @@
+<!DOCTYPE html><html>
+<head>
+<title>application of logarithm series</title>
+<!--Generated on Fri Feb  9 20:34:36 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">application of logarithm series</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The integrand of the improper integral</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle I\;:=\;\int_{0}^{1}\frac{\ln(1\!+\!x)}{x}dx" display="inline"><mrow><mpadded width="+2.8pt"><mi>I</mi></mpadded><mo rspace="5.3pt">:=</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mn>1</mn></msubsup></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">+</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mi>x</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">is not defined at the lower limit 0.  However, from the Taylor series expansion</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\ln(1\!+\!x)\;=\;x-\frac{x^{2}}{2}+\frac{x^{3}}{3}-\frac{x^{4}}{4}+-\ldots%
+\qquad(-1&lt;x\leqq 1)" display="block"><mrow><mi>ln</mi><mrow><mo stretchy="false">(</mo><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">+</mo><mi>x</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow><mo rspace="5.3pt">=</mo><mi>x</mi><mo>-</mo><mfrac><msup><mi>x</mi><mn>2</mn></msup><mn>2</mn></mfrac><mo>+</mo><mfrac><msup><mi>x</mi><mn>3</mn></msup><mn>3</mn></mfrac><mo>-</mo><mfrac><msup><mi>x</mi><mn>4</mn></msup><mn>4</mn></mfrac><mo>+</mo><mo>-</mo><mi mathvariant="normal">…</mi><mo mathvariant="italic" separator="true">  </mo><mrow><mo stretchy="false">(</mo><mo>-</mo><mn>1</mn><mo>&lt;</mo><mi>x</mi><mo>≦</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">of the natural logarithm we obtain the expansion of the integrand</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\frac{\ln(1\!+\!x)}{x}\;=\;1-\frac{x}{2}+\frac{x^{2}}{3}-\frac{x^{3}}{4}+-%
+\ldots\qquad(-1&lt;x&lt;0,\;\;0&lt;x\leqq 1)" display="block"><mrow><mpadded width="+2.8pt"><mfrac><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">+</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mi>x</mi></mfrac></mpadded><mo>=</mo><mn> 1</mn><mo>-</mo><mfrac><mi>x</mi><mn>2</mn></mfrac><mo>+</mo><mfrac><msup><mi>x</mi><mn>2</mn></msup><mn>3</mn></mfrac><mo>-</mo><mfrac><msup><mi>x</mi><mn>3</mn></msup><mn>4</mn></mfrac><mo>+</mo><mo>-</mo><mi mathvariant="normal">…</mi><mo mathvariant="italic" separator="true">  </mo><mrow><mo stretchy="false">(</mo><mo>-</mo><mn>1</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>0</mn><mo>,</mo><mn>  0</mn><mo>&lt;</mo><mi>x</mi><mo>≦</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">whence</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle\lim_{x\to 0}\frac{\ln(1\!+\!x)}{x}\;=\;1." display="inline"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>x</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mpadded width="+2.8pt"><mstyle displaystyle="true"><mfrac><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">+</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mi>x</mi></mfrac></mstyle></mpadded></mrow><mo>=</mo><mn> 1</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">This implies that the integrand of (1) is bounded on the interval  <math id="p2.m1" class="ltx_Math" alttext="[0,\,1]" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn> 1</mn><mo stretchy="false">]</mo></mrow></math> and also continuous, if we think that (2) defines its value at  <math id="p2.m2" class="ltx_Math" alttext="x=0" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math>.  Accordingly, the integrand is Riemann integrable on the interval, and we can determine the improper integral by integrating termwise:</p>
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle I" display="inline"><mi>I</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle\;=\;\int_{0}^{1}\!\left(1-\frac{x}{2}+\frac{x^{2}}{3}-\frac{x^{3%
+}}{4}+-\ldots\right)dx" display="inline"><mrow><mi mathvariant="normal"> </mi><mo rspace="5.3pt">=</mo><mpadded width="-1.7pt"><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mn>1</mn></msubsup></mstyle></mpadded><mrow><mo>(</mo><mn>1</mn><mo>-</mo><mstyle displaystyle="true"><mfrac><mi>x</mi><mn>2</mn></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><msup><mi>x</mi><mn>2</mn></msup><mn>3</mn></mfrac></mstyle><mo>-</mo><mstyle displaystyle="true"><mfrac><msup><mi>x</mi><mn>3</mn></msup><mn>4</mn></mfrac></mstyle><mo>+</mo><mo>-</mo><mi mathvariant="normal">…</mi><mo>)</mo></mrow><mi>d</mi><mi>x</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle\;=\;\operatornamewithlimits{\Big{/}}_{\!\!\!0}^{\,\quad 1}\!%
+\left(x-\frac{x^{2}}{2^{2}}+\frac{x^{3}}{3^{2}}-\frac{x^{4}}{4^{2}}+-\ldots\right)" display="inline"><mrow><mi mathvariant="normal"> </mi><mo rspace="5.3pt">=</mo><mpadded width="-1.7pt"><munderover><mo mathsize="160%" movablelimits="false" stretchy="false">/</mo><mpadded lspace="-5pt" width="-5pt"><mn>0</mn></mpadded><mpadded lspace="11.7pt" width="+11.7pt"><mn>1</mn></mpadded></munderover></mpadded><mrow><mo>(</mo><mi>x</mi><mo>-</mo><mstyle displaystyle="true"><mfrac><msup><mi>x</mi><mn>2</mn></msup><msup><mn>2</mn><mn>2</mn></msup></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><msup><mi>x</mi><mn>3</mn></msup><msup><mn>3</mn><mn>2</mn></msup></mfrac></mstyle><mo>-</mo><mstyle displaystyle="true"><mfrac><msup><mi>x</mi><mn>4</mn></msup><msup><mn>4</mn><mn>2</mn></msup></mfrac></mstyle><mo>+</mo><mo>-</mo><mi mathvariant="normal">…</mi><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle\;=\;1-\frac{1}{2^{2}}+\frac{1}{3^{2}}-\frac{1}{4^{2}}+-\ldots" display="inline"><mrow><mi mathvariant="normal"> </mi><mo>=</mo><mn> 1</mn><mo>-</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><msup><mn>2</mn><mn>2</mn></msup></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><msup><mn>3</mn><mn>2</mn></msup></mfrac></mstyle><mo>-</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><msup><mn>4</mn><mn>2</mn></msup></mfrac></mstyle><mo>+</mo><mo>-</mo><mi mathvariant="normal">…</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">By the entry on Dirichlet eta function at 2 (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ValueOfDirichletEtaFunctionAtS2</span>), the sum of the obtained series is  <math id="p2.m3" class="ltx_Math" alttext="\eta(2)=\frac{\pi^{2}}{12}" display="inline"><mrow><mrow><mi>η</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><msup><mi>π</mi><mn>2</mn></msup><mn>12</mn></mfrac></mrow></math>.  Thus we have the result</p>
+<table id="S0.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E3.m1" class="ltx_Math" alttext="\displaystyle\int_{0}^{1}\frac{\ln(1\!+\!x)}{x}dx\;=\;\frac{\pi^{2}}{12}." display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mn>1</mn></msubsup></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">+</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mi>x</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded></mrow></mrow></mrow><mo rspace="5.3pt">=</mo><mstyle displaystyle="true"><mfrac><msup><mi>π</mi><mn>2</mn></msup><mn>12</mn></mfrac></mstyle></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Similarly, using the series
+</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\ln(1\!-\!x)\;=\;-x-\frac{x^{2}}{2}-\frac{x^{3}}{3}-\frac{x^{4}}{4}-\ldots%
+\qquad(-1\leqq x&lt;1)" display="block"><mrow><mi>ln</mi><mrow><mo stretchy="false">(</mo><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">-</mo><mi>x</mi><mo rspace="5.3pt" stretchy="false">)</mo></mrow><mo rspace="5.3pt">=</mo><mo>-</mo><mi>x</mi><mo>-</mo><mfrac><msup><mi>x</mi><mn>2</mn></msup><mn>2</mn></mfrac><mo>-</mo><mfrac><msup><mi>x</mi><mn>3</mn></msup><mn>3</mn></mfrac><mo>-</mo><mfrac><msup><mi>x</mi><mn>4</mn></msup><mn>4</mn></mfrac><mo>-</mo><mi mathvariant="normal">…</mi><mo mathvariant="italic" separator="true">  </mo><mrow><mo stretchy="false">(</mo><mo>-</mo><mn>1</mn><mo>≦</mo><mi>x</mi><mo>&lt;</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and the result in the entry Riemann zeta function at 2 (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ValueOfTheRiemannZetaFunctionAtS2</span>), one can calculate that</p>
+<table id="S0.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E4.m1" class="ltx_Math" alttext="\displaystyle\int_{0}^{1}\frac{\ln(1\!-\!x)}{x}dx\;=\;-\frac{\pi^{2}}{6}." display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mn>1</mn></msubsup></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mi>x</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+2.8pt"><mi>x</mi></mpadded></mrow></mrow></mrow><mo rspace="5.3pt">=</mo><mrow><mo>-</mo><mstyle displaystyle="true"><mfrac><msup><mi>π</mi><mn>2</mn></msup><mn>6</mn></mfrac></mstyle></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="p4" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">application of logarithm series</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ApplicationOfLogarithmSeries</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:56:09</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:56:09</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">12</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Application</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 33B10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">DilogarithmFunction</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ExamplesOnHowToFindTaylorSeriesFromOtherKnownSeries</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">SubstitutionNotation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:34:36 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

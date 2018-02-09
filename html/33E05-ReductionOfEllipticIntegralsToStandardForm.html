@@ -1,0 +1,313 @@
+<!DOCTYPE html><html>
+<head>
+<title>reduction of elliptic integrals to standard form</title>
+<!--Generated on Fri Feb  9 20:37:52 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">reduction of elliptic integrals to standard form</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Any integral of the form <math id="p1.m1" class="ltx_Math" alttext="\int R(x,\sqrt{P(x)})\,dx" display="inline"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><msqrt><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></msqrt><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow></math>, where <math id="p1.m2" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is a rational
+function and <math id="p1.m3" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is a polynomial of degree 3 or 4 can be expressed as a linear
+combination of elementary functions and elliptic integrals of the first, second,
+and third kinds.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">To begin, we will assume that <math id="p2.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> has no repeated roots. Were this not the case,
+we could simply pull the repeated factor out of the radical and be left with a
+polynomial of degree of 1 or 2 inside the square root and express the integral in
+terms of inverse trigonometric functions.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Make a change of variables <math id="p3.m1" class="ltx_Math" alttext="z=(ax+b)/(cx+d)" display="inline"><mrow><mi>z</mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>c</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mi>d</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. By choosing the coefficients
+<math id="p3.m2" class="ltx_Math" alttext="a,b,c,d" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi></mrow></math> suitably, one can cast P into either Jacobi’s normal form
+<math id="p3.m3" class="ltx_Math" alttext="P(z)=(1-z^{2})(1-k^{2}z^{2})" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> or Weierstrass’ normal form
+<math id="p3.m4" class="ltx_Math" alttext="P(z)=4z^{3}-g_{2}z-g_{3}" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mn>4</mn><mo>⁢</mo><msup><mi>z</mi><mn>3</mn></msup></mrow><mo>-</mo><mrow><msub><mi>g</mi><mn>2</mn></msub><mo>⁢</mo><mi>z</mi></mrow><mo>-</mo><msub><mi>g</mi><mn>3</mn></msub></mrow></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Note that</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="R(z,\sqrt{P(z)})=\frac{A(z)+B(z)\sqrt{P(z)}}{C(z)+D(z)\sqrt{P(z)}}" display="block"><mrow><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo>,</mo><msqrt><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></msqrt><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msqrt><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></msqrt></mrow></mrow><mrow><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>D</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msqrt><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></msqrt></mrow></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for suitable polynomials <math id="p4.m1" class="ltx_Math" alttext="A,B,C,D" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi><mo>,</mo><mi>C</mi><mo>,</mo><mi>D</mi></mrow></math>. We can rationalize the denominator like so:</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\frac{A(z)+B(z)\sqrt{P(z)}}{C(z)+D(z)\sqrt{P(z)}}\times\frac{C(z)-D(z)\sqrt{P(%
+z)}}{C(z)-D(z)\sqrt{P(z)}}=F(z)+G(z)\sqrt{P(z)}" display="block"><mrow><mrow><mfrac><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msqrt><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></msqrt></mrow></mrow><mrow><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>D</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msqrt><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></msqrt></mrow></mrow></mfrac><mo>×</mo><mfrac><mrow><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>D</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msqrt><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></msqrt></mrow></mrow><mrow><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>D</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msqrt><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></msqrt></mrow></mrow></mfrac></mrow><mo>=</mo><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msqrt><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></msqrt></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The rational functions <math id="p4.m2" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> and <math id="p4.m3" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> appearing in the foregoing equation are defined like so:</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle F(z)" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m3" class="ltx_Math" alttext="\displaystyle\frac{A(z)C(z)-B(z)D(z)P(z)}{C^{2}(z)-D^{2}(z)P(z)}" display="inline"><mstyle displaystyle="true"><mfrac><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>D</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mrow><msup><mi>C</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><msup><mi>D</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mfrac></mstyle></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\displaystyle G(z)" display="inline"><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m3" class="ltx_Math" alttext="\displaystyle 2\frac{B(z)C(z)-A(z)D(z)}{C^{2}(z)-D^{2}(z)P(z)}" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>D</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mrow><msup><mi>C</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><msup><mi>D</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Since <math id="p5.m1" class="ltx_Math" alttext="\int F(z)\,dz" display="inline"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>z</mi></mrow></mrow></mrow></math> may be expressed in terms of elementary functions,
+we shall focus our attention on the remaining piece, <math id="p5.m2" class="ltx_Math" alttext="\int G(z)\sqrt{P(z)}\,dz" display="inline"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mi>G</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+1.7pt"><msqrt><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></msqrt></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>z</mi></mrow></mrow></mrow></math>,
+which we shall write as <math id="p5.m3" class="ltx_Math" alttext="\int H(z)/\sqrt{P(z)}\,dz" display="inline"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mpadded width="+1.7pt"><msqrt><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></msqrt></mpadded></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>z</mi></mrow></mrow></mrow></math>, where <math id="p5.m4" class="ltx_Math" alttext="H=PG" display="inline"><mrow><mi>H</mi><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mi>G</mi></mrow></mrow></math>..
+Because we may decompose <math id="p5.m5" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> into partial fractions, it suffices to consider
+the following cases, which we shall all <math id="p5.m6" class="ltx_Math" alttext="A_{n}" display="inline"><msub><mi>A</mi><mi>n</mi></msub></math> and <math id="p5.m7" class="ltx_Math" alttext="B_{n}" display="inline"><msub><mi>B</mi><mi>n</mi></msub></math>:</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="A_{n}(z)=\int\frac{z^{n}}{\sqrt{P(z)}}\,dz" display="block"><mrow><mrow><msub><mi>A</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mfrac><msup><mi>z</mi><mi>n</mi></msup><msqrt><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></msqrt></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>z</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="B_{n}(z,r)=\int\frac{1}{(z-r)^{n}\sqrt{P(z)}}\,dz" display="block"><mrow><mrow><msub><mi>B</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo>,</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mfrac><mn>1</mn><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>-</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>⁢</mo><msqrt><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></msqrt></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>z</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Here, <math id="p5.m8" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is a non-negative integer and <math id="p5.m9" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> is a complex number.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">We will reduce thes further using integration by parts.
+Taking antiderivatives, we have:</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\int\frac{z^{n-1}(zP^{\prime}(z)+2nP(z))}{2\sqrt{P(z)}}\,dz=z^{n}\sqrt{P(z)}+C" display="block"><mrow><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mfrac><mrow><msup><mi>z</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>z</mi><mo>⁢</mo><msup><mi>P</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mn>2</mn><mo>⁢</mo><msqrt><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></msqrt></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>z</mi></mrow></mrow></mrow><mo>=</mo><mrow><mrow><msup><mi>z</mi><mi>n</mi></msup><mo>⁢</mo><msqrt><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></msqrt></mrow><mo>+</mo><mi>C</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\int\frac{(z-r)P^{\prime}(z)-2nP(z)}{2(z-r)^{n+1}\sqrt{P(z)}}\,dz=\frac{\sqrt{%
+P(z)}}{(z-r)^{n}}+C" display="block"><mrow><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mfrac><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>-</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>P</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mn>2</mn><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>-</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msqrt><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></msqrt></mrow></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>z</mi></mrow></mrow></mrow><mo>=</mo><mrow><mfrac><msqrt><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></msqrt><msup><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>-</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mfrac><mo>+</mo><mi>C</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">These identities will allow us to express <math id="p6.m1" class="ltx_Math" alttext="A_{n}" display="inline"><msub><mi>A</mi><mi>n</mi></msub></math>’s and <math id="p6.m2" class="ltx_Math" alttext="B_{n}" display="inline"><msub><mi>B</mi><mi>n</mi></msub></math>’s with large
+<math id="p6.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> in terms of ones with smaller <math id="p6.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>’s.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">At this point, it is convenient to employ the specific form of the polynominal <math id="p7.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>.
+We will first conside the Weierstrass normal form and then the Jacobi normal form.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">Substituting into our identities and collecting terms, we find</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="4(2n+3)A_{n+2}=(2n+1)g_{2}A_{n}+2ng_{3}A_{n-1}+z^{n}\sqrt{4z^{3}-g_{2}x-g_{3}}+C" display="block"><mrow><mrow><mn>4</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>A</mi><mrow><mi>n</mi><mo>+</mo><mn>2</mn></mrow></msub></mrow><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>g</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>A</mi><mi>n</mi></msub></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi><mo>⁢</mo><msub><mi>g</mi><mn>3</mn></msub><mo>⁢</mo><msub><mi>A</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow><mo>+</mo><mrow><msup><mi>z</mi><mi>n</mi></msup><mo>⁢</mo><msqrt><mrow><mrow><mn>4</mn><mo>⁢</mo><msup><mi>z</mi><mn>3</mn></msup></mrow><mo>-</mo><mrow><msub><mi>g</mi><mn>2</mn></msub><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><msub><mi>g</mi><mn>3</mn></msub></mrow></msqrt></mrow><mo>+</mo><mi>C</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p9" class="ltx_para">
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="2n(4r^{3}-g_{2}r-g_{3})B_{n+1}+(2n-1)(12r^{2}-g_{2})B_{n}+24(n-1)rB_{n-1}+4(2n%
+-3)B_{n-2}+\frac{\sqrt{4z^{3}-g_{2}x-g_{3}}}{(z-r)^{n}}+C=0" display="block"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>4</mn><mo>⁢</mo><msup><mi>r</mi><mn>3</mn></msup></mrow><mo>-</mo><mrow><msub><mi>g</mi><mn>2</mn></msub><mo>⁢</mo><mi>r</mi></mrow><mo>-</mo><msub><mi>g</mi><mn>3</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>B</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>12</mn><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow><mo>-</mo><msub><mi>g</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>B</mi><mi>n</mi></msub></mrow><mo>+</mo><mrow><mn>24</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>r</mi><mo>⁢</mo><msub><mi>B</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>-</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>B</mi><mrow><mi>n</mi><mo>-</mo><mn>2</mn></mrow></msub></mrow><mo>+</mo><mfrac><msqrt><mrow><mrow><mn>4</mn><mo>⁢</mo><msup><mi>z</mi><mn>3</mn></msup></mrow><mo>-</mo><mrow><msub><mi>g</mi><mn>2</mn></msub><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><msub><mi>g</mi><mn>3</mn></msub></mrow></msqrt><msup><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>-</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mfrac><mo>+</mo><mi>C</mi></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">Note that there are some cases which can be integrated in elementary terms. Namely, suppose that the power is odd:</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="\int z^{2m+1}\sqrt{(1-z^{2})(1-k^{2}z^{2})}\,dz" display="block"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><msup><mi>z</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mpadded width="+1.7pt"><msqrt><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></msqrt></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>z</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then we may make a change of variables <math id="p10.m1" class="ltx_Math" alttext="y=z^{2}" display="inline"><mrow><mi>y</mi><mo>=</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></math> to obtain</p>
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="\frac{1}{2}\int y^{2m}\sqrt{(1-y)(1-k^{2}y)}\,dy," display="block"><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><msup><mi>y</mi><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></msup><mo>⁢</mo><mpadded width="+1.7pt"><msqrt><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>⁢</mo><mi>y</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></msqrt></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>y</mi></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which may be integrated using elementary functions.</p>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">Next, we derive some identities using integration by parts. Since</p>
+<table id="S0.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex13.m1" class="ltx_Math" alttext="d\left((1-z^{2})(1-k^{2}z^{2})\sqrt{(1-z^{2})(1-k^{2}z^{2})}\right)=\left(%
+\frac{9}{2}k^{2}z^{3}-3(1+k^{2})z\right)\sqrt{(1-z^{2})(1-k^{2}z^{2})}\,dz," display="block"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msqrt><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></msqrt></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mrow><mrow><mfrac><mn>9</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>z</mi><mn>3</mn></msup></mrow><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><msup><mi>k</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>z</mi></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><mpadded width="+1.7pt"><msqrt><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></msqrt></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>z</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">we have</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex14" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex14.m1" class="ltx_Math" alttext="\displaystyle(2m+1)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex14.m3" class="ltx_Math" alttext="\displaystyle\int z^{2m}(1-z^{2})(1-k^{2}z^{2})\sqrt{(1-z^{2})(1-k^{2}z^{2})}%
+\,dz" display="inline"><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><msup><mi>z</mi><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+1.7pt"><msqrt><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></msqrt></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>z</mi></mrow></mrow></mrow></mstyle></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex15" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex15.m1" class="ltx_Math" alttext="\displaystyle+" display="inline"><mo>+</mo></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex15.m3" class="ltx_Math" alttext="\displaystyle\int z^{2m+1}\left(\frac{9}{2}k^{2}z^{3}-3(1+k^{2})z\right)\sqrt{%
+(1-z^{2})(1-k^{2}z^{2})}\,dz" display="inline"><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><msup><mi>z</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mfrac><mn>9</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>z</mi><mn>3</mn></msup></mrow><mo>-</mo><mrow><mn>3</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><msup><mi>k</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>z</mi></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><mpadded width="+1.7pt"><msqrt><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></msqrt></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>z</mi></mrow></mrow></mrow></mstyle></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex16" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex16.m1" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex16.m3" class="ltx_Math" alttext="\displaystyle z^{2m+1}(1-z^{2})(1-k^{2}z^{2})\sqrt{(1-z^{2})(1-k^{2}z^{2})}+C" display="inline"><mrow><mrow><msup><mi>z</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msqrt><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></msqrt></mrow><mo>+</mo><mi>C</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">By colecting terms, this identity may be rewritten as follows:</p>
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex17" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex17.m1" class="ltx_Math" alttext="\displaystyle\left(1+2m+\frac{9}{2}k^{2}\right)" display="inline"><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>9</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup></mrow></mrow><mo>)</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex17.m3" class="ltx_Math" alttext="\displaystyle\int z^{2m+4}\sqrt{(1-z^{2})(1-k^{2}z^{2})}\,dz-" display="inline"><mrow><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><msup><mi>z</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>4</mn></mrow></msup><mo>⁢</mo><mpadded width="+1.7pt"><msqrt><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></msqrt></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>z</mi></mrow></mrow></mrow></mstyle><mo>-</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex20" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex18.m1" class="ltx_Math" alttext="\displaystyle(4+2m)(1+k^{2})" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>4</mn><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><msup><mi>k</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex18.m3" class="ltx_Math" alttext="\displaystyle\int z^{2m+2}\sqrt{(1-z^{2})(1-k^{2}z^{2})}\,dz+" display="inline"><mrow><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><msup><mi>z</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow><mo>+</mo><mn>2</mn></mrow></msup><mo>⁢</mo><mpadded width="+1.7pt"><msqrt><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></msqrt></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>z</mi></mrow></mrow></mrow></mstyle><mo>+</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex19.m3" class="ltx_Math" alttext="\displaystyle\int z^{2m}\sqrt{(1-z^{2})(1-k^{2}z^{2})}=" display="inline"><mrow><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><msup><mi>z</mi><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></msup><mo>⁢</mo><msqrt><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></msqrt></mrow></mrow></mstyle><mo>=</mo><mi></mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex20.m3" class="ltx_Math" alttext="\displaystyle x^{2k+1}(1-z^{2})(1-k^{2}z^{2})\sqrt{(1-z^{2})(1-k^{2}z^{2})}+C" display="inline"><mrow><mrow><msup><mi>x</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msqrt><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></msqrt></mrow><mo>+</mo><mi>C</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">By repeated use of this identity, we may express any integral of the form <math id="p11.m1" class="ltx_Math" alttext="\int z^{2m}\sqrt{P(z)}\,dz" display="inline"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><msup><mi>z</mi><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></msup><mo>⁢</mo><mpadded width="+1.7pt"><msqrt><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></msqrt></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>z</mi></mrow></mrow></mrow></math> as the sum of a linear combination of <math id="p11.m2" class="ltx_Math" alttext="\int z^{2}\sqrt{P(z)}\,dz" display="inline"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><msup><mi>z</mi><mn>2</mn></msup><mo>⁢</mo><mpadded width="+1.7pt"><msqrt><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></msqrt></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>z</mi></mrow></mrow></mrow></math> and <math id="p11.m3" class="ltx_Math" alttext="\int\sqrt{P(z)}\,dz" display="inline"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><msqrt><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></msqrt></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>z</mi></mrow></mrow></mrow></math> and the product of a polyomial and <math id="p11.m4" class="ltx_Math" alttext="\sqrt{P(z)}" display="inline"><msqrt><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></msqrt></math>.</p>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">Likewise, we can use integration by parts to simplify integrals of the form</p>
+<table id="S0.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex21.m1" class="ltx_Math" alttext="\int\frac{\sqrt{P(z)}}{(z-r)^{n}}\,dz" display="block"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mfrac><msqrt><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></msqrt><msup><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>-</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mfrac></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>z</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p13" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Will finish later — saving in case of computer crash.</em>
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">reduction of elliptic integrals to standard form</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ReductionOfEllipticIntegralsToStandardForm</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2014-02-01 18:13:38</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2014-02-01 18:13:38</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">30</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 33E05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">ExpressibleInClosedForm</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:37:52 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of Bohr-Mollerup theorem</title>
+<!--Generated on Fri Feb  9 20:35:42 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of Bohr-Mollerup theorem</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">To show that the gamma function is logarithmically convex, we can examine the product representation:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\Gamma(x)={1\over x}e^{-\gamma x}\prod_{n=1}^{\infty}{n\over x+n}e^{-x/n}" display="block"><mrow><mrow><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mi>x</mi></mfrac><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></msup><mo>⁢</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mfrac><mi>n</mi><mrow><mi>x</mi><mo>+</mo><mi>n</mi></mrow></mfrac><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>x</mi><mo>/</mo><mi>n</mi></mrow></mrow></msup></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since this product converges absolutely for <math id="p1.m1" class="ltx_Math" alttext="x&gt;0" display="inline"><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, we can take the logarithm term-by-term to obtain</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\log\Gamma(x)=-\log x-\gamma x-\sum_{n=1}^{\infty}\log\left({n\over x+n}\right%
+)-{x\over n}" display="block"><mrow><mrow><mrow><mi>log</mi><mo>⁡</mo><mi mathvariant="normal">Γ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mi>log</mi><mo>⁡</mo><mi>x</mi></mrow></mrow><mo>-</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><mi>log</mi><mo>⁡</mo><mrow><mo>(</mo><mfrac><mi>n</mi><mrow><mi>x</mi><mo>+</mo><mi>n</mi></mrow></mfrac><mo>)</mo></mrow></mrow></mrow><mo>-</mo><mfrac><mi>x</mi><mi>n</mi></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">It is justified to differentiate this series twice because the series of derivatives is absolutely and uniformly convergent.</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="{d^{2}\over dx^{2}}\log\Gamma(x)={1\over x^{2}}+\sum_{n=1}^{\infty}{1\over(x+n%
+)^{2}}=\sum_{n=0}^{\infty}{1\over(x+n)^{2}}" display="block"><mrow><mrow><mfrac><msup><mi>d</mi><mn>2</mn></msup><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>⁢</mo><mrow><mi>log</mi><mo>⁡</mo><mi mathvariant="normal">Γ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><msup><mi>x</mi><mn>2</mn></msup></mfrac><mo>+</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mfrac><mn>1</mn><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mfrac></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mfrac><mn>1</mn><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since every term in this series is positive, <math id="p1.m2" class="ltx_Math" alttext="\Gamma" display="inline"><mi mathvariant="normal">Γ</mi></math> is logarithmically convex. Furthermore, note that since each term is monotonically decreasing, <math id="p1.m3" class="ltx_Math" alttext="\log\Gamma" display="inline"><mrow><mi>log</mi><mo>⁡</mo><mi mathvariant="normal">Γ</mi></mrow></math> is a decreasing function of <math id="p1.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>. If <math id="p1.m5" class="ltx_Math" alttext="x&gt;m" display="inline"><mrow><mi>x</mi><mo>&gt;</mo><mi>m</mi></mrow></math> for some integer <math id="p1.m6" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>, then we can bound the series term-by-term to obtain</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="{d^{2}\over dx^{2}}\log\Gamma(x)&lt;\sum_{n=0}^{\infty}{1\over(m+n)^{2}}=\sum_{n=%
+m}^{\infty}{1\over n^{2}}" display="block"><mrow><mrow><mfrac><msup><mi>d</mi><mn>2</mn></msup><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>⁢</mo><mrow><mi>log</mi><mo>⁡</mo><mi mathvariant="normal">Γ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mfrac><mn>1</mn><msup><mrow><mo stretchy="false">(</mo><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mfrac></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mi>m</mi></mrow><mi mathvariant="normal">∞</mi></munderover><mfrac><mn>1</mn><msup><mi>n</mi><mn>2</mn></msup></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore, as <math id="p1.m7" class="ltx_Math" alttext="x\to\infty" display="inline"><mrow><mi>x</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>, <math id="p1.m8" class="ltx_Math" alttext="d^{2}\Gamma/dx^{2}\to 0" display="inline"><mrow><mrow><mrow><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mi mathvariant="normal">Γ</mi></mrow><mo>/</mo><mi>d</mi></mrow><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>→</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Next, let <math id="p2.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> satisfy the hypotheses of the Bohr-Mollerup theorem. Consider the function <math id="p2.m2" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> defined as <math id="p2.m3" class="ltx_Math" alttext="e^{g(x)}=f(x)/\Gamma(x)" display="inline"><mrow><msup><mi>e</mi><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></msup><mo>=</mo><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mi mathvariant="normal">Γ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. By hypothesis 3, <math id="p2.m4" class="ltx_Math" alttext="g(1)=0" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>. By hypothesis 2, <math id="p2.m5" class="ltx_Math" alttext="e^{g(x+1)}=e^{g(x)}" display="inline"><mrow><msup><mi>e</mi><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></msup><mo>=</mo><msup><mi>e</mi><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></msup></mrow></math>, so <math id="p2.m6" class="ltx_Math" alttext="g(x+1)=g(x)" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. In other , <math id="p2.m7" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is periodic.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Suppose that <math id="p3.m1" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is not constant. Then there must exist points <math id="p3.m2" class="ltx_Math" alttext="x_{0}" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math> and <math id="p3.m3" class="ltx_Math" alttext="x_{1}" display="inline"><msub><mi>x</mi><mn>1</mn></msub></math> on the real axis such that <math id="p3.m4" class="ltx_Math" alttext="g(x_{0})\neq g(x_{1})" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Suppose that <math id="p3.m5" class="ltx_Math" alttext="g(x_{1})&gt;g(x_{0})" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>&gt;</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for definiteness. Since <math id="p3.m6" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is periodic with period 1, we may assume without loss of generality that <math id="p3.m7" class="ltx_Math" alttext="x_{0}&lt;x_{1}&lt;x_{0}+1" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>&lt;</mo><msub><mi>x</mi><mn>1</mn></msub><mo>&lt;</mo><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><mn>1</mn></mrow></mrow></math>. Let <math id="p3.m8" class="ltx_Math" alttext="D_{2}" display="inline"><msub><mi>D</mi><mn>2</mn></msub></math> denote the second divided difference of <math id="p3.m9" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>:</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="D_{2}=\Delta_{2}(g;x_{0},x_{1},x_{0}+1)=-{g(x_{0})\over x_{0}-x_{1}}+{g(x_{1})%
+\over(x_{1}-x_{0})(x_{1}-x_{0}-1)}-{g(x_{0}+1)\over x_{0}-x_{1}+1}" display="block"><mrow><msub><mi>D</mi><mn>2</mn></msub><mo>=</mo><mrow><msub><mi mathvariant="normal">Δ</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo>;</mo><msub><mi>x</mi><mn>0</mn></msub><mo>,</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mo>-</mo><mfrac><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>-</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac></mrow><mo>+</mo><mfrac><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mrow><mo>-</mo><mfrac><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>-</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>+</mo><mn>1</mn></mrow></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">By our assumptions, <math id="p3.m10" class="ltx_Math" alttext="D_{2}&lt;0" display="inline"><mrow><msub><mi>D</mi><mn>2</mn></msub><mo>&lt;</mo><mn>0</mn></mrow></math>. By linearity,</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="D_{2}=\Delta_{2}(\log f;x_{0},x_{1},x_{0}+1)-\Delta_{2}(\log\Gamma;x_{0},x_{1}%
+,x_{0}+1)" display="block"><mrow><msub><mi>D</mi><mn>2</mn></msub><mo>=</mo><mrow><mrow><msub><mi mathvariant="normal">Δ</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>log</mi><mo>⁡</mo><mi>f</mi></mrow><mo>;</mo><msub><mi>x</mi><mn>0</mn></msub><mo>,</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><msub><mi mathvariant="normal">Δ</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>log</mi><mo>⁡</mo><mi mathvariant="normal">Γ</mi></mrow><mo>;</mo><msub><mi>x</mi><mn>0</mn></msub><mo>,</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">By periodicity, we have</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="D_{2}=\Delta_{2}(\log f;x_{0}+n,x_{1}+n,x_{0}+n+1)-\Delta_{2}(\log\Gamma;x_{0}%
++n,x_{1}+n,x_{0}+n+1)" display="block"><mrow><msub><mi>D</mi><mn>2</mn></msub><mo>=</mo><mrow><mrow><msub><mi mathvariant="normal">Δ</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>log</mi><mo>⁡</mo><mi>f</mi></mrow><mo>;</mo><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><mi>n</mi></mrow><mo>,</mo><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mi>n</mi></mrow><mo>,</mo><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><msub><mi mathvariant="normal">Δ</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>log</mi><mo>⁡</mo><mi mathvariant="normal">Γ</mi></mrow><mo>;</mo><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><mi>n</mi></mrow><mo>,</mo><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mi>n</mi></mrow><mo>,</mo><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for every integer <math id="p3.m11" class="ltx_Math" alttext="n&gt;0" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><mn>0</mn></mrow></math>. However,</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="|\Delta_{2}(\log\Gamma;x_{0}+n,x_{1}+n,x_{0}+n+1)|&lt;\max_{x_{0}+n\leq x\leq x_{%
+0}+1}{d^{2}\over dx^{2}}\log\Gamma(x)" display="block"><mrow><mrow><mo stretchy="false">|</mo><mrow><msub><mi mathvariant="normal">Δ</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>log</mi><mo>⁡</mo><mi mathvariant="normal">Γ</mi></mrow><mo>;</mo><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><mi>n</mi></mrow><mo>,</mo><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mi>n</mi></mrow><mo>,</mo><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mrow><mrow><munder><mi>max</mi><mrow><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><mi>n</mi></mrow><mo>≤</mo><mi>x</mi><mo>≤</mo><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><mn>1</mn></mrow></mrow></munder><mo>⁡</mo><mrow><mfrac><msup><mi>d</mi><mn>2</mn></msup><mrow><mi>d</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>⁢</mo><mrow><mi>log</mi><mo>⁡</mo><mi mathvariant="normal">Γ</mi></mrow></mrow></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">As <math id="p3.m12" class="ltx_Math" alttext="n\to\infty" display="inline"><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>, the right hand side approaches zero. Hence, by choosing <math id="p3.m13" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> sufficiently large, we can make the left-hand side smaller than <math id="p3.m14" class="ltx_Math" alttext="|D_{2}|/2" display="inline"><mrow><mrow><mo stretchy="false">|</mo><msub><mi>D</mi><mn>2</mn></msub><mo stretchy="false">|</mo></mrow><mo>/</mo><mn>2</mn></mrow></math>. For such an <math id="p3.m15" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>,</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\Delta_{2}(\log f;x_{0}+n,x_{1}+n,x_{0}+n+1)&lt;0" display="block"><mrow><mrow><msub><mi mathvariant="normal">Δ</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>log</mi><mo>⁡</mo><mi>f</mi></mrow><mo>;</mo><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><mi>n</mi></mrow><mo>,</mo><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mi>n</mi></mrow><mo>,</mo><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">However, this contradicts hypothesis 1. Therefore, <math id="p3.m16" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> must be constant. Since <math id="p3.m17" class="ltx_Math" alttext="g(0)=0" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>, <math id="p3.m18" class="ltx_Math" alttext="g(x)=0" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> for all <math id="p3.m19" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, which implies that <math id="p3.m20" class="ltx_Math" alttext="e^{0}=f(x)/\Gamma(x)" display="inline"><mrow><msup><mi>e</mi><mn>0</mn></msup><mo>=</mo><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mi mathvariant="normal">Γ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. In other words, <math id="p3.m21" class="ltx_Math" alttext="f(x)=\Gamma(x)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> as desired.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of Bohr-Mollerup theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfBohrMollerupTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:53:39</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:53:39</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Andrea Ambrosio (7332)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Andrea Ambrosio (7332)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">18</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Andrea Ambrosio (7332)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 33B15</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:35:42 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
